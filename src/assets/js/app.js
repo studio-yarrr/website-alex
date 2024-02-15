@@ -130,15 +130,16 @@ document.addEventListener("DOMContentLoaded", () => {
       currentScrollPos = 0;
     };
     const num = xl.matches ? 50 : 100;
-    if (currentScrollPos > num) {
-      header.classList.add('header--active');
-    } else {
-      header.classList.remove('header--active');
-    };
+
     if (prevScrollpos >= currentScrollPos) {
       header.classList.remove('out');
     } else {
       header.classList.add('out');
+    };
+    if (currentScrollPos > num) {
+      header.classList.add('out');
+    } else {
+      header.classList.remove('out');
     };
     prevScrollpos = currentScrollPos;
   };
@@ -182,6 +183,27 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     return wrapper;
+  }
+
+  const swiperWrappers = document.querySelectorAll('.main-wrapper')
+  if (swiperWrappers.length) {
+    swiperWrappers.forEach(wrapper => {
+      const swiper = wrapper.querySelector('.swiper');
+      const next = wrapper.querySelector('.next');
+      const prev = wrapper.querySelector('.prev');
+
+      if (swiper) {
+        new Swiper(swiper, {
+          loop: true,
+          slidePerView: 'auto',
+          speed: 500,
+          navigation: {
+            prevEl: prev,
+            nextEl: next,
+          }
+        })
+      }
+    })
   }
 });
 

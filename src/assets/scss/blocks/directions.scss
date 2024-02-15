@@ -1,0 +1,51 @@
+
+.mdirections-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8.2rem;
+  row-gap: 4rem;
+  margin-top: 8rem;
+}
+.mdirections-item {
+  background-color: var(--lgrey-2);
+  color: var(--grey);
+  min-height: 48rem;
+  border-radius: 0.3rem;
+  overflow: hidden;
+  a {
+    display: block;
+    min-height: 48rem;
+    @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      .mdirections-subtitle {
+        color: var(--orange);
+      }
+    }
+    }
+  }
+}
+.mdirections-img {
+  height: 18.2rem;
+}
+
+.mdirections-subtitle {
+  margin-top: 4.5rem;
+  font-size: 2.2rem;
+  font-weight: 600;
+  line-height: 2.6rem;
+  text-align: center;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  transition: color .3s;
+}
+
+.mdirections-desc {
+  font-size: 1.8rem;
+  font-weight: 400;
+  line-height: 2.2rem;
+  text-align: center;
+  margin-top: 3.3rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  padding-bottom: 1.5rem;
+}

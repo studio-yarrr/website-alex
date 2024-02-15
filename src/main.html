@@ -3,4 +3,50 @@ layout: default
 title: Главная
 ---
 
-<div class="main"></div>
+<section class="main">
+  <div class="main-wrapper">
+    <div class="swiper main-swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide main-item img-cover">
+          <img src="./assets/images/main/1.jpg" alt="Аукционный Дом «Александр»">
+  
+          <h2 class="main-title">Аукционный Дом «Александр»</h2>
+          <h3 class="main-subtitle">Мы находим шедевры</h3>
+        </div>
+      </div>
+    </div>
+  
+    <button class="arrow-swiper next"><svg><use xlink:href='./assets/images/sprite.svg#arrowR'></use></svg></button>
+    <button class="arrow-swiper prev"><svg><use xlink:href='./assets/images/sprite.svg#arrowL'></use></svg></button>
+  </div>
+
+  <ul class="main-list container">
+    <li class="main-li">
+      <h4 class="main-h4">Инвестиции</h4>
+    </li>
+    <li class="main-li">
+      <h4 class="main-h4">Интерьеры</h4>
+      <p class="main-desc">
+        Искусство добавляет индивидуальности и стиля, позволяя отразить характер владельца. Оно вдохновляет и создает особую атмосферу
+      </p>
+    </li>
+    <li class="main-li">
+      <h4 class="main-h4">Подарки</h4>
+      <p class="main-desc">
+        Через предметы искусства можно выразить свою заботу и внимание.  Наши шедевры являются  достойными, интеллектуально и материально ценными подарками
+      </p>
+    </li>
+    <li class="main-li">
+      <h4 class="main-h4">Коллекции</h4>
+      <p class="main-desc">
+        Ведущие специалисты России отбирают высоко коллекционные предметы искусства мирового уровня и профессионально их атрибутируют
+      </p>
+    </li>
+  </ul>
+</section>
+
+{{> directions}}
+
+{{> mlk}}
+
+{{> mservices}}
