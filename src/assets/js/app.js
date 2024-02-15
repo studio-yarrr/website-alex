@@ -185,17 +185,40 @@ document.addEventListener("DOMContentLoaded", () => {
     return wrapper;
   }
 
-  const swiperWrappers = document.querySelectorAll('.main-wrapper')
+  const swiperWrappers = document.querySelectorAll('.main-wrapper, .minteresting')
   if (swiperWrappers.length) {
     swiperWrappers.forEach(wrapper => {
+      const swiper = wrapper.querySelector('.swiper');
+      const next = wrapper.querySelector('.next');
+      const prev = wrapper.querySelector('.prev');
+      const pagination = wrapper.querySelector('.swiper-pagination')
+      if (swiper) {
+        new Swiper(swiper, {
+          loop: true,
+          slidesPerView: 'auto',
+          speed: 500,
+          navigation: {
+            prevEl: prev,
+            nextEl: next,
+          },
+          pagination: {
+            el: pagination,
+            clickable: true,
+          }
+        })
+      }
+    })
+  }
+  const swiperWrappersNoLoop = document.querySelectorAll('.mbelieve')
+  if (swiperWrappersNoLoop.length) {
+    swiperWrappersNoLoop.forEach(wrapper => {
       const swiper = wrapper.querySelector('.swiper');
       const next = wrapper.querySelector('.next');
       const prev = wrapper.querySelector('.prev');
 
       if (swiper) {
         new Swiper(swiper, {
-          loop: true,
-          slidePerView: 'auto',
+          slidesPerView: 'auto',
           speed: 500,
           navigation: {
             prevEl: prev,

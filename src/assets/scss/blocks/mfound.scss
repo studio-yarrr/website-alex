@@ -1,0 +1,41 @@
+.mfound {
+  margin-top: 9.4rem;
+}
+
+.mfound-bg {
+  height: 16rem;
+}
+
+.mfound-title {
+  margin-top: 8rem;
+}
+
+.mfound-list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 20rem;
+  margin-top: 8rem;
+}
+.mfound-item {
+  min-height: 15.2rem;
+  min-width: 18.4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+.mfound-desc {
+  text-align: center;
+  font-size: 2.2rem;
+  font-weight: 600;
+  line-height: 2.6rem;
+}
+.mfound-number {
+  font-family: 'PT Serif';
+  font-size: 6.4rem;
+  font-weight: 700;
+  line-height: 1;
+  text-align: center;
+}
