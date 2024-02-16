@@ -1,13 +1,22 @@
 .mfound {
   margin-top: 9.4rem;
+  @include breakpoint($xl-bp) {
+    margin-top: 2rem;
+  }
 }
 
 .mfound-bg {
   height: 16rem;
+  @include breakpoint($xl-bp) {
+    height: 12.1rem;
+  }
 }
 
 .mfound-title {
   margin-top: 8rem;
+  @include breakpoint($xl-bp) {
+    margin-top: 2rem;
+  }
 }
 
 .mfound-list {
@@ -17,6 +26,10 @@
   justify-content: center;
   gap: 20rem;
   margin-top: 8rem;
+  @include breakpoint($xl-bp) {
+    gap: 0;
+    margin-top: 1.5rem;
+  }
 }
 .mfound-item {
   min-height: 15.2rem;
@@ -25,6 +38,29 @@
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
+
+  @include breakpoint($xl-bp) {
+    display: inline-block;
+    min-height: 0;
+    padding-top: 4.1rem;
+    position: relative;
+    &::before {
+      content: '';
+      width: 10.9rem;
+      height: 1.2rem;
+      position: absolute;
+      top: 1.5rem;
+      left: 50%;
+      transform: translate3d(-50%, 0, 0);
+      background-image: url("data:image/svg+xml,%3Csvg width='109' height='12' viewBox='0 0 109 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cline x1='70.5' y1='5.5' x2='108.5' y2='5.5' stroke='%23343E47'/%3E%3Cline x1='0.5' y1='5.5' x2='38.5' y2='5.5' stroke='%23343E47'/%3E%3Crect x='54.5' y='0.707107' width='7' height='7' transform='rotate(45 54.5 0.707107)' fill='%23343E47' stroke='%23343E47'/%3E%3C/svg%3E%0A");
+    }
+    &:first-child {
+      padding-top: 0;
+      &::before {
+        content: normal;
+      }
+    }
+  }
 }
 .mfound-desc {
   text-align: center;
@@ -38,4 +74,14 @@
   font-weight: 700;
   line-height: 1;
   text-align: center;
+}
+
+.mfound-number,
+.mfound-desc {
+  @include breakpoint($xl-bp) {
+    font-size: 1.6rem;
+    font-weight: 600;
+    line-height: 1.9rem;
+    font-family: 'Fira Sans';
+  }
 }

@@ -1,10 +1,16 @@
 .minteresting {
   margin-top: 2.2rem;
+  @include breakpoint($xl-bp) {
+    margin-top: 3.4rem;
+  }
 }
 
 
 .minteresting-swiper {
   padding-bottom: 6rem;
+  @include breakpoint($xl-bp) {
+    padding-bottom: 3.1rem;
+  }
   .swiper-slide {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -12,12 +18,22 @@
     gap: 4rem;
     row-gap: 0;
     margin-right: 4rem;
+
+    @include breakpoint($xl-bp) {
+      display: flex;
+      flex-direction: column;
+      background-color: var(--lgrey-2);
+      padding: 2rem 0.75rem 1rem;
+    }
   }
 }
 
 .minteresting-title {
   grid-column: 2 span;
   margin-bottom: 8rem;
+  @include breakpoint($xl-bp) {
+    margin-bottom: 1rem;
+  }
 }
 
 .minteresting-types {
@@ -26,36 +42,69 @@
   gap: 1rem;
   height: min-content;
 }
+
 .minteresting-type {
   font-size: 1.8rem;
   font-weight: 700;
   line-height: 2.2rem;
   color: var(--orange);
+  @include breakpoint($xl-bp) {
+    font-size: 1.4rem;
+    font-weight: 600;
+    line-height: 1.5rem;
+    text-align: center;
+  }
 }
+
 .minteresting-img {
   border-radius: 0.3rem;
   grid-column: 1 / 2;
   grid-row: 2 / 4;
   height: 36rem;
+  @include breakpoint($xl-bp) {
+    margin-top: 1.2rem;
+    height: 19.37rem;
+  }
 }
 
 .minteresting-bot {
   display: flex;
   flex-direction: column;
 }
+
 .minteresting-subtitle {
   font-size: 2.2rem;
   font-weight: 600;
   line-height: 2.6rem;
   min-height: 8.3rem;
+  @include breakpoint($xl-bp) {
+    font-size: 1.6rem;
+    font-weight: 500;
+    line-height: 1.9rem;
+    margin-top: 0.5rem;
+    padding-left: 0.9rem;
+    padding-right: 0.9rem;
+    min-height: 0;
+  }
 }
+
 .minteresting-desc {
   margin-top: 2rem;
+  @include breakpoint($xl-bp) {
+    margin-top: 0.7rem;
+    padding-left: 0.7rem;
+    padding-right: 0.7rem;
+  }
 }
+
 .minteresting-link {
   text-decoration-line: underline;
   text-decoration-skip-ink: none;
   margin-top: auto;
+  @include breakpoint($xl-bp) {
+    text-align: center;
+    margin-top: 1rem;
+  }
 }
 
 
@@ -65,17 +114,41 @@
   align-items: center;
   gap: 4rem;
 
-  & > * {
+  @include breakpoint($xl-bp) {
+    flex-direction: column;
+    gap: 1.1rem;
+  }
+
+  &>* {
     width: 45rem;
+    max-width: 100%;
   }
 }
+
 .mt-40 {
   margin-top: 4rem;
+  @include breakpoint($xl-bp) {
+    margin-top: 0.5rem;
+  }
 }
+
+.subscribe-input {
+  @include breakpoint($xl-bp) {
+    max-width: 24rem;
+  }
+}
+
 .subscribe-btn {
   text-align: start;
   font-family: 'Fira Sans';
-  font-size: 22px;
+  font-size: 2.2rem;
   font-weight: 600;
-  line-height: 26px;
+  line-height: 2.6rem;
+  @include breakpoint($xl-bp) {
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.2rem;
+    max-width: 13.3rem;
+    padding: 0.6rem 0.8rem;
+  }
 }

@@ -7,11 +7,14 @@ title: Главная
   <div class="main-wrapper">
     <div class="swiper main-swiper">
       <div class="swiper-wrapper">
-        <div class="swiper-slide main-item img-cover">
-          <img src="./assets/images/main/1.jpg" alt="Аукционный Дом «Александр»">
+        <div class="swiper-slide main-item img-cover header-container">
+          <picture>
+            <source srcset="./assets/images/main/1-sm.jpg" media="(max-width:500px)">
+            <img src="./assets/images/main/1.jpg" alt="Аукционный Дом «Александр»">
+          </picture>
 
           <h2 class="main-title">Аукционный Дом «Александр»</h2>
-          <h3 class="main-subtitle">Мы находим шедевры</h3>
+          <h3 class="main-subtitle">Мы находим <br class="xl-block">шедевры</h3>
         </div>
       </div>
     </div>
@@ -27,6 +30,9 @@ title: Главная
   <ul class="main-list container">
     <li class="main-li">
       <h4 class="main-h4">Инвестиции</h4>
+      <p class="main-desc">
+        Инвестирование в искусство может служить диверсифика&shy;цией инвестиционного портфеля, что помогает уменьшить риски и обеспечить стабильный доход.
+      </p>
     </li>
     <li class="main-li">
       <h4 class="main-h4">Интерьеры</h4>

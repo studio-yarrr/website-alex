@@ -44,18 +44,18 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     disableScroll() {
-        // Get the current page scroll position;
-        const scrollTop = window.pageYOffset  || document.documentElement.scrollTop;
-        const scrollLeft = window.pageXOffset  || document.documentElement.scrollLeft;
-      
-            // if any scroll is attempted, set this to the previous value;
-            window.onscroll = function() {
-                window.scrollTo(scrollLeft, scrollTop);
-            };
+      // Get the current page scroll position;
+      const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+      const scrollLeft = window.pageXOffset || document.documentElement.scrollLeft;
+
+      // if any scroll is attempted, set this to the previous value;
+      window.onscroll = function () {
+        window.scrollTo(scrollLeft, scrollTop);
+      };
     }
 
     enableScroll() {
-      window.onscroll = function() {};
+      window.onscroll = function () { };
     }
   }
 
@@ -129,18 +129,16 @@ document.addEventListener("DOMContentLoaded", () => {
       prevScrollpos = 0;
       currentScrollPos = 0;
     };
-    const num = xl.matches ? 50 : 100;
+    const num = 200;
 
     if (prevScrollpos >= currentScrollPos) {
       header.classList.remove('out');
     } else {
       header.classList.add('out');
     };
-    if (currentScrollPos > num) {
-      header.classList.add('out');
-    } else {
+    if (currentScrollPos < num) {
       header.classList.remove('out');
-    };
+    }
     prevScrollpos = currentScrollPos;
   };
 
@@ -228,6 +226,32 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     })
   }
+  const swiperMLK = document.querySelector('.mlk-swiper');
+  if (swiperMLK) {
+    let init = false;
+    let swiper = null;
+    const swiperpagination = swiperMLK.querySelector('.swiper-pagination')
+    function swiperCard() {
+      if (xl.matches) {
+        if (!init) {
+          init = true;
+          swiper = new Swiper(swiperMLK, {
+            slidesPerView: "auto",
+            pagination: {
+              el: swiperpagination,
+              type: 'progressbar',
+            },
+          });
+        }
+      } else if (init && swiper) {
+        swiper.destroy();
+        init = false;
+      }
+    }
+    swiperCard();
+    window.addEventListener("resize", swiperCard);
+  }
+
 });
 
 

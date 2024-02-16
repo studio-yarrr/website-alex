@@ -6,25 +6,52 @@
   max-width: 87rem;
   margin: 0 auto;
   margin-top: 3.5rem;
+  @include breakpoint($xl-bp) {
+    font-size: 1.2rem;
+    font-weight: 400;
+    line-height: 1.5rem;
+    margin-top: 1rem;
+  }
 }
 .mlk-list {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 7.7rem;
   margin-top: 4.5rem;
+  @include breakpoint($xl-bp) {
+    display: flex;
+    gap: 0;
+    margin-top: 2.8rem;
+    padding-bottom: 2.1rem  ;
+  }
 }
 .mlk-item {
+  @include breakpoint($xl-bp) {
+    margin-right: 2rem;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
 }
 .mlk-h4 {
   font-family: 'PT Serif';
   font-size: 3.2rem;
   font-weight: 700;
   line-height: 4.2rem;
+  @include breakpoint($xl-bp) {
+    text-align: center;
+    font-size: 1.4rem;
+    line-height: 1.5rem;
+    font-family: 'Fira Sans';
+  }
 }
 .mlk-sublist {
   position: relative;
   margin-top: 2rem;
   padding-left: 5rem;
+  @include breakpoint($xl-bp) {
+    margin-top: 1.8rem;
+  }
   &::before {
     content: '';
     width: 0.4rem;
@@ -34,6 +61,10 @@
     position: absolute;
     top: 0;
     left: 0;
+    @include breakpoint($xl-bp) {
+      width: 0.3rem;
+      left: 2.3rem;
+    }
   }
 }
 .mlk-subitem {
@@ -43,6 +74,14 @@
   position: relative;
   margin-bottom: 2.2rem;
   max-width: 54.9rem;
+  @include breakpoint($xl-bp) {
+    font-size: 1.2rem;
+    font-weight: 400;
+    line-height: 1.5rem;
+    margin-bottom: 0.5rem;
+    padding-right: 1rem;
+    
+  }
   &:last-child {
     margin-bottom: 0;
   }
@@ -55,6 +94,12 @@
     width: 0.5rem;
     height: 0.5rem;
     border-radius: 100%;
+    @include breakpoint($xl-bp) {
+      top: 0.5rem;
+      left: -1.2rem;
+      width: 0.3rem;
+      height: 0.3rem;
+    }
   }
 }
 .mlk-bot {
@@ -62,9 +107,33 @@
   align-items: center;
   justify-content: center;
   margin-top: 5.8rem;
+  @include breakpoint($xl-bp) {
+    margin-top: 2rem;
+  }
 }
 .mlk-btn {
   display: inline-block;
   padding-left: 3.9rem;
   padding-right: 3.2rem;
+  @include breakpoint($xl-bp) {
+    padding-left: 1.7rem;
+    padding-right: 1.7rem;
+    margin-left: 0.4rem;
+  }
+}
+
+.mlk-swiper {
+  .swiper-pagination {
+    display: none;
+    @include breakpoint($xl-bp) {
+      display: block;
+      bottom: 0;
+      top: auto;
+      left: 50%;
+      width: 13rem;
+      max-width: 100%;
+      transform: translate3d(-50%, 0, 0);
+      margin-left: 0.2rem;
+    }
+  }
 }

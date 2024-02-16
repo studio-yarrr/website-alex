@@ -8,10 +8,16 @@
     transform: translate3d(0, -50%, 0);
     &.next {
       right: 2rem;
+      @include breakpoint($xl-bp) {
+        right: 0.8rem;
+      }
     }
 
     &.prev {
       left: 2rem;
+      @include breakpoint($xl-bp) {
+        left: 0.8rem;
+      }
     }
   }
 }
@@ -26,7 +32,10 @@
   flex-direction: column;
   padding-top: 12.4rem;
   padding-bottom: 12.4rem;
-
+  @include breakpoint($xl-bp) {
+    min-height: 50rem;
+    padding-top: 11.9rem;
+  }
   img {
     position: absolute;
     top: 0;
@@ -55,6 +64,10 @@
   font-size: 3.2rem;
   font-weight: 500;
   line-height: 3.8rem;
+  @include breakpoint($xl-bp) {
+    font-size: 1.6rem;
+    line-height: 1.9rem;
+  }
 }
 
 .main-subtitle {
@@ -63,6 +76,11 @@
   line-height: 8.5rem;
   font-family: 'PT Serif';
   margin-top: 0.5rem;
+  @include breakpoint($xl-bp) {
+    font-size: 2.4rem;
+    line-height: 3.2rem;
+    margin-top: 2.5rem;
+  }
 }
 
 .arrow-swiper {
@@ -70,11 +88,21 @@
   height: 4rem;
   display: block;
   fill: #F1EFEC;
-
+  flex: 0 0 auto;
+  @include breakpoint($xl-bp) {
+    width: 1rem;
+    height: 1rem;
+  }
   @media (hover: hover) and (pointer: fine) {
     &:hover {
       fill: var(--orange);
     }
+  }
+
+  svg {
+    position: absolute;
+    top: 0;
+    left: 0;
   }
   &:active {
     fill: var(--lgrey);
@@ -87,6 +115,13 @@
   gap: 4rem;
   margin-top: 3.9rem;
   padding-bottom: 4rem;
+  @include breakpoint($xl-bp) {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
+    gap: 1rem;
+    padding-bottom: 0;
+  }
 }
 .main-h4 {
   color: var(--orange);
@@ -96,12 +131,23 @@
   line-height: 2.6rem;
   margin-bottom: 1rem;
   padding-bottom: 1rem;
+  @include breakpoint($xl-bp) {
+    font-size: 1.6rem;
+    line-height: 1.9rem;
+    border-bottom-width: 0.2rem;
+    margin-bottom: 0.5rem;
+    padding-bottom: 0.5rem;
+  }
 }
 
 .main-desc {
   font-size: 1.8rem;
   font-weight: 400;
   line-height: 2.2rem;
+  @include breakpoint($xl-bp) {
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+  }
 }
 
 .last-margin {

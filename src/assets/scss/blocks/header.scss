@@ -14,6 +14,10 @@
   justify-content: space-between;
   gap: 1.8rem;
   @include breakpoint($xl-bp) {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    will-change: auto;
+    transition: none;
   }
 }
 
@@ -21,8 +25,15 @@
   width: 19.9rem;
   height: 3.7rem;
   flex: 0 0 auto;
+  @include breakpoint($xl-bp) {
+    width: 11.5rem;
+    height: 2.1rem;
+  }
 }
 
 .out {
   transform: translate3d(0, calc(-100% - 1rem), 0);
+  @include breakpoint($xl-bp) {
+    transform: none;
+  }
 }
