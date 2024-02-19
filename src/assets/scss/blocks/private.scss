@@ -1,0 +1,24 @@
+.private-desc {
+  font-weight: 600;
+  font-size: 2.2rem;
+  text-align: center;
+  color: var(--lgrey-2);
+  position: relative; 
+  z-index: 1;
+  margin-top: 4rem;
+  @include breakpoint($xl-bp) {
+    font-weight: 400;
+    font-size: 1.2rem;
+    line-height: 125%;
+    max-width: 25.3rem;
+    line-height: normal;
+  }
+}
+.private-subtitle {
+  font-weight: 600;
+  font-size: 2.2rem;
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 4rem;
+  max-width: 115rem;
+}

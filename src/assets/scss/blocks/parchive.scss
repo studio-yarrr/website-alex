@@ -1,0 +1,38 @@
+.parchive-list {
+  display: flex;
+  justify-content: center;
+  gap: 8rem;
+  flex-wrap: wrap;
+  margin-top: 8rem;
+}
+.parchive-item {
+  width: 32.8rem;
+  max-width: 100%;
+}
+.parchive-img {
+  width: 100%;
+  height: 32.8rem;
+  border-radius: 0.3rem;
+}
+.parchive-subtitle {
+  font-weight: 700;
+  font-size: 1.8rem;
+  line-height: 122%;
+  text-align: center;
+  color: var(--orange);
+  margin-top: 1.1rem;
+}
+.parchive-desc {
+  font-weight: 400;
+  font-size: 1.8rem;
+  line-height: 122%;
+  text-align: center;
+  color: var(--grey);
+  margin-top: 3.5rem;
+}
+.parchive-bot {
+  margin-top: 8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

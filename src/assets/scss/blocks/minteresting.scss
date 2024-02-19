@@ -26,6 +26,12 @@
       padding: 2rem 0.75rem 1rem;
     }
   }
+
+  .swiper-pagination {
+    bottom: 0;
+    left: 50%;
+    transform: translate3d(-50%, 0, 0);
+  }
 }
 
 .minteresting-title {
@@ -144,6 +150,12 @@
   font-size: 2.2rem;
   font-weight: 600;
   line-height: 2.6rem;
+  transition: color .3s;
+  @media (hover: hover) and (pointer: fine) {
+  &:hover {
+    color: var(--orange);
+  }
+  }
   @include breakpoint($xl-bp) {
     font-size: 1rem;
     font-weight: 500;

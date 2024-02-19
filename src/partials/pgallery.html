@@ -1,0 +1,20 @@
+<div class="pgallery mt-80">
+  <div class="swiper pgallery-swiper --top container swiper-no-swiping" dir="rtl">
+    <div class="swiper-wrapper">
+      @for (i=1; i<=5; i++) {
+        <a href="./assets/images/pgallery/top/`+i+`.jpg" data-fancybox='gallery' class="swiper-slide pgallery-item img-cover">
+          <img src="./assets/images/pokazplace.png" data-src="./assets/images/pgallery/top/`+i+`.jpg" class="lazyload" alt="pgallery-top">
+        </a>
+      }
+    </div>
+  </div>
+    <div class="swiper pgallery-swiper --bot container swiper-no-swiping">
+      <div class="swiper-wrapper">
+        @for (i=1; i<=5; i++) {
+          <a href="./assets/images/pgallery/bot/`+i+`.jpg" data-fancybox='gallery' class="swiper-slide pgallery-item img-cover">
+            <img src="./assets/images/pokazplace.png" data-src="./assets/images/pgallery/bot/`+i+`.jpg" class="lazyload" alt="pgallery-bot">
+          </a>
+        }
+      </div>
+  </div>
+</div>

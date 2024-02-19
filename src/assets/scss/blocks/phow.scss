@@ -1,0 +1,34 @@
+.phow {
+  margin-top: 11rem;
+}
+
+.phow-swiper {
+  margin-top: 8rem;
+  padding-bottom: 8rem;
+  .swiper-slide {
+    width: 23.9rem;
+    margin-right: 5rem;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  .swiper-pagination {
+    width: 71.7rem;
+    max-width: 100%;
+    height: 0.7rem;
+    left: 50%;
+    bottom: 0;
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+.phow-img {
+  width: 20rem;
+  height: 20rem;
+}
+.phow-subtitle {
+  margin-top: 2rem;
+  font-weight: 600;
+  font-size: 2.2rem;
+  color: var(--black);
+}

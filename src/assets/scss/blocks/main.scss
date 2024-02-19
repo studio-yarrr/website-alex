@@ -50,6 +50,13 @@
     position: absolute;
     top: 0;
     left: 0;
+    @include breakpoint($xl-bp) {
+      background-color: rgba(48, 62, 71, 0.6);;
+    }
+  }
+
+  &.--private {
+    min-height: 60rem;
   }
 }
 
@@ -76,6 +83,9 @@
   line-height: 8.5rem;
   font-family: 'PT Serif';
   margin-top: 0.5rem;
+  &.--private {
+    margin-top: 3rem;
+  }
   @include breakpoint($xl-bp) {
     font-size: 2.4rem;
     line-height: 3.2rem;

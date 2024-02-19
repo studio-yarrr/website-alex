@@ -360,7 +360,18 @@
   .swiper-pagination-progressbar {
     background: var(--lgrey-2);
     border-radius: 0.3rem;
+    overflow: hidden;
     position: absolute;
+    height: 0.7rem;
+    @include breakpoint($xl-bp) {
+      height: 0.3rem;
+    }
+  }
+  .swiper-pagination-bullet {
+    margin: 0 1rem;
+    @include breakpoint($xl-bp) {
+      margin: 0 0.45rem;
+    }
   }
   .swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
     background: var(--grey);

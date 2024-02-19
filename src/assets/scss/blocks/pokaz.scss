@@ -1,0 +1,84 @@
+.pokaz-title {
+  text-align: center;
+  font-weight: 600;
+  font-size: 2.2rem;
+}
+
+.pokaz-subtitle {
+  margin-top: 4rem;
+}
+
+.pokaz-block {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 4rem;
+  margin-top: 7.3rem;
+  @include breakpoint($xl-bp) {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 2rem;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  &.--implement {
+    padding-right: 4rem;
+    gap: 2rem;
+    @include breakpoint($xl-bp) {
+      padding-right: 0;
+    }
+  }
+}
+.pokaz-rigth {
+  @include breakpoint($xl-bp) {
+    padding-right: 1rem;
+    padding-left: 1rem;
+  }
+}
+
+.pokaz-img {
+  border-radius: 0.3rem;
+  height: 36rem;
+  margin-top: 0.7rem;
+}
+
+.pokaz-h4 {
+  font-weight: 600;
+  font-size: 2.2rem;
+}
+
+.pokaz-desc {
+  margin-top: 3rem;
+}
+
+.pokaz-item {
+  width: 20rem;
+  height: 20rem;
+  background-color: var(--lgrey-2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 7.8rem;
+  border-radius: 0.3rem;
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.pokaz-swiper {
+  margin-top: 4rem;
+}
+
+.pokaz-subimg {
+  width: 12rem;
+  height: 12rem;
+  margin-top: 1rem;
+}
+
+.pokaz-h5 {
+  font-weight: 400;
+  font-size: 1.8rem;
+  line-height: 122%;
+  text-align: center;
+  padding-right: 1.5rem;
+  padding-left: 1.5rem;
+}

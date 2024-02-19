@@ -195,6 +195,7 @@ document.addEventListener("DOMContentLoaded", () => {
           loop: true,
           slidesPerView: 'auto',
           speed: 500,
+          grabCursor: true,
           navigation: {
             prevEl: prev,
             nextEl: next,
@@ -207,50 +208,113 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     })
   }
-  const swiperWrappersNoLoop = document.querySelectorAll('.mbelieve')
-  if (swiperWrappersNoLoop.length) {
-    swiperWrappersNoLoop.forEach(wrapper => {
-      const swiper = wrapper.querySelector('.swiper');
-      const next = wrapper.querySelector('.next');
-      const prev = wrapper.querySelector('.prev');
+  setTimeout(() => {
+    const swiperWrappersNoLoop = document.querySelectorAll('.mbelieve, .pokaz')
+    if (swiperWrappersNoLoop.length) {
+      swiperWrappersNoLoop.forEach(wrapper => {
+        const swiper = wrapper.querySelector('.swiper');
+        const next = wrapper.querySelector('.next');
+        const prev = wrapper.querySelector('.prev');
 
-      if (swiper) {
-        new Swiper(swiper, {
-          slidesPerView: 'auto',
-          speed: 500,
-          navigation: {
-            prevEl: prev,
-            nextEl: next,
-          }
-        })
-      }
-    })
-  }
-  const swiperMLK = document.querySelector('.mlk-swiper');
-  if (swiperMLK) {
-    let init = false;
-    let swiper = null;
-    const swiperpagination = swiperMLK.querySelector('.swiper-pagination')
-    function swiperCard() {
-      if (xl.matches) {
-        if (!init) {
-          init = true;
-          swiper = new Swiper(swiperMLK, {
-            slidesPerView: "auto",
-            pagination: {
-              el: swiperpagination,
-              type: 'progressbar',
-            },
-          });
+        if (swiper) {
+          new Swiper(swiper, {
+            slidesPerView: 'auto',
+            speed: 500,
+            navigation: {
+              prevEl: prev,
+              nextEl: next,
+            }
+          })
         }
-      } else if (init && swiper) {
-        swiper.destroy();
-        init = false;
+      })
+    }
+    const swiperMLK = document.querySelector('.mlk-swiper');
+    if (swiperMLK) {
+      let init = false;
+      let swiper = null;
+      const swiperpagination = swiperMLK.querySelector('.swiper-pagination')
+      function swiperCard() {
+        if (xl.matches) {
+          if (!init) {
+            init = true;
+            swiper = new Swiper(swiperMLK, {
+              slidesPerView: "auto",
+              pagination: {
+                el: swiperpagination,
+                type: 'progressbar',
+              },
+            });
+          }
+        } else if (init && swiper) {
+          swiper.destroy();
+          init = false;
+        }
+      }
+      swiperCard();
+      window.addEventListener("resize", swiperCard);
+    }
+
+    const pgallery = document.querySelector('.pgallery')
+    if (pgallery) {
+      const swiperT = pgallery.querySelector('.swiper.--top');
+      const swiperB = pgallery.querySelector('.swiper.--bot');
+
+      const speed = 15000;
+      const option = {
+        slidesPerView: 'auto',
+        speed: speed,
+        autoplay: {
+          delay: 0,
+        }
+      }
+      if (swiperT) {
+        const slides = swiperT.querySelectorAll('.swiper-slide')
+        if (slides.length) {
+          new Swiper(swiperT, Object.assign(option, { loop: slides.length > 4 }))
+        }
+
+      }
+      if (swiperB) {
+        const slides = swiperB.querySelectorAll('.swiper-slide')
+        if (slides.length) {
+          new Swiper(swiperB, Object.assign(option, { loop: slides.length > 4 }))
+        }
+
       }
     }
-    swiperCard();
-    window.addEventListener("resize", swiperCard);
-  }
+
+    const phowswipers = document.querySelectorAll('.phow-swiper')
+    if (phowswipers.length) {
+      phowswipers.forEach(swiper => {
+        const swiperpagination = swiper.querySelector('.swiper-pagination')
+        new Swiper(swiper, {
+          slidesPerView: "auto",
+          speed: 500,
+          pagination: {
+            el: swiperpagination,
+            type: 'progressbar',
+          },
+        })
+      })
+    }
+
+    const accordionBtns = document.querySelectorAll('.accordion-btn')
+    if (accordionBtns.length) {
+      accordionBtns.forEach(btn => {
+        btn.addEventListener('click', function () {
+          this.classList.toggle('opened')
+        })
+      })
+    }
+
+    Fancybox.bind('[data-fancybox]:not(.swiper-slide-duplicate)', {
+      Image: {
+        zoom: false,
+      },
+      showClass: "fancybox-fadeIn",
+      hideClass: "fancybox-fadeOut",
+    });
+  }, 0)
 
 });
 

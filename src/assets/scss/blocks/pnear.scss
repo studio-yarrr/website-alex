@@ -1,0 +1,43 @@
+.pnear {
+  color: var(--lgrey-2);
+  background-color: var(--grey);
+  padding-left: 9.8rem;
+  display: flex;
+  justify-content: space-between;
+  @include breakpoint($xl-bp) {
+    padding-left: 1.9rem;
+  }
+}
+.pnear-left {
+  padding-top: 9.45rem;
+  padding-bottom: 9.45rem;
+}
+.pnear-title {
+  font-weight: 600;
+  font-size: 2.2rem;
+  color: var(--orange);
+}
+.pnear-subtitle {
+  font-family: 'PT Serif';
+  font-weight: 700;
+  font-size: 3.6rem;
+  letter-spacing: -0.02em;
+  margin-top: 4rem;
+}
+.pnear-desc {
+  font-weight: 400;
+  font-size: 1.8rem;
+  line-height: 122%;
+  max-width: 43.4rem;
+  margin-top: 4rem;
+}
+.pnear-btn {
+  display: inline-block;
+  margin-top: 4rem;
+  padding-left: 2.7rem;
+  padding-right: 2rem;
+}
+.pnear-img {
+  width: 50rem;
+  height: 50rem;
+}
