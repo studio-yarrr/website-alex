@@ -13,6 +13,12 @@
     max-width: 25.3rem;
     line-height: normal;
   }
+
+  &.--private {
+    @include breakpoint($xl-bp) {
+      margin-top: 3.5rem;
+    }
+  }
 }
 .private-subtitle {
   font-weight: 600;
@@ -21,4 +27,18 @@
   margin: 0 auto;
   margin-top: 4rem;
   max-width: 115rem;
+  @include breakpoint($xl-bp) {
+    font-weight: 400;
+    font-size: 1.2rem;
+    line-height: 125%;
+    margin-top: 1rem;
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
+  }
+}
+
+.private-bot {
+  @include breakpoint($xl-bp) {
+    margin-top: 1rem;
+  }
 }

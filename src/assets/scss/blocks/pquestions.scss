@@ -1,6 +1,9 @@
 .pquestions-subtitle {
   margin-top: 8rem;
   text-align: center;
+  @include breakpoint($xl-bp) {
+    margin-top: 3rem;
+  }
   a {
     transition: color .3s;
     @media (hover: hover) and (pointer: fine) {

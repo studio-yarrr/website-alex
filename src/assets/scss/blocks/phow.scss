@@ -1,13 +1,24 @@
 .phow {
   margin-top: 11rem;
+  @include breakpoint($xl-bp) {
+    margin-top: 3rem;
+  }
 }
 
 .phow-swiper {
   margin-top: 8rem;
   padding-bottom: 8rem;
+  @include breakpoint($xl-bp) {
+    margin-top: 3rem;
+    padding-bottom: 3rem;
+  }
   .swiper-slide {
     width: 23.9rem;
     margin-right: 5rem;
+    @include breakpoint($xl-bp) {
+      width: 18rem;
+      margin-right: 3rem;
+    }
     &:last-child {
       margin-right: 0;
     }
@@ -25,10 +36,18 @@
 .phow-img {
   width: 20rem;
   height: 20rem;
+  @include breakpoint($xl-bp) {
+    width: 15rem;
+    height: 15rem;
+  }
 }
 .phow-subtitle {
   margin-top: 2rem;
   font-weight: 600;
   font-size: 2.2rem;
   color: var(--black);
+  @include breakpoint($xl-bp) {
+    font-size: 1.2rem;
+    font-weight: 500;
+  }
 }

@@ -290,6 +290,7 @@ document.addEventListener("DOMContentLoaded", () => {
         new Swiper(swiper, {
           slidesPerView: "auto",
           speed: 500,
+          grabCursor: true,
           pagination: {
             el: swiperpagination,
             type: 'progressbar',

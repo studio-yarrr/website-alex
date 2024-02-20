@@ -4,18 +4,31 @@
   padding-left: 9.8rem;
   display: flex;
   justify-content: space-between;
+  position: relative;
+  overflow: hidden;
   @include breakpoint($xl-bp) {
     padding-left: 1.9rem;
+    margin-top: 2rem;
   }
 }
 .pnear-left {
   padding-top: 9.45rem;
   padding-bottom: 9.45rem;
+  @include breakpoint($xl-bp) {
+    padding-top: 5.45rem;
+    padding-bottom: 9.9rem;
+    position: relative;
+    z-index: 1;
+  }
 }
 .pnear-title {
   font-weight: 600;
   font-size: 2.2rem;
   color: var(--orange);
+  @include breakpoint($xl-bp) {
+    font-weight: 500;
+    font-size: 1.6rem;
+  }
 }
 .pnear-subtitle {
   font-family: 'PT Serif';
@@ -23,6 +36,13 @@
   font-size: 3.6rem;
   letter-spacing: -0.02em;
   margin-top: 4rem;
+  @include breakpoint($xl-bp) {
+    font-weight: 600;
+    font-size: 1.6rem;
+    font-family: "Fira Sans",;
+    margin-top: 3rem;
+    letter-spacing: normal;
+  }
 }
 .pnear-desc {
   font-weight: 400;
@@ -30,14 +50,37 @@
   line-height: 122%;
   max-width: 43.4rem;
   margin-top: 4rem;
+  @include breakpoint($xl-bp) {
+    font-weight: 400;
+    font-size: 1.2rem;
+    line-height: 125%;
+    max-width: 19.1rem;
+    margin-top: 3.5rem;
+  }
 }
 .pnear-btn {
   display: inline-block;
   margin-top: 4rem;
   padding-left: 2.7rem;
   padding-right: 2rem;
+  @include breakpoint($xl-bp) {
+    margin-top: 2rem;
+    padding-right: 2.2rem;
+    padding-left: 2.2rem;
+  }
 }
 .pnear-img {
   width: 50rem;
   height: 50rem;
+  max-width: 100%;
+  @include breakpoint($xl-bp) {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 24rem;
+    height: 24rem;
+    img {
+      object-position: right bottom;
+    }
+  }
 }

@@ -4,6 +4,10 @@
   gap: 8rem;
   flex-wrap: wrap;
   margin-top: 8rem;
+  @include breakpoint($xl-bp) {
+    margin-top: 3rem;
+    gap: 2rem;
+  }
 }
 .parchive-item {
   width: 32.8rem;
@@ -13,6 +17,9 @@
   width: 100%;
   height: 32.8rem;
   border-radius: 0.3rem;
+  @include breakpoint($xl-bp) {
+    height: 20rem;
+  }
 }
 .parchive-subtitle {
   font-weight: 700;
@@ -21,6 +28,10 @@
   text-align: center;
   color: var(--orange);
   margin-top: 1.1rem;
+  @include breakpoint($xl-bp) {
+    font-size: 1.4rem;
+    font-weight: 600;
+  }
 }
 .parchive-desc {
   font-weight: 400;
@@ -29,10 +40,17 @@
   text-align: center;
   color: var(--grey);
   margin-top: 3.5rem;
+  @include breakpoint($xl-bp) {
+    font-size: 1.2rem;
+    margin-top: 1rem;
+  }
 }
 .parchive-bot {
   margin-top: 8rem;
   display: flex;
   align-items: center;
   justify-content: center;
+  @include breakpoint($xl-bp) {
+    margin-top: 3rem;
+  }
 }

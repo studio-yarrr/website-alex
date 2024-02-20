@@ -57,6 +57,9 @@
 
   &.--private {
     min-height: 60rem;
+    @include breakpoint($xl-bp) {
+      min-height: 50rem;
+    }
   }
 }
 
@@ -85,6 +88,9 @@
   margin-top: 0.5rem;
   &.--private {
     margin-top: 3rem;
+    @include breakpoint($xl-bp) {
+      margin-top: 2.5rem;
+    }
   }
   @include breakpoint($xl-bp) {
     font-size: 2.4rem;

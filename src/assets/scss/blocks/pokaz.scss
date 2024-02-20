@@ -1,11 +1,23 @@
+.pokaz {
+  @include breakpoint($xl-bp) {
+    margin-top: 2.1rem;
+  }
+}
+
 .pokaz-title {
   text-align: center;
   font-weight: 600;
   font-size: 2.2rem;
+  @include breakpoint($xl-bp) {
+    font-size: 1.6rem;
+  }
 }
 
 .pokaz-subtitle {
   margin-top: 4rem;
+  @include breakpoint($xl-bp) {
+    margin-top: 1.5rem;
+  }
 }
 
 .pokaz-block {
@@ -19,12 +31,14 @@
     gap: 2rem;
     padding-left: 0;
     padding-right: 0;
+    margin-top: 1.5rem;
   }
   &.--implement {
     padding-right: 4rem;
     gap: 2rem;
     @include breakpoint($xl-bp) {
       padding-right: 0;
+      flex-direction: column;
     }
   }
 }
@@ -39,15 +53,30 @@
   border-radius: 0.3rem;
   height: 36rem;
   margin-top: 0.7rem;
+  @include breakpoint($xl-bp) {
+    margin-top: 0;
+    height: 21.2rem;
+  }
 }
 
 .pokaz-h4 {
   font-weight: 600;
   font-size: 2.2rem;
+  @include breakpoint($xl-bp) {
+    font-weight: 400;
+    font-size: 1.2rem;
+    line-height: 125%;
+    text-align: center;
+  }
 }
 
 .pokaz-desc {
   margin-top: 3rem;
+  @include breakpoint($xl-bp) {
+    text-align: center;
+    margin-top: 0;
+    line-height: 1.25;
+  }
 }
 
 .pokaz-item {
@@ -62,16 +91,29 @@
   &:last-child {
     margin-right: 0;
   }
+  @include breakpoint($xl-bp) {
+    width: 14rem;
+    height: 14rem;
+    margin-right: 2.3rem;
+  }
 }
 
 .pokaz-swiper {
   margin-top: 4rem;
+  @include breakpoint($xl-bp) {
+    margin-top: 2rem;
+  }
 }
 
 .pokaz-subimg {
   width: 12rem;
   height: 12rem;
   margin-top: 1rem;
+  @include breakpoint($xl-bp) {
+    width: 8rem;
+    height: 8rem;
+    margin-top: 1.4rem;
+  }
 }
 
 .pokaz-h5 {
@@ -81,4 +123,11 @@
   text-align: center;
   padding-right: 1.5rem;
   padding-left: 1.5rem;
+  @include breakpoint($xl-bp) {
+    font-weight: 400;
+    font-size: 1.2rem;
+    line-height: 125%;
+    text-align: center;
+    margin-top: -0.8rem;
+  }
 }

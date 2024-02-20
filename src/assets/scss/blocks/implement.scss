@@ -4,6 +4,9 @@
   align-items: center;
   justify-content: center;
   margin-top: 4rem;
+  @include breakpoint($xl-bp) {
+    display: none;
+  }
 }
 
 .implement-btn {
