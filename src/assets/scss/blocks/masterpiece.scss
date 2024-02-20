@@ -1,0 +1,32 @@
+.masterpiece-type {
+  padding-left: 1.34rem;
+  position: relative;
+  color: var(--orange);
+  &::before {
+    content: '';
+    width: 0.4rem;
+    background-color: var(--orange);
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+  }
+}
+
+.masterpiece-char {
+font-size: 1.8rem;
+font-weight: 700;
+line-height: 2.2rem;
+margin-top: 4rem;
+@include breakpoint($xl-bp) {
+  font-size: 1.4rem;
+  margin-top: 1rem;
+}
+}
+
+.masterpiece-desc {
+  margin-top: 4rem;
+  @include breakpoint($xl-bp) {
+    margin-top: 0.7rem;
+  }
+}

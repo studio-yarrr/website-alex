@@ -38,6 +38,9 @@
   width: 100%;
   grid-column: 1 / 2;
   grid-row: 1 / 2;
+  @include breakpoint($xl-bp) {
+    height: 28.5rem;
+  }
 }
 
 .mcontacts-socials {

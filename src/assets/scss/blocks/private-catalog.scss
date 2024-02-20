@@ -1,0 +1,71 @@
+.private-date {
+  font-weight: 500;
+  font-size: 3.2rem;
+  text-align: center;
+  color: var(--lgrey-2);
+  margin-top: 7rem;
+  position: relative;
+  z-index: 1;
+
+  @include breakpoint($xl-bp) {
+    font-size: 1.6rem;
+    line-height: 1.9rem;
+    margin-top: 2rem;
+  }
+}
+
+.private-pred {
+  font-weight: 700;
+  font-size: 4rem;
+  text-align: center;
+  color: var(--lgrey-2);
+  position: relative;
+  z-index: 1;
+  margin-top: 1rem;
+  font-family: 'PT Serif';
+
+  @include breakpoint($xl-bp) {
+    font-size: 2rem;
+  }
+}
+
+.private-btn {
+  position: relative;
+  z-index: 1;
+  padding-left: 4rem;
+  padding-right: 3.3rem;
+  margin-top: 4rem;
+}
+
+.private-catalog-swiper {
+  margin-top: 8rem;
+
+  .swiper-slide {
+    width: 24.4rem;
+    margin-right: 2.4rem;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+.private-bot-img {
+  height: 32.5rem;
+  border-radius: 0.3rem 0.3rem 0 0;
+  background-color: var(--lgrey);
+}
+
+.private-bot-text {
+  font-weight: 600;
+  font-size: 2.2rem;
+  text-align: center;
+  color: var(--lgrey-2);
+  border-radius: 0 0 0.3rem 0.3rem;
+  min-height: 8.1rem;
+  background-color: #313e47;
+  padding: 1.5rem 1rem 1.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

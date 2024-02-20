@@ -1,0 +1,56 @@
+.nearest-list {
+  margin-top: 8rem;
+  display: grid;
+  grid-template-columns: repeat(3, max(39.3rem));
+  justify-content: center;
+  gap: 3rem;
+  @include breakpoint($xl-bp) {
+    display: flex;
+    flex-direction: column  ;
+  }
+}
+.nearest-item {
+  a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba($color: #D0B787, $alpha: 0.1);
+    border: 0.2rem solid var(--orange);
+    border-radius: 0.2rem;
+    padding-top: 5.6rem;
+    min-height: 24.5rem;
+    transition: background-color .3s, color .3s;
+    @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      background-color: var(--lgrey-2);
+      color: var(--grey);
+      .nearest-btn {
+        opacity: 1;
+      }
+    }
+    }
+  }
+}
+.nearest-subtitle {
+  text-align: center;
+}
+.nearest-desc {
+  text-align: center;
+  margin-top: 3rem;
+}
+.nearest-btn {
+  display: inline-block;
+  padding-right: 2.78rem;
+  padding-left: 2.78rem;
+  margin-top: auto;
+  position: relative;
+  top: 2.9rem;
+  opacity: 0;
+  transition: opacity .3s;
+  @media (hover: hover) and (pointer: fine) {
+  &:hover {
+    background-color: var(--orange);
+    color: var(--grey);
+  }
+  }
+}

@@ -183,7 +183,7 @@ document.addEventListener("DOMContentLoaded", () => {
     return wrapper;
   }
 
-  const swiperWrappers = document.querySelectorAll('.main-wrapper, .minteresting')
+  const swiperWrappers = document.querySelectorAll('.main-wrapper, .minteresting, .masterpiece, .ngraph')
   if (swiperWrappers.length) {
     swiperWrappers.forEach(wrapper => {
       const swiper = wrapper.querySelector('.swiper');
@@ -209,7 +209,7 @@ document.addEventListener("DOMContentLoaded", () => {
     })
   }
   setTimeout(() => {
-    const swiperWrappersNoLoop = document.querySelectorAll('.mbelieve, .pokaz')
+    const swiperWrappersNoLoop = document.querySelectorAll('.mbelieve, .pokaz, .private-bot')
     if (swiperWrappersNoLoop.length) {
       swiperWrappersNoLoop.forEach(wrapper => {
         const swiper = wrapper.querySelector('.swiper');
@@ -283,7 +283,7 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     }
 
-    const phowswipers = document.querySelectorAll('.phow-swiper')
+    const phowswipers = document.querySelectorAll('.phow-swiper, .nhowto-swiper')
     if (phowswipers.length) {
       phowswipers.forEach(swiper => {
         const swiperpagination = swiper.querySelector('.swiper-pagination')

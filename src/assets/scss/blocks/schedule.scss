@@ -1,0 +1,30 @@
+.schedule-subtitle {
+  text-align: center;
+  margin-top: 4rem;
+}
+
+.schedule-list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20rem;
+  row-gap: 4rem;
+  margin-top: 4rem;
+}
+
+.schedule-item {
+  width: 42.6rem;
+  max-width: 100%;
+  display: grid;
+  grid-template-columns: 0.4fr 0.85fr;
+  justify-content: space-between;
+  row-gap: 1.6rem;
+}
+
+.schedule-date {
+  grid-row: 2 span;
+}
+
+.text-orange {
+  color: var(--orange);
+}

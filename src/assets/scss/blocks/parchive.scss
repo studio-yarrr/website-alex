@@ -33,6 +33,7 @@
     font-weight: 600;
   }
 }
+
 .parchive-desc {
   font-weight: 400;
   font-size: 1.8rem;
@@ -43,6 +44,11 @@
   @include breakpoint($xl-bp) {
     font-size: 1.2rem;
     margin-top: 1rem;
+  }
+}
+.dark {
+  .parchive-desc {
+    color: var(--lgrey-2);
   }
 }
 .parchive-bot {

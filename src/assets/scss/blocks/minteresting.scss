@@ -32,6 +32,13 @@
     left: 50%;
     transform: translate3d(-50%, 0, 0);
   }
+
+  &.--masterpiece {
+    .swiper-slide {
+
+      grid-template-rows: min-content minmax(6.5rem, min-content);
+    }
+  }
 }
 
 .minteresting-title {

@@ -1,0 +1,70 @@
+---
+layout: default
+title: Каталоги Аукциона Частных Коллекций №4
+---
+
+<section class="private-catalog">
+  <div class="main-wrapper">
+    <div class="swiper main-swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide main-item --private-catalog img-cover header-container">
+          <picture>
+            <source srcset="./assets/images/main/1-sm.jpg" media="(max-width:500px)">
+            <img src="./assets/images/private/1.jpg" alt="Аукцион Частных Коллекций">
+          </picture>
+
+          <h2 class="main-title">23 мая 2024</h2>
+          <h3 class="main-subtitle --private-catalog">Аукцион Частных Коллекций №4</h3>
+          <div class="private-date">13-22 мая 2024</div>
+          <div class="private-pred">Предаукционный показ</div>
+          <button class="private-btn btn-white">Получить приглашение</button>
+        </div>
+      </div>
+    </div>
+
+    <button class="arrow-swiper next"><svg>
+        <use xlink:href='./assets/images/sprite.svg#arrowR'></use>
+      </svg></button>
+    <button class="arrow-swiper prev"><svg>
+        <use xlink:href='./assets/images/sprite.svg#arrowL'></use>
+      </svg></button>
+  </div>
+  <div class="private-bot mt-80">
+    <h2 class="private-title h2 container">Каталоги Аукциона Частных Коллекций №4</h2>
+
+    <div class="swiper private-catalog-swiper container">
+      <div class="swiper-wrapper">
+        @for(let i=1;i<=5;i++) {
+          <div class="swiper-slide">
+            <div class="private-bot-img img-cover"></div>
+            <div class="private-bot-text">
+              Японское искусство <br>в 2 строчки
+            </div>
+          </div>
+        }
+      </div>
+    </div>
+  </div>
+</section>
+
+{{> masterpiece}}
+
+{{> pokaz}}
+
+{{> schedule}}
+
+{{> ptranslation}}
+
+{{> pgallery}}
+
+@include('./partials/implement.html',{title: 'Закрытые аукционные торги', btn: 'Принять участие в аукционе'})
+
+@include('./partials/phow.html',{title: 'Аукцион Частных Коллекций №4'})
+
+{{> pvariants}}
+
+{{> pfaq}}
+
+{{> mcontacts}}
+
+<div class="last-margin"></div>
