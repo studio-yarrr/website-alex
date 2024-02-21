@@ -87,18 +87,18 @@ svg {
   padding-left: 1.8rem;
 }
 
-.lazyload {
-  transition: opacity .3s;
-}
-
-img.lazyload {
-  opacity: 0;
+img.lazyload:not([src]) {
   visibility: hidden;
 }
 
-img {
-  animation: fadeEffect .3s;
-  transition: opacity .3s;
+.lazyload,
+.lazyloading {
+  opacity: 0;
+}
+
+.lazyloaded {
+  opacity: 1;
+  transition: opacity 300ms;
 }
 
 @keyframes fadeEffect {
@@ -210,6 +210,198 @@ img {
   }
 }
 
+.inp {
+  font-family: 'Fira Sans';
+  font-size: 1.8rem;
+  font-weight: 400;
+  line-height: 2.2rem;
+  color: var(--grey);
+  border: 0.2rem solid var(--grey);
+  border-radius: 0.2rem;
+  padding: 1rem;
+  height: 4.2rem;
+  background-color: transparent;
+
+  &::placeholder {
+    color: inherit;
+  }
+}
+
+.dark {
+  .inp {
+    border-color: var(--orange);
+    color: var(--orange);
+  }
+}
+
+.w-full {
+  width: 100%;
+}
+
+/* The container must be positioned relative: */
+.custom-select {
+  position: relative;
+}
+
+.custom-select select {
+  display: none;
+  /*hide original SELECT element: */
+}
+
+.select-selected {
+  border-bottom: 0.2rem solid var(--grey);
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.dark {
+  .select-selected {
+    border-color: var(--orange);
+    &::after {
+      background-image: url("data:image/svg+xml,%3Csvg width='18' height='10' viewBox='0 0 18 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M9 10L0.339745 0.249998L17.6603 0.25L9 10Z' fill='%23CDB98C'/%3E%3C/svg%3E%0A");
+    }
+  }
+}
+
+/* Style the arrow inside the select element: */
+.select-selected:after {
+  position: absolute;
+  content: "";
+  top: 50%;
+  transform: translateY(-50%);
+  right: 1.6rem;
+  width: 1.8rem;
+  height: 1rem;
+  transition: transform .3s;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  background-image: url("data:image/svg+xml,%3Csvg width='18' height='10' viewBox='0 0 18 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M9 10L0.339745 0.249998L17.6603 0.25L9 10Z' fill='%23343E47'/%3E%3C/svg%3E%0A");
+}
+
+/* Point the arrow upwards when the select box is open (active): */
+.select-selected.select-arrow-active:after {
+  // border-color: transparent transparent #fff transparent;
+  transform: translateY(-50%) rotate(180deg);
+}
+
+.select-arrow-active {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+/* style the items (options), including the selected item: */
+.select-items div,
+.select-selected {
+  color: var(--grey);
+  font-family: 'Fira Sans';
+  font-size: 1.8rem;
+  font-weight: 700;
+  line-height: 2.2rem;
+  padding: 1rem 0.75rem;
+}
+
+.dark {
+
+  .select-items div,
+  .select-selected {
+    color: var(--orange);
+  }
+
+  .select-items>div {
+    @media (hover: hover) and (pointer: fine) {
+      &:hover {
+        color: var(--white);
+      }
+    }
+  }
+}
+
+.select-items>div {
+  padding: 1rem 1.2rem;
+  cursor: pointer;
+  transition: color .3s;
+
+}
+
+/* Style items (options): */
+.select-items {
+  position: absolute;
+  background-color: var(--white);
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 99;
+  overflow: hidden;
+  box-shadow: 0px 0.5rem 1rem rgba(19, 33, 42, 0.15);
+  border: 0.1rem solid var(--grey);
+  border-top: 0;
+  animation: fadeEffect .3s;
+}
+
+.dark {
+  .select-items {
+    background-color: #161616;
+    border-color: var(--orange);
+  }
+}
+
+/* Hide the items when the select box is closed: */
+.select-hide {
+  display: none;
+}
+
+.select-items div:hover,
+.same-as-selected {
+  background-color: var(--lgreen);
+}
+
+.select-selected--active {
+  color: var(--black);
+}
+
+.pagination {
+  display: flex;
+  gap: 0.3rem;
+
+  a {
+    width: 4.2rem;
+    height: 4.2rem;
+    border: 0.2rem solid var(--grey);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Fira Sans';
+    font-size: 1.8rem;
+    font-weight: 400;
+    line-height: 2.2rem;
+    text-align: center;
+    color: var(--grey);
+    transition: border-color .3s, color .3s;
+    @media (hover: hover) and (pointer: fine) {
+      &:hover {
+        color: var(--orange);
+        border-color: var(--orange);
+      }
+      }
+  }
+}
+
+.dark {
+  .pagination {
+    a {
+      color: var(--orange);
+      border-color: var(--orange);
+      @media (hover: hover) and (pointer: fine) {
+      &:hover {
+        color: var(--lgrey-2);
+        border-color: var(--lgrey-2);
+      }
+      }
+    }
+  }
+}
+
 .mt-80 {
   margin-top: 8rem;
 
@@ -244,7 +436,6 @@ img {
 }
 
 .h4 {
-  font-family: 'Fira Sans';
   font-size: 2.2rem;
   font-weight: 600;
   line-height: 2.6rem;
@@ -255,10 +446,29 @@ img {
   }
 }
 
+.h5 {
+  font-size: 1.8rem;
+  font-weight: 400;
+  line-height: 2.2rem;
+}
+
 .h6 {
   font-size: 1.8rem;
   font-weight: 700;
   line-height: 2.2rem;
+}
+
+.h7 {
+font-size: 1.4rem;
+font-weight: 500;
+line-height: 1.8rem;
+}
+
+.h8 {
+font-size: 1.4rem;
+font-weight: 300;
+line-height: 1.8rem;
+
 }
 
 .xl-hidden {

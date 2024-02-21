@@ -373,6 +373,11 @@
       margin: 0 0.45rem;
     }
   }
+  .dark {
+    .swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
+      background: var(--orange);
+    }
+  }
   .swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
     background: var(--grey);
     position: absolute;

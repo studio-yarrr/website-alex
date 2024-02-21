@@ -1,0 +1,143 @@
+---
+layout: default
+title: Аукцион №132
+---
+
+<section class="lots">
+  <div class="lots-header">
+    <div class="lots-head container">
+      <h1 class="lots-title h2">Аукцион №132</h1>
+  
+      <h2 class="lots-info h5">
+        Закрытие аукциона: 25 января с 12:00 <br>
+        Просмотр лотов в офисе Аукционного Дома с 18 по 24 января с 11 до 19 ч.
+      </h2>
+    </div>
+  
+    <div class="lots-filter container">
+      <form action="#" class="lots-row">
+        <input type="text" class="inp lots-input" placeholder="Название" name="name">
+        <input type="number" class="inp lots-number" placeholder="Номер лота" name="lotnumber">
+        <div class="lots-years">
+          <div class="lots-ytext h5">Год</div>
+          <div class="lots-ylist">
+            <input type="number" name="year-from" class="inp lots-year">
+            <span class="lots-line">–</span>
+            <input type="number" name="year-to" class="inp lots-year">
+          </div>
+        </div>
+    
+        <ul class="pagination lots-pagination">
+          <li><a href="#">&lt;</a></li>
+          <li><a href="#">1</a></li>
+          <li><a href="#">2</a></li>
+          <li><a href="#">...</a></li>
+          <li><a href="#">26</a></li>
+          <li><a href="#">&gt;</a></li>
+        </ul>
+  
+        <button type="reset" class="lots-reset">
+          Сброс
+        </button>
+  
+        <div class="lots-views">
+          <button type="button" class="lots-view" data-view="--plane" aria-label="plane view">
+            <svg><use xlink:href='./assets/images/sprite.svg#planeview'></use></svg>
+          </button>
+          <button type="button" class="lots-view selected" data-view="--box" aria-label="plane view">
+            <svg><use xlink:href='./assets/images/sprite.svg#boxview'></use></svg>
+          </button>
+        </div>
+      </form>
+  
+      <div class="lots-selects">
+        <div class="custom-select w-full">
+          <select name="category">
+            <option value="none">Категория</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+          </select>
+        </div>
+        <div class="custom-select w-full">
+          <select name="material">
+            <option value="none">Металл</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+          </select>
+        </div>
+        <div class="custom-select w-full">
+          <select name="state">
+            <option value="none">Состояние</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+          </select>
+        </div>
+        <div class="custom-select w-full">
+          <select name="sort">
+            <option value="none">Сортировка</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+          </select>
+        </div>
+      </div>
+  
+    </div>
+  </div>
+
+  <ul class="lots-list container" data-content="--box">
+    @for(i=1;i<=12;i++){
+    <li class="lots-item">
+      <div class="lots-top">
+        <div class="lots-buttons">
+          <button class="lots-favor" onclick="this.classList.toggle('selected')">
+            <svg><use xlink:href='./assets/images/sprite.svg#star'></use></svg>
+          </button>
+          <button class="lots-doc">
+            <svg><use xlink:href='./assets/images/sprite.svg#doc'></use></svg>
+          </button>
+        </div>
+        <div class="lots-num h7 text-orange">Лот №111</div>
+        <div class="lots-date h8">23.02 в 12.00</div>
+      </div>
+      <a href="lot.html" class="lots-link text-orange">
+        <h3 class="lots-name h7">
+          Название монеты или медали
+          Название монеты или медали
+        </h3>
+      </a>
+
+      <div class="lots-images">
+        <div class="lots-img img-contain">
+          <img src="./assets/images/lots/1.png" alt="Название монеты или медали">
+        </div>
+        <div class="lots-img img-contain">
+          <img src="./assets/images/lots/1.png" alt="Название монеты или медали">
+        </div>
+      </div>
+
+      <h4 class="lots-material h8">
+        Серебро, XF 45 <br>Серебро, XF 45
+      </h4>
+
+      <div class="lots-form">
+        <input type="number" class="lots-stavka" name="stavka" value="70900">
+        <button type="submit" class="lots-submit btn">Ставка</button>
+      </div>
+    </li>
+    }
+  </ul>
+  <div class="lots-bot container">
+    <ul class="pagination lots-pagination">
+      <li><a href="#">&lt;</a></li>
+      <li><a href="#">1</a></li>
+      <li><a href="#">2</a></li>
+      <li><a href="#">...</a></li>
+      <li><a href="#">26</a></li>
+      <li><a href="#">&gt;</a></li>
+    </ul>
+  </div>
+</section>
+
+@include('./partials/lotsswiper.html', {title: 'Некоторые лоты текущего аукциона'})
+
+<div class="last-margin"></div>

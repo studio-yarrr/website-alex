@@ -4,20 +4,47 @@
 
 .nhowto-swiper {
   margin-top: 8rem;
+  padding-bottom: 8rem;
   .swiper-slide {
-    width: 35rem;
+    width: 36rem;
     margin-right: 4rem;
-    &:last-child {
-      margin-right: 0;
-    }
+  }
+
+  .swiper-pagination-progressbar {
+    bottom: 0;
+    left: 50%;
+    height: 0.7rem;
+    width: 71rem;
+    transform: translate3d(-50%, 0, 0);
   }
 }
 
 
 .nhowto-img {
   height: 13.5rem;
+  img {
+    object-position: left;
+  }
 }
 
 .nhowto-subtitle {
+  padding-left: 1rem;
+  margin-top: 4.5rem;
+}
 
+.nhowto-bot {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  margin-top: 4.5rem;
+}
+
+.nhowto-calc {
+  width: 22.4rem;
+  height: 13.5rem;
+}
+.nhowto-commission {
+  max-width: 90.9rem;
 }

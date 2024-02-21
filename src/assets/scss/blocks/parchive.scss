@@ -8,10 +8,28 @@
     margin-top: 3rem;
     gap: 2rem;
   }
+
+  &.--gap-140 {
+    gap: 14rem;
+    @include breakpoint($xl-bp) {
+      gap: 2rem;
+    }
+  }
 }
 .parchive-item {
   width: 32.8rem;
   max-width: 100%;
+  a {
+    @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      .parchive-img {
+        img {
+          transform: scale(1.05);
+        }
+      }
+    }
+    }
+  }
 }
 .parchive-img {
   width: 100%;
@@ -19,6 +37,10 @@
   border-radius: 0.3rem;
   @include breakpoint($xl-bp) {
     height: 20rem;
+  }
+
+  img {
+    transition: transform .3s;
   }
 }
 .parchive-subtitle {
@@ -45,6 +67,12 @@
     font-size: 1.2rem;
     margin-top: 1rem;
   }
+  &.--mt-15 {
+    margin-top: 1.5rem;
+    @include breakpoint($xl-bp) {
+      margin-top: 1rem;
+    }
+  }
 }
 .dark {
   .parchive-desc {
@@ -58,5 +86,9 @@
   justify-content: center;
   @include breakpoint($xl-bp) {
     margin-top: 3rem;
+  }
+
+  &.--mt-70 {
+    margin-top: 7rem;
   }
 }

@@ -23,6 +23,10 @@
 .ngraph-swiper {
   padding-left: 6.3rem;
   padding-right: 6.3rem;
+  @include breakpoint($xl-bp) {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
   .swiper-slide {
     margin-right: 7rem;
   }
