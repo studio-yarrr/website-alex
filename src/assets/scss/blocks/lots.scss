@@ -1,4 +1,3 @@
-
 .lots-header {
   padding-top: 4rem;
   padding-bottom: 3rem;
@@ -9,9 +8,11 @@
   align-items: center;
   max-width: 150rem;
   margin: 0 auto;
+
   @include breakpoint($cos-bp) {
     max-width: 114.3rem;
   }
+
   @include breakpoint($xl-bp) {
     flex-direction: column;
   }
@@ -28,15 +29,17 @@
 }
 
 .lots-number {
-  width: 11.9rem;
+  width: 12.4rem;
 }
 
 .lots-info {
   padding-left: 14.2rem;
   position: relative;
+
   @include breakpoint($xl-bp) {
     padding-left: 0;
   }
+
   &::before {
     content: '';
     position: absolute;
@@ -46,6 +49,7 @@
     transform: translateY(-50%);
     width: 0.2rem;
     background-color: var(--grey);
+
     @include breakpoint($xl-bp) {
       content: normal;
     }
@@ -71,6 +75,7 @@
   display: flex;
   justify-content: space-between;
   gap: 1rem;
+
   @include breakpoint($xl-bp) {
     flex-direction: column;
   }
@@ -80,6 +85,7 @@
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 4rem;
+
   @include breakpoint($xl-bp) {
     display: flex;
     flex-direction: column;
@@ -210,14 +216,17 @@
 
 .lots-list[data-content="--plane"] {
   grid-template-columns: repeat(2, 1fr);
+
   .lots-item {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
+
     @include breakpoint($xl-bp) {
       flex-direction: column;
     }
   }
+
   @include breakpoint($xl-bp) {
     display: flex;
     flex-direction: column;
@@ -274,6 +283,7 @@
   height: 1.3rem;
   fill: var(--orange);
   flex: 0 0 auto;
+
   @media (hover: hover) and (pointer: fine) {
     &:hover {
       fill: var(--lgrey-2);
@@ -292,10 +302,11 @@
 
 .lots-link {
   transition: color .3s;
+
   @media (hover: hover) and (pointer: fine) {
-  &:hover {
-    color: var(--lgrey-2);
-  }
+    &:hover {
+      color: var(--lgrey-2);
+    }
   }
 }
 
@@ -371,4 +382,112 @@
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.radio-container {
+  position: relative;
+}
+
+.radio-btn {
+  width: 100%;
+  text-align: start;
+  border-bottom: 0.2rem solid var(--grey);
+  background-color: transparent;
+  cursor: pointer;
+  color: var(--grey);
+  font-family: 'Fira Sans';
+  font-size: 1.8rem;
+  font-weight: 700;
+  line-height: 2.2rem;
+  padding: 1rem 0.75rem;
+  padding-right: 3.5rem;
+}
+
+.radio-btn:after {
+  position: absolute;
+  content: "";
+  top: 50%;
+  transform: translateY(-50%);
+  right: 1.6rem;
+  width: 1.8rem;
+  height: 1rem;
+  transition: transform .3s;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  background-image: url("data:image/svg+xml,%3Csvg width='18' height='10' viewBox='0 0 18 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M9 10L0.339745 0.249998L17.6603 0.25L9 10Z' fill='%23343E47'/%3E%3C/svg%3E%0A");
+}
+
+.radio-btn.select-arrow-active:after {
+  // border-color: transparent transparent #fff transparent;
+  transform: translateY(-50%) rotate(180deg);
+}
+.radio-btn.select-arrow-active + .radio-list {
+  display: block;
+}
+
+.dark {
+  .radio-btn {
+    color: var(--orange);
+  }
+}
+
+.dark {
+  .radio-btn {
+    border-color: var(--orange);
+
+    &::after {
+      background-image: url("data:image/svg+xml,%3Csvg width='18' height='10' viewBox='0 0 18 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M9 10L0.339745 0.249998L17.6603 0.25L9 10Z' fill='%23CDB98C'/%3E%3C/svg%3E%0A");
+    }
+  }
+}
+
+.radio-list {
+  position: absolute;
+  background-color: var(--lgrey-2);
+  top: calc(100% + 0.1rem);
+  left: 0;
+  right: 0;
+  z-index: 99;
+  overflow: hidden;
+  box-shadow: 0px 0.5rem 1rem rgba(19, 33, 42, 0.15);
+  animation: fadeEffect .3s;
+  padding: 1.2rem 1.9rem;
+  border-radius: 0.3rem;
+  display: none;
+}
+
+.radio-item {
+  padding: 0.5rem 0;
+}
+
+.radio-label {
+  display: flex;
+  gap: 0.8rem;
+  align-items: baseline;
+  input {
+    position: absolute;
+    pointer-events: none;
+    opacity: 0;
+    &:checked + .radio-box {
+      background-color: var(--orange);
+    }
+  }
+}
+
+.radio-box {
+  width: 1.3rem;
+  height: 1.3rem;
+  background-color: var(--lgrey-2);
+  border: 1px solid var(--orange);
+  border-radius: 0.2rem;
+  display: inline-block;
+  transition: background-color .3s;
+}
+
+.radio-text {
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 112%;
+  color: var(--black);
 }

@@ -1,5 +1,5 @@
-<div class="lots-filter container">
-  <form action="#" class="lots-row">
+<form action="#" class="lots-filter container">
+  <div class="lots-row">
     <input type="text" class="inp lots-input" placeholder="Название" name="name">
     <input type="number" class="inp lots-number" placeholder="Номер лота" name="lotnumber">
     <div class="lots-years">
@@ -32,37 +32,160 @@
         <svg><use xlink:href='./assets/images/sprite.svg#boxview'></use></svg>
       </button>
     </div>
-  </form>
+  </div>
 
   <div class="lots-selects">
-    <div class="custom-select w-full">
-      <select name="category">
-        <option value="none">Категория</option>
-        <option value="1">1</option>
-        <option value="2">2</option>
-      </select>
+
+    <div class="radio-container">
+      <button type="button" class="radio-btn">Категория</button>
+
+      <ul class="radio-list">
+        <li class="radio-item">
+          <label class="radio-label">
+            <input type="checkbox" name="Литература">
+            <span class="radio-box"></span>
+            <span class="radio-text">Литература</span>
+          </label>
+        </li>
+        <li class="radio-item">
+          <label class="radio-label">
+            <input type="checkbox" name="Бумаги">
+            <span class="radio-box"></span>
+            <span class="radio-text">Бумаги</span>
+          </label>
+        </li>
+        <li class="radio-item">
+          <label class="radio-label">
+            <input type="checkbox" name="Монеты России до 1917 года ">
+            <span class="radio-box"></span>
+            <span class="radio-text">Монеты России до 1917 года</span>
+          </label>
+        </li>
+        <li class="radio-item">
+          <label class="radio-label">
+            <input type="checkbox" name="Монеты РСФСР, СССР, России">
+            <span class="radio-box"></span>
+            <span class="radio-text">Монеты РСФСР, СССР, России</span>
+          </label>
+        </li>
+        <li class="radio-item">
+          <label class="radio-label">
+            <input type="checkbox" name="Монеты иностранные">
+            <span class="radio-box"></span>
+            <span class="radio-text">Монеты иностранные</span>
+          </label>
+        </li>
+        <li class="radio-item">
+          <label class="radio-label">
+            <input type="checkbox" name="Монеты антика, средневековье">
+            <span class="radio-box"></span>
+            <span class="radio-text">Монеты антика, средневековье</span>
+          </label>
+        </li>
+        <li class="radio-item">
+          <label class="radio-label">
+            <input type="checkbox" name="Награды, знаки, жетоны">
+            <span class="radio-box"></span>
+            <span class="radio-text">Награды, знаки, жетоны</span>
+          </label>
+        </li>
+
+        <li class="radio-item">
+          <label class="radio-label">
+            <input type="checkbox" name="Групповые лоты">
+            <span class="radio-box"></span>
+            <span class="radio-text">Групповые лоты</span>
+          </label>
+        </li>
+
+      </ul>
     </div>
-    <div class="custom-select w-full">
-      <select name="material">
-        <option value="none">Металл</option>
-        <option value="1">1</option>
-        <option value="2">2</option>
-      </select>
+
+    <div class="radio-container">
+      <button type="button" class="radio-btn">Категория</button>
+
+      <ul class="radio-list">
+        <li class="radio-item">
+          <label class="radio-label">
+            <input type="checkbox" name="Алюминиевая бронза">
+            <span class="radio-box"></span>
+            <span class="radio-text">Алюминиевая бронза</span>
+          </label>
+        </li>
+        <li class="radio-item">
+          <label class="radio-label">
+            <input type="checkbox" name="Алюминий">
+            <span class="radio-box"></span>
+            <span class="radio-text">Алюминий</span>
+          </label>
+        </li>
+        <li class="radio-item">
+          <label class="radio-label">
+            <input type="checkbox" name="Бронза">
+            <span class="radio-box"></span>
+            <span class="radio-text">Бронза</span>
+          </label>
+        </li>
+        <li class="radio-item">
+          <label class="radio-label">
+            <input type="checkbox" name="Золото">
+            <span class="radio-box"></span>
+            <span class="radio-text">Золото</span>
+          </label>
+        </li>
+        <li class="radio-item">
+          <label class="radio-label">
+            <input type="checkbox" name="Латунь">
+            <span class="radio-box"></span>
+            <span class="radio-text">Латунь</span>
+          </label>
+        </li>
+        <li class="radio-item">
+          <label class="radio-label">
+            <input type="checkbox" name="Медно-никелевый сплав">
+            <span class="radio-box"></span>
+            <span class="radio-text">Медно-никелевый сплав</span>
+          </label>
+        </li>
+        <li class="radio-item">
+          <label class="radio-label">
+            <input type="checkbox" name="Медь">
+            <span class="radio-box"></span>
+            <span class="radio-text">Медь</span>
+          </label>
+        </li>
+
+        <li class="radio-item">
+          <label class="radio-label">
+            <input type="checkbox" name="Платина">
+            <span class="radio-box"></span>
+            <span class="radio-text">Платина</span>
+          </label>
+        </li>
+
+        <li class="radio-item">
+          <label class="radio-label">
+            <input type="checkbox" name="Серебро">
+            <span class="radio-box"></span>
+            <span class="radio-text">Серебро</span>
+          </label>
+        </li>
+        
+      </ul>
     </div>
-    <div class="custom-select w-full">
-      <select name="state">
-        <option value="none">Состояние</option>
-        <option value="1">1</option>
-        <option value="2">2</option>
-      </select>
-    </div>
+
+    <input type="text" class="inp lots-input" placeholder="Состояние" name="state">
+    
     <div class="custom-select w-full">
       <select name="sort">
         <option value="none">Сортировка</option>
-        <option value="1">1</option>
-        <option value="2">2</option>
+        <option value="Возрастание номера лота">Возрастание номера лота</option>
+        <option value="Убывание номера лота">Убывание номера лота</option>
+        <option value="Сначала дешевле">Сначала дешевле</option>
+        <option value="Сначала дороже">Сначала дороже</option>
+        <option value="По лучшему состоянию">По лучшему состоянию</option>
       </select>
     </div>
   </div>
 
-</div>
+</form>

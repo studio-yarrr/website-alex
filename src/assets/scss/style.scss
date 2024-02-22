@@ -358,7 +358,6 @@ img.lazyload:not([src]) {
 }
 
 /* style the items (options), including the selected item: */
-.select-items div,
 .select-selected {
   color: var(--grey);
   font-family: 'Fira Sans';
@@ -366,51 +365,40 @@ img.lazyload:not([src]) {
   font-weight: 700;
   line-height: 2.2rem;
   padding: 1rem 0.75rem;
+  padding-right: 3.5rem;
 }
 
 .dark {
-
-  .select-items div,
   .select-selected {
     color: var(--orange);
-  }
-
-  .select-items>div {
-    @media (hover: hover) and (pointer: fine) {
-      &:hover {
-        color: var(--white);
-      }
-    }
   }
 }
 
 .select-items>div {
-  padding: 1rem 1.2rem;
+  padding: 0.5rem 1.7rem;
   cursor: pointer;
   transition: color .3s;
-
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 112%;
+  color: var(--black); 
+  transition: background-color .3s;
+  border-radius: 0.2rem;
 }
 
 /* Style items (options): */
 .select-items {
   position: absolute;
-  background-color: var(--white);
-  top: 100%;
+  background-color: var(--lgrey-2);
+  top: calc(100% + 0.1rem);
   left: 0;
   right: 0;
   z-index: 99;
   overflow: hidden;
   box-shadow: 0px 0.5rem 1rem rgba(19, 33, 42, 0.15);
-  border: 0.1rem solid var(--grey);
-  border-top: 0;
   animation: fadeEffect .3s;
-}
-
-.dark {
-  .select-items {
-    background-color: #161616;
-    border-color: var(--orange);
-  }
+  padding: 1.2rem 1.9rem;
+  border-radius: 0.3rem;
 }
 
 /* Hide the items when the select box is closed: */
@@ -420,7 +408,7 @@ img.lazyload:not([src]) {
 
 .select-items div:hover,
 .same-as-selected {
-  background-color: var(--lgreen);
+  background-color: var(--orange);
 }
 
 .select-selected--active {
@@ -445,7 +433,10 @@ img.lazyload:not([src]) {
     text-align: center;
     color: var(--grey);
     transition: border-color .3s, color .3s;
-
+    &.active {
+      color: var(--orange);
+      border-color: var(--orange);
+    }
     @media (hover: hover) and (pointer: fine) {
       &:hover {
         color: var(--orange);
@@ -460,7 +451,10 @@ img.lazyload:not([src]) {
     a {
       color: var(--orange);
       border-color: var(--orange);
-
+      &.active {
+        color: var(--lgrey-2);
+        border-color: var(--lgrey-2);
+      }
       @media (hover: hover) and (pointer: fine) {
         &:hover {
           color: var(--lgrey-2);

@@ -485,6 +485,14 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
+  const radionbtns = document.querySelectorAll('.radio-container .radio-btn')
+  if (radionbtns.length) {
+    radionbtns.forEach(btn => {
+      btn.addEventListener('click', function () { 
+        this.classList.toggle('select-arrow-active')
+      })
+    })
+  }
 });
 
 
