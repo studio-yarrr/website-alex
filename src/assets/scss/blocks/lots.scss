@@ -9,6 +9,9 @@
   align-items: center;
   max-width: 114.3rem;
   margin: 0 auto;
+  @include breakpoint($xl-bp) {
+    flex-direction: column;
+  }
 }
 
 .dark {
@@ -28,7 +31,9 @@
 .lots-info {
   padding-left: 14.2rem;
   position: relative;
-
+  @include breakpoint($xl-bp) {
+    padding-left: 0;
+  }
   &::before {
     content: '';
     position: absolute;
@@ -38,6 +43,9 @@
     transform: translateY(-50%);
     width: 0.2rem;
     background-color: var(--grey);
+    @include breakpoint($xl-bp) {
+      content: normal;
+    }
   }
 }
 
@@ -59,12 +67,20 @@
 .lots-row {
   display: flex;
   justify-content: space-between;
+  gap: 1rem;
+  @include breakpoint($xl-bp) {
+    flex-direction: column;
+  }
 }
 
 .lots-selects {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 4rem;
+  @include breakpoint($xl-bp) {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 .lots-years {
