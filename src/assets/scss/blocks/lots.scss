@@ -210,7 +210,14 @@
 
 .lots-list[data-content="--plane"] {
   grid-template-columns: repeat(2, 1fr);
-
+  .lots-item {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    @include breakpoint($xl-bp) {
+      flex-direction: column;
+    }
+  }
   @include breakpoint($xl-bp) {
     display: flex;
     flex-direction: column;
@@ -275,12 +282,12 @@
 }
 
 .lots-num {
-  margin-right: auto;
   margin-left: 1rem;
 }
 
 .lots-date {
   color: var(--lgrey-2);
+  margin-right: 1rem;
 }
 
 .lots-link {
@@ -294,7 +301,7 @@
 
 .lots-name {
   max-width: 19.8rem;
-  margin-top: 0.2rem;
+  margin-top: 1.5rem;
 }
 
 .lots-images {
@@ -311,17 +318,18 @@
 }
 
 .lots-material {
-  margin: 0 auto;
+  margin-right: auto;
   color: var(--lgrey-2);
 }
 
 .lots-form {
   display: grid;
-  grid-template-columns: repeat(2, 10.3rem);
-  gap: 3rem;
+  grid-template-columns: 8.4rem 7.5rem;
+  gap: 1.8rem;
   align-items: center;
   justify-content: center;
   margin-top: 0.5rem;
+  margin-left: 1rem;
 }
 
 .lots-stavka {
@@ -348,6 +356,14 @@
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.lots-botitem {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 2.4rem;
+  padding-left: 0.4rem;
 }
 
 .lots-bot {

@@ -1,0 +1,68 @@
+<div class="lots-filter container">
+  <form action="#" class="lots-row">
+    <input type="text" class="inp lots-input" placeholder="Название" name="name">
+    <input type="number" class="inp lots-number" placeholder="Номер лота" name="lotnumber">
+    <div class="lots-years">
+      <div class="lots-ytext h5">Год</div>
+      <div class="lots-ylist">
+        <input type="number" name="year-from" class="inp lots-year">
+        <span class="lots-line">–</span>
+        <input type="number" name="year-to" class="inp lots-year">
+      </div>
+    </div>
+
+    <ul class="pagination lots-pagination">
+      <li><a href="#">&lt;</a></li>
+      <li><a href="#">1</a></li>
+      <li><a href="#">2</a></li>
+      <li><a href="#">...</a></li>
+      <li><a href="#">26</a></li>
+      <li><a href="#">&gt;</a></li>
+    </ul>
+
+    <button type="reset" class="lots-reset">
+      Сброс
+    </button>
+
+    <div class="lots-views">
+      <button type="button" class="lots-view" data-view="--plane" aria-label="plane view">
+        <svg><use xlink:href='./assets/images/sprite.svg#planeview'></use></svg>
+      </button>
+      <button type="button" class="lots-view selected" data-view="--box" aria-label="plane view">
+        <svg><use xlink:href='./assets/images/sprite.svg#boxview'></use></svg>
+      </button>
+    </div>
+  </form>
+
+  <div class="lots-selects">
+    <div class="custom-select w-full">
+      <select name="category">
+        <option value="none">Категория</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+      </select>
+    </div>
+    <div class="custom-select w-full">
+      <select name="material">
+        <option value="none">Металл</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+      </select>
+    </div>
+    <div class="custom-select w-full">
+      <select name="state">
+        <option value="none">Состояние</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+      </select>
+    </div>
+    <div class="custom-select w-full">
+      <select name="sort">
+        <option value="none">Сортировка</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+      </select>
+    </div>
+  </div>
+
+</div>
