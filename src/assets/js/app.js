@@ -410,6 +410,81 @@ document.addEventListener("DOMContentLoaded", () => {
     })
   }
 
+  const lotWrapper = document.querySelector('.lot-wrapper');
+
+  if (lotWrapper) {
+    const swiper = lotWrapper.querySelector('.lot-swiper');
+    const tmb = lotWrapper.querySelector('.lot-thumbs')
+    const slides = swiper.querySelectorAll('.swiper-slide img');
+
+    if (swiper && slides.length) {
+
+      const wrap = tmb.querySelector('.swiper-wrapper')
+      if (wrap) {
+        slides.forEach(img => {
+          const slide = document.createElement('div')
+          slide.classList.add('swiper-slide', 'img-contain')
+          slide.appendChild(img.cloneNode(true))
+          wrap.appendChild(slide);
+        })
+      }
+
+
+
+      const thumbs = new Swiper(tmb, {
+        direction: 'vertical',
+        loop: false,
+        slidesPerView: 'auto',
+        grabCursor: true,
+        slideToClickedSlide: true,
+      })
+
+      const thumbsSlides = tmb.querySelectorAll('.swiper-slide');
+
+      if (thumbsSlides.length) {
+        thumbsSlides.forEach((el, i) => {
+          el.addEventListener('click', function () {
+            thumbsSlides.forEach(thm => {
+              thm.classList.remove('active');
+            })
+            this.classList.add('active')
+            mainSwiper.slideTo(i);
+          })
+        })
+      }
+
+      const mainSwiper = new Swiper(swiper, {
+        loop: false,
+        slidesPerView: 1,
+        grabCursor: true,
+        on: {
+          slideChange: function () {
+            if (thumbs) {
+              if (thumbs.slides.length) {
+                const slides = Array.from(thumbs.slides)
+                slides.forEach(el => {
+                  el.classList.remove('active');
+                })
+                slides[this.activeIndex].classList.add('active')
+              }
+            }
+          },
+          init: function () {
+            if (thumbs.slides.length) {
+              const slides = Array.from(thumbs.slides)
+              slides[this.activeIndex].classList.add('active')
+            }
+          }
+        }
+      })
+
+      mainSwiper.controller.control = thumbs
+      thumbs.controller.control = mainSwiper
+
+
+    }
+  }
+
 });
 
 

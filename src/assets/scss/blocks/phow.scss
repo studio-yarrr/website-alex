@@ -6,11 +6,18 @@
 }
 
 .phow-swiper {
+  padding-left: 2rem;
+  padding-right: 2rem;
   margin-top: 8rem;
   padding-bottom: 8rem;
   @include breakpoint($xl-bp) {
     margin-top: 3rem;
     padding-bottom: 3rem;
+    padding-right: 1rem;
+    padding-left: 1rem;
+  }
+  .swiper-wrapper {
+
   }
   .swiper-slide {
     width: 23.9rem;

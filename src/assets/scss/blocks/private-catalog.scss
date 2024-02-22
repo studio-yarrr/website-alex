@@ -39,7 +39,12 @@
 
 .private-catalog-swiper {
   margin-top: 8rem;
-
+  .swiper-wrapper {
+    justify-content: center;
+    @include breakpoint($cos-bp) {
+      justify-content: flex-start;
+    }
+  }
   .swiper-slide {
     width: 24.4rem;
     margin-right: 2.4rem;

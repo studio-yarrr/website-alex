@@ -1,19 +1,10 @@
 ---
-layout: dark
+layout: default
 title: Название лота
 ---
 
 <section class="lot">
   <h1 class="h2 lot-title container">Название лота</h1>
-
-  <ul class="breadcrumbs h7 container">
-    <li class="breadcrumbs-home"><a href="main.html"><svg>
-          <use xlink:href='./assets/images/sprite.svg#home'></use>
-        </svg></a></li>
-    <li class="breadcrumbs-li"><a href="numis.html">Аукцион</a></li>
-    <li class="breadcrumbs-li"><a href="lots.html">Аукцион №131</a></li>
-    <li class="breadcrumbs-li"><span>лот №1</span></li>
-  </ul>
 
   <div class="lot-container">
 
@@ -35,8 +26,8 @@ title: Название лота
         <div class="swiper lot-swiper">
           <div class="swiper-wrapper">
             @for(i=1;i<=5;i++) {
-            <a href="./assets/images/lot/2.png" data-fancybox="lot" class="swiper-slide img-contain">
-              <img src="./assets/images/lot/2.png" alt="lot">
+            <a href="./assets/images/lot/1.png" data-fancybox="lot" class="swiper-slide img-contain">
+              <img src="./assets/images/lot/1.png" alt="lot">
             </a>
             }
           </div>
@@ -52,10 +43,9 @@ title: Название лота
 
     <div class="lot-info">
       <div class="lot-top h4">
-        <div class="lot-num text-orange">Лот №111</div>
+        <div class="lot-num text-orange"><div class="lot-star2"><svg><use xlink:href='./assets/images/sprite.svg#star'></use></svg></div> Лот №111</div>
         <div class="lot-close">Закрытие лота: 23.02 в 12.00</div>
       </div>
-      <div class="lot-cur h4 text-orange">Текущая цена: 67 800 ₽</div>
 
       <div class="lot-mid">
         <form action="#" class="lot-form">
@@ -65,9 +55,6 @@ title: Название лота
 
         <ul class="lot-do">
           <li class="lot-doitem">
-            <button class="lot-star"><svg><use xlink:href='./assets/images/sprite.svg#star2'></use></svg></button>
-          </li>
-          <li class="lot-doitem">
             <a class="lot-down" href="#"><svg><use xlink:href='./assets/images/sprite.svg#down'></use></svg></a>
           </li>
           <li class="lot-doitem">
@@ -76,12 +63,7 @@ title: Название лота
         </ul>
       </div>
 
-      <ul class="lot-list">
-        <li><span class="h5">Год:</span> <span class="h6">1843</span></li>
-        <li><span class="h5">Буквы:</span> <span class="h6">СПБ-АЧ</span></li>
-        <li><span class="h5">Металл:</span> <span class="h6">Серебро</span></li>
-        <li><span class="h5">Состояние:</span> <span class="h6">XF 45</span></li>
-      </ul>
+      <div class="lot-cur h4">Текущая цена: 67 800 ₽</div>
 
       <div class="lot-table-container mt-18">
         <table class="lot-table table">
@@ -92,7 +74,7 @@ title: Название лота
               <td>Время</td>
             </tr>
           </thead>
-          <tbody class="scroll">
+          <tbody class="scroll max-h-200">
             @for(i=0;i<=10;i++) {
               <tr>
                 <td>65 300 ₽ </td>
@@ -114,6 +96,6 @@ title: Название лота
   </div>
 </section>
 
-@include('./partials/lotsswiper.html', {title: 'Вы смотрели'})
+@include('./partials/lotsswiperLight.html', {title: 'Вы смотрели'})
 
 <div class="last-margin"></div>

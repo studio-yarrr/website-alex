@@ -3,6 +3,12 @@
 }
 .lotsswiper-swiper {
   margin-top: 8rem;
+  .swiper-wrapper {
+    justify-content: center;
+    @include breakpoint($cos-bp) {
+      justify-content: flex-start;
+    }
+  }
   .swiper-slide {
     background-color: var(--black);
     border: 0.1rem solid var(--orange);
@@ -21,6 +27,14 @@
       padding: 1rem 2.3rem;
       display: block;
     }
+    &.--light {
+      background-color: var(--lgrey-2);
+      .lotsswiper-material,
+      .lotsswiper-name,
+      .lotsswiper-num {
+        color: var(--grey);
+      }
+    }
   }
 }
 .lotsswiper-img {
@@ -30,6 +44,4 @@
 }
 .lotsswiper-name {
   margin-top: 0.5rem;
-}
-.lotsswiper-material {
 }

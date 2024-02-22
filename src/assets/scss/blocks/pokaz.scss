@@ -103,6 +103,13 @@
   @include breakpoint($xl-bp) {
     margin-top: 2rem;
   }
+
+  .swiper-wrapper {
+    justify-content: center;
+    @include breakpoint($xl-bp) {
+      justify-content: flex-start;
+    }
+  }
 }
 
 .pokaz-subimg {

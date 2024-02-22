@@ -6,7 +6,10 @@
 }
 
 .mfound-bg {
-  height: 16rem;
+  height: 20rem;
+  @include breakpoint($cos-bp) {
+    height: 16rem;
+  }
   @include breakpoint($xl-bp) {
     height: 12.1rem;
   }

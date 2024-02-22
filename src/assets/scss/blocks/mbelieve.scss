@@ -9,6 +9,12 @@
   @include breakpoint($xl-bp) {
     margin-top: 3rem;
   }
+  .swiper-wrapper {
+    justify-content: center;
+    @include breakpoint($cos-bp) {
+      justify-content: flex-start;
+    }
+  }
 }
 .mbelieve-item {
   width: 30.7rem;
