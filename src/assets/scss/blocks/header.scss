@@ -13,11 +13,13 @@
   align-items: center;
   justify-content: space-between;
   gap: 1.8rem;
+  transform: translate3d(0, 0, 0);
   @include breakpoint($xl-bp) {
     padding-top: 1.5rem;
     padding-bottom: 1.5rem;
     will-change: auto;
     transition: none;
+    transform: none;
   }
 }
 

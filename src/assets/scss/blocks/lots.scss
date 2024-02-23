@@ -24,12 +24,27 @@
   }
 }
 
+.--light {
+  .lots-input {
+    width: 100%;
+  }
+}
+
 .lots-input {
   width: 30rem;
+  font-weight: 700;
+  &.--light { 
+    width: 100%;
+  }
 }
 
 .lots-number {
-  width: 12.4rem;
+  width: 12rem;
+  font-weight: 700;
+
+  &.--light {
+    width: 100%;
+  }
 }
 
 .lots-info {
@@ -79,6 +94,12 @@
   @include breakpoint($xl-bp) {
     flex-direction: column;
   }
+
+  &.--light {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 4rem;
+  }
 }
 
 .lots-selects {
@@ -103,6 +124,14 @@
   align-items: center;
   color: var(--grey);
   gap: 2rem;
+
+  &.--light {
+    width: 100%;
+    justify-content: space-between;
+    .lots-year {
+      width: 12rem;
+    }
+  }
 }
 
 .lots-ytext {
@@ -129,6 +158,11 @@
 .lots-year {
   width: 8.8rem;
   border-radius: 0;
+  font-weight: 700;
+  font-size: 1.8rem;
+  line-height: 122%;
+  text-align: center;
+  color: var(--grey);
 }
 
 .lots-view {
@@ -174,8 +208,13 @@
 
   @media (hover: hover) and (pointer: fine) {
     &:hover {
+      color: var(--grey);
       background-color: transparent;
     }
+  }
+
+  &.--light {
+    width: 14.3rem;
   }
 }
 
@@ -465,6 +504,15 @@
   display: flex;
   gap: 0.8rem;
   align-items: baseline;
+  transition: color .3s;
+  cursor: pointer;
+  @media (hover: hover) and (pointer: fine) {
+  &:hover {
+    .radio-text {
+      color: var(--orange);
+    }
+  }
+  }
   input {
     position: absolute;
     pointer-events: none;
@@ -490,4 +538,16 @@
   font-size: 1.6rem;
   line-height: 112%;
   color: var(--black);
+  transition: color .3s;
+}
+
+.lots-inputs {
+  display: flex;
+  align-items: center;
+  gap: 2.4rem;
+}
+
+.lots-rightwrap {
+  display: flex;
+  justify-content: space-between;
 }

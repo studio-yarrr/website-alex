@@ -1,0 +1,117 @@
+---
+layout: default
+title: Личный кабинет - профиль
+---
+
+<section class="lk container">
+  
+  @include('./partials/lknav.html', {page: 1})
+
+  <div class="lk-main">
+    <div class="lk-wrap col-span-2">
+      <h1 class="lk-title h3">Профиль</h1>
+  
+      <div class="lk-block lk-profile">
+        <div class="lk-img img-cover">
+          <img src="./assets/images/lk/1.jpg" alt="">
+        </div>
+        <h2 class="lk-name h6">Ибрагимов Инакентий Сергеевич <button type="button" class="edit-btn" aria-label="edit profile"><svg><use xlink:href='./assets/images/sprite.svg#edit'></use></svg></button></h2>
+        <ul class="lk-profright">
+          <li class="lk-item lk-date h5">
+            <div class="lk-icon img-contain"><img src="./assets/images/lk/date.svg" alt="date"></div>
+            01.01.1975
+          </li>
+          <li class="lk-item lk-tel h5">
+            <div class="lk-icon img-contain"><img src="./assets/images/lk/tel.svg" alt="tel"></div>
+            +7 916 777 77 77
+          </li>
+          <li class="lk-item lk-email h5">
+            <div class="lk-icon img-contain"><img src="./assets/images/lk/email.svg" alt="email"></div>
+            Pochta@mail.ru
+          </li>
+        </ul>
+        <div class="lk-profleft">
+          <h3 class="lk-login h5">Buyer234</h3>
+          <button class="lk-changepass">Изменить пароль</button>
+        </div>
+  
+      </div>
+    </div>
+
+    <div class="lk-wrap lk-notification">
+      <h1 class="lk-title h3">Оповещения</h1>
+  
+      <div class="lk-block">
+        <ul class="notification-list">
+          <li class="notification-item">
+            <label class="lk-label">
+              <input type="checkbox" name="Информировать о перебитой ставке">
+              <span class="lk-box"></span>
+              <span class="lk-span h5">Информировать о перебитой ставке</span>
+            </label>
+          </li>
+          <li class="notification-item">
+            <label class="lk-label">
+              <input type="checkbox" name="Информировать о перебитом автобидере">
+              <span class="lk-box"></span>
+              <span class="lk-span h5">Информировать о перебитом автобидере</span>
+            </label>
+          </li>
+          <li class="notification-item">
+            <label class="lk-label">
+              <input type="checkbox" name="Присылать новости">
+              <span class="lk-box"></span>
+              <span class="lk-span h5">Присылать новости</span>
+            </label>
+          </li>
+          <li class="notification-item">
+            <label class="lk-label">
+              <input type="checkbox" name="Присылать информацию о закрытии торгов">
+              <span class="lk-box"></span>
+              <span class="lk-span h5">Присылать информацию о закрытии торгов</span>
+            </label>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="lk-wrap lk-notification">
+      <h1 class="lk-title h3">Способ коммуникации</h1>
+  
+      <div class="lk-block">
+        <ul class="notification-list">
+          <li class="notification-item">
+            <label class="lk-label">
+              <input type="checkbox" name="E-mail">
+              <span class="lk-box"></span>
+              <span class="lk-span h5">E-mail</span>
+            </label>
+          </li>
+          <li class="notification-item">
+            <label class="lk-label">
+              <input type="checkbox" name="Whatsapp">
+              <span class="lk-box"></span>
+              <span class="lk-span h5">Whatsapp</span>
+            </label>
+          </li>
+          <li class="notification-item">
+            <label class="lk-label">
+              <input type="checkbox" name="Telegram">
+              <span class="lk-box"></span>
+              <span class="lk-span h5">Telegram</span>
+            </label>
+          </li>
+          <li class="notification-item">
+            <label class="lk-label">
+              <input type="checkbox" name="CМС">
+              <span class="lk-box"></span>
+              <span class="lk-span h5">CМС</span>
+            </label>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="last-margin"></div>

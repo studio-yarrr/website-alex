@@ -1,0 +1,124 @@
+.interesting-filter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  margin-top: 4rem;
+}
+
+.interesting-inp {
+  width: 100%;
+  width: 30rem;
+  max-width: 100%;
+  font-weight: 700;
+
+  &.--light {
+    border-color: var(--orange);
+    color: var(--orange);
+
+  }
+}
+
+.custom-select {
+  &.--interesting-select {
+    width: 30rem;
+  }
+
+  &.--light {
+    .select-selected {
+      color: var(--orange);
+
+      &::after {
+        background-image: url("data:image/svg+xml,%3Csvg width='18' height='10' viewBox='0 0 18 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M9 10L0.339745 0.249998L17.6603 0.25L9 10Z' fill='%23CDB98C'/%3E%3C/svg%3E%0A");
+      }
+
+      border-color: var(--orange);
+    }
+  }
+}
+
+.interesting-btn {
+  padding: 1rem 1.15rem;
+  border: 0.2rem solid var(--orange);
+  font-weight: 500;
+  font-size: 1.6rem;
+  border-radius: 0.2rem;
+  transition: color .3s;
+
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      color: var(--orange);
+    }
+  }
+}
+
+.interesting-line {
+  height: 4.2rem;
+  width: 0.5rem;
+  background-color: var(--orange);
+  border-radius: 0.2rem;
+}
+
+.interesting-reset {
+  //styleName: H5;
+  font-family: 'Fira Sans';
+  font-size: 1.8rem;
+  font-weight: 500;
+  line-height: 2.2rem;
+  color: var(--black);
+  background-color: var(--orange);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0.9rem 1.2rem;
+  border-radius: .2rem;
+  transition: background-color .3s, color .3s;
+  border: 0.1rem solid var(--orange);
+
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      color: var(--orange);
+      background-color: transparent;
+    }
+  }
+}
+
+.intresting-item {
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: minmax(7.5rem, min-content);
+  gap: 4rem;
+  row-gap: 0;
+  margin-right: 20rem;
+
+  @include breakpoint($cos-bp) {
+    margin-right: 4rem;
+  }
+
+  @include breakpoint($xl-bp) {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--lgrey-2);
+    padding: 2rem 0.75rem 1rem;
+  }
+}
+
+.intresting-list {
+  margin-top: 8rem;
+  display: flex;
+  flex-direction: column;
+  gap: 8rem;
+}
+
+.interesting-img {
+  border-radius: 0.3rem;
+  grid-column: 1 / 2;
+  grid-row: 1 / 3;
+  height: 36rem;
+  @include breakpoint($xl-bp) {
+    margin-top: 1.2rem;
+    height: 19.37rem;
+  }
+}

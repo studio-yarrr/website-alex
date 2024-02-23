@@ -100,6 +100,7 @@
     padding-left: 0.9rem;
     padding-right: 0.9rem;
     min-height: 0;
+    font-family: 'Fira Sans';
   }
 }
 
@@ -171,5 +172,74 @@
     line-height: 1.2rem;
     max-width: 13.3rem;
     padding: 0.6rem 0.8rem;
+  }
+}
+
+.wysiwyg {
+
+  h2,h3,h4,h5,h6 {
+    margin-bottom: 4rem;
+    margin-bottom: 6rem;
+  }
+
+  h2 {
+    font-family: 'PT Serif';
+    font-size: 4rem;
+    font-weight: 700;
+    line-height: 5.3rem;
+    text-align: center;
+  
+    @include breakpoint($xl-bp) {
+      font-size: 2rem;
+      line-height: 2.7rem;
+    }
+  }
+  
+  h3 {
+    font-family: 'PT Serif';
+    font-size: 3.2rem;
+    font-weight: 700;
+    line-height: 4.2rem;
+  
+    @include breakpoint($xl-bp) {
+      font-size: 1.8rem;
+      line-height: 2.4rem;
+    }
+  }
+  
+  h4 {
+    font-size: 2.2rem;
+    font-weight: 600;
+    line-height: 2.6rem;
+  
+    @include breakpoint($xl-bp) {
+      font-size: 1.6rem;
+      line-height: 2.2rem;
+    }
+  }
+  
+  h5 {
+    font-size: 1.8rem;
+    font-weight: 400;
+    line-height: 2.2rem;
+  }
+  
+  h6 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    line-height: 2.2rem;
+  }
+  
+  p {
+    margin-bottom: 2rem;
+  }
+
+  & > * {
+    &:first-child {
+      margin-top: 0;
+    }
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
 }

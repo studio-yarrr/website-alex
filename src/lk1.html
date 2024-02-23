@@ -1,0 +1,94 @@
+---
+layout: default
+title: Личный кабинет - финансы
+---
+
+<section class="lk container">
+  
+  @include('./partials/lknav.html', {page: 2})
+
+  <div class="lk-main">
+    <div class="lk-wrap">
+      <h1 class="lk-title h3">Финансы</h1>
+  
+      <ul class="lk-block lk-finance mt-30">
+        <li class="justify-between lk-balance">
+          <div>Текущий баланс:</div>
+          <div>17 800 ₽</div>
+        </li>
+        <li class="mt-48 justify-between lk-balance">
+          <div class="h6">Покупки:</div>
+          <div class="h5">50 000 ₽</div>
+        </li>
+        <li class="mt-17 justify-between lk-balance">
+          <div class="h6">Продажи:</div>
+          <div class="h5">67 800 ₽</div>
+        </li>
+      </ul>
+    </div>
+    <div class="lk-wrap">
+      <h1 class="lk-title h3">Реквизиты для оплаты</h1>
+  
+      <div class="lk-block lk-payment mt-30">
+        <div class="lk-payleft h6">
+          <svg><use xlink:href='./assets/images/sprite.svg#doc'></use></svg>
+          <div class="lk-paytext">Счет:</div>
+        </div>
+
+        <div class="lk-desc">Оплата возможна переводом по реквизитам, по QR-коду или наличными <br>в офисе Аукционного Дома</div>
+  
+      </div>
+    </div>
+
+    <div class="lk-wrap col-span-2 mt-50">
+      <h1 class="lk-title h3">Мои реквизиты</h1>
+  
+      <div class="lk-block lk-rec mt-30">
+        <ul class="rec-list">
+          <li class="rec-item">
+            <label class="lk-label">
+              <input type="checkbox" name="Сбербанк">
+              <span class="lk-box"></span>
+              <span class="h5">Сбербанк  </span>
+              <span class="h5">*** 4554</span>
+            </label>
+
+            <div class="rec-buttons">
+              <button><svg><use xlink:href='./assets/images/sprite.svg#edit'></use></svg></button>
+              <button><svg><use xlink:href='./assets/images/sprite.svg#delete'></use></svg></button>
+            </div>
+          </li>
+          <li class="rec-item">
+            <label class="lk-label">
+              <input type="checkbox" name="Тинькофф">
+              <span class="lk-box"></span>
+              <span class="h5">Тинькофф</span>
+              <span class="h5">*** 4554</span>
+            </label>
+
+            <div class="rec-buttons">
+              <button><svg><use xlink:href='./assets/images/sprite.svg#edit'></use></svg></button>
+              <button><svg><use xlink:href='./assets/images/sprite.svg#delete'></use></svg></button>
+            </div>
+          </li>
+          <li class="rec-item">
+            <label class="lk-label">
+              <input type="checkbox" name="Альфабанк">
+              <span class="lk-box"></span>
+              <span class="h5">Альфабанк</span>
+              <span class="h5">*** 4554</span>
+            </label>
+
+            <div class="rec-buttons">
+              <button><svg><use xlink:href='./assets/images/sprite.svg#edit'></use></svg></button>
+              <button><svg><use xlink:href='./assets/images/sprite.svg#delete'></use></svg></button>
+            </div>
+          </li>
+        </ul>
+  
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="last-margin"></div>

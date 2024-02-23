@@ -1,0 +1,35 @@
+<form action="#" class="lots-filter --light container">
+  <div class="lots-row --light">
+    <input type="text" class="inp lots-input --light" placeholder="Название" name="name">
+    <input type="number" class="inp lots-number --light" placeholder="Номер лота" name="lotnumber">
+    <div class="lots-years">
+      <div class="lots-ylist --light">
+        <input type="number" name="year-from" placeholder="Год от" class="inp lots-year">
+        <span class="lots-line">–</span>
+        <input type="number" name="year-to" placeholder="Год до" class="inp lots-year">
+      </div>
+    </div>
+
+    <div class="lots-rightwrap">
+      <button type="reset" class="lots-reset --light">
+        Сброс
+      </button>
+
+      <div class="lots-views">
+        <button type="button" class="lots-view" data-view="--plane" aria-label="plane view">
+          <svg>
+            <use xlink:href='./assets/images/sprite.svg#planeview'></use>
+          </svg>
+        </button>
+        <button type="button" class="lots-view selected" data-view="--box" aria-label="plane view">
+          <svg>
+            <use xlink:href='./assets/images/sprite.svg#boxview'></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  {{> lotsfilterrow}}
+
+</form>

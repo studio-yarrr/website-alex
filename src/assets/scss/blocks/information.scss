@@ -1,0 +1,90 @@
+.information-subtitle {
+  text-align: center;
+  margin-top: 4rem;
+  font-size: 2.4rem;
+  line-height: 2.8rem;
+}
+
+.information-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 4rem;
+  gap: 7.2rem;
+}
+
+.information-link {
+  font-weight: 400;
+  font-size: 1.8rem;
+  line-height: 122%;
+  text-align: center;
+  width: 30rem;
+  height: 10rem;
+
+  a {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--lgrey-2);
+    transition: color .3s, background-color .3s;
+
+    @media (hover: hover) and (pointer: fine) {
+      &:hover {
+        background-color: var(--orange);
+        color: var(--white);
+      }
+    }
+  }
+}
+
+.information-block {
+  text-align: center;
+  padding-top: 7.7rem;
+  padding-bottom: 7.7rem;
+  background-color: var(--grey);
+  color: var(--white);
+  margin-top: 9rem;
+}
+
+.information-inner {
+  display: none;
+}
+
+.information-content {
+  &>* {
+    animation: fadeEffect .3s;
+  }
+}
+
+.information-container {
+  display: grid;
+  grid-template-columns: 30rem 1fr;
+  gap: 5rem;
+  margin-top: 3.8rem;
+}
+
+.information-tabs {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.information-btn {
+  font-weight: 600;
+  font-size: 2.2rem;
+  background-color: var(--grey);
+  border-radius: 0.2rem;
+  color: var(--lgrey-2);
+  padding: 0.7rem 0.8rem 0.7rem 1.5rem;
+  width: 100%;
+  border-radius: 0.2rem;
+  transition: background-color .3s;
+  @media (hover: hover) and (pointer: fine) {
+  &:hover {
+    background-color: var(--orange);
+  }
+  }
+}

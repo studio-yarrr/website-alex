@@ -20,7 +20,7 @@
 
   }
   .swiper-slide {
-    width: 23.9rem;
+    width: 25.9rem;
     margin-right: 5rem;
     @include breakpoint($xl-bp) {
       width: 18rem;
@@ -53,6 +53,7 @@
   font-weight: 600;
   font-size: 2.2rem;
   color: var(--black);
+  line-height: normal;
   @include breakpoint($xl-bp) {
     font-size: 1.2rem;
     font-weight: 500;

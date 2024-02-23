@@ -478,7 +478,7 @@ table,
   thead {
     tr {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(2, 1fr) 18.5rem;
       border-bottom: 0;
       position: relative;
       &::after {
@@ -490,11 +490,6 @@ table,
         left: 0;
         position: absolute;
 
-      }
-    }
-    td {
-      &:last-child {
-        width: 18.5rem;
       }
     }
   }

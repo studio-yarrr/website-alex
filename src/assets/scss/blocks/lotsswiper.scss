@@ -1,14 +1,18 @@
 .lotsswiper {
   margin-top: 8.8rem;
 }
+
 .lotsswiper-swiper {
   margin-top: 8rem;
+
   .swiper-wrapper {
     justify-content: center;
+
     @include breakpoint($cos-bp) {
       justify-content: flex-start;
     }
   }
+
   .swiper-slide {
     background-color: var(--black);
     border: 0.1rem solid var(--orange);
@@ -20,15 +24,31 @@
     margin-right: 1.1rem;
     text-align: center;
     color: var(--lgrey-2);
+
     &:last-child {
       margin-right: 0;
     }
-    & > a {
+
+    &>a {
       padding: 1rem 2.3rem;
       display: block;
+
+      .lotsswiper-name {
+        transition: color .3s;
+      }
+
+      @media (hover: hover) and (pointer: fine) {
+        &:hover {
+          .lotsswiper-name {
+            color: var(--orange);
+          }
+        }
+      }
     }
+
     &.--light {
       background-color: var(--lgrey-2);
+
       .lotsswiper-material,
       .lotsswiper-name,
       .lotsswiper-num {
@@ -37,11 +57,13 @@
     }
   }
 }
+
 .lotsswiper-img {
   width: 15rem;
   height: 15rem;
   margin-top: 1rem;
 }
+
 .lotsswiper-name {
   margin-top: 0.5rem;
 }

@@ -209,7 +209,7 @@ document.addEventListener("DOMContentLoaded", () => {
     })
   }
   setTimeout(() => {
-    const swiperWrappersNoLoop = document.querySelectorAll('.mbelieve, .pokaz, .private-bot, .lotsswiper')
+    const swiperWrappersNoLoop = document.querySelectorAll('.mbelieve, .pokaz, .private-bot, .lotsswiper, .gallery-wrapper')
     if (swiperWrappersNoLoop.length) {
       swiperWrappersNoLoop.forEach(wrapper => {
         const swiper = wrapper.querySelector('.swiper');
@@ -485,13 +485,48 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
+  function closeAllBlocks() {
+    const parent = event.target.closest('.radio-container')
+    if (!parent) {
+      const radiocontainers = document.querySelectorAll('.radio-container .select-arrow-active')
+      if (radiocontainers.length) {
+        radiocontainers.forEach(el => {
+          el.classList.remove('select-arrow-active')
+        })
+      }
+      document.removeEventListener('click', closeAllBlocks)
+    }
+  }
+
   const radionbtns = document.querySelectorAll('.radio-container .radio-btn')
   if (radionbtns.length) {
     radionbtns.forEach(btn => {
       btn.addEventListener('click', function () { 
         this.classList.toggle('select-arrow-active')
+        if (this.classList.contains('select-arrow-active')) {
+          document.addEventListener('click', closeAllBlocks)
+        } else {
+          document.removeEventListener('click', closeAllBlocks)
+        }
       })
     })
+  }
+
+  const informationBlock = document.querySelector('.information-container')
+  if (informationBlock) {
+    const btns = informationBlock.querySelectorAll('.information-btn')
+    const content = informationBlock.querySelector('.information-content')
+    if (btns.length && content) {
+      btns.forEach(el => {
+        el.addEventListener('click', function () {
+          const next = this.nextElementSibling
+          if (next) {
+            content.innerHTML = next.innerHTML
+          }
+        })
+      })
+      btns[0].click()
+    }
   }
 });
 

@@ -1,0 +1,147 @@
+---
+layout: default
+title: Галерея
+---
+
+<section class="gallery mt-80">
+  <h1 class="gallery-title h2 container">Галерея</h1>
+
+  <h2 class="gallery-subtitle container">
+    Пара строчек о том, что это за галерея, как она работает. <br>Для покупки необходима регистрация
+  </h2>
+
+  <div class="gallery-wrapper">
+    <div class="swiper gallery-swiper container">
+      <div class="swiper-wrapper">
+        @for(i=1; i<=6; i++) {
+          <a href="#" class="swiper-slide gallery-item">
+            <div class="gallery-img img-cover">
+              
+            </div>
+            <h3 class="gallery-dir h4">Направление 1</h3>
+          </a>
+        }
+      </div>
+  </div>
+
+  <div class="gallery-container container">
+    <ul class="gallery-filter">
+      <li class="gallery-accordion">
+        <button class="gallery-btn accordion-btn">Фильтр поиска 1</button>
+        <div class="gallery-block accordion-block">
+          <div class="gallery-inner accordion-inner">
+            <ul class="gallery-checkboxes">
+              <li class="gallery-checkbox">
+                <label class="checkbox-label">
+                  <input type="checkbox" name="Пункт 1">
+                  <span class="check-box"></span>
+                  <span class="gallery-checkboxtext">Пункт 1</span>
+                </label>
+              </li>
+              <li class="gallery-checkbox">
+                <label class="checkbox-label">
+                  <input type="checkbox" name="Пункт 2">
+                  <span class="check-box"></span>
+                  <span class="gallery-checkboxtext">Пункт 2</span>
+                </label>
+              </li>
+              <li class="gallery-checkbox">
+                <label class="checkbox-label">
+                  <input type="checkbox" name="Пункт 3">
+                  <span class="check-box"></span>
+                  <span class="gallery-checkboxtext">Пункт 3</span>
+                </label>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </li>
+      <li class="gallery-accordion">
+        <button class="gallery-btn accordion-btn">Фильтр поиска 2</button>
+        <div class="gallery-block accordion-block">
+          <div class="gallery-inner accordion-inner">
+            <ul class="gallery-checkboxes">
+              <li class="gallery-checkbox">
+                <label class="checkbox-label">
+                  <input type="checkbox" name="Пункт 1">
+                  <span class="check-box"></span>
+                  <span class="gallery-checkboxtext">Пункт 1</span>
+                </label>
+              </li>
+              <li class="gallery-checkbox">
+                <label class="checkbox-label">
+                  <input type="checkbox" name="Пункт 2">
+                  <span class="check-box"></span>
+                  <span class="gallery-checkboxtext">Пункт 2</span>
+                </label>
+              </li>
+              <li class="gallery-checkbox">
+                <label class="checkbox-label">
+                  <input type="checkbox" name="Пункт 3">
+                  <span class="check-box"></span>
+                  <span class="gallery-checkboxtext">Пункт 3</span>
+                </label>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </li>
+      <li class="gallery-accordion">
+        <button class="gallery-btn accordion-btn">Фильтр поиска 3</button>
+        <div class="gallery-block accordion-block">
+          <div class="gallery-inner accordion-inner">
+            <ul class="gallery-checkboxes">
+              <li class="gallery-checkbox">
+                <label class="checkbox-label">
+                  <input type="checkbox" name="Пункт 1">
+                  <span class="check-box"></span>
+                  <span class="gallery-checkboxtext">Пункт 1</span>
+                </label>
+              </li>
+              <li class="gallery-checkbox">
+                <label class="checkbox-label">
+                  <input type="checkbox" name="Пункт 2">
+                  <span class="check-box"></span>
+                  <span class="gallery-checkboxtext">Пункт 2</span>
+                </label>
+              </li>
+              <li class="gallery-checkbox">
+                <label class="checkbox-label">
+                  <input type="checkbox" name="Пункт 3">
+                  <span class="check-box"></span>
+                  <span class="gallery-checkboxtext">Пункт 3</span>
+                </label>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </li>
+    </ul>
+
+    <ul class="gallery-list">
+      @for(i=1;i<=6;i++){
+        <li class="gallery-li">
+          <a href="#">
+            <div class="gallery-image img-cover">
+              
+            </div>
+            <h3 class="gallery-direction h4">Краткое описание в три строчки, Краткое описание в три строчки... подробнее</h3> 
+          </a>
+        </li>
+      }
+    </ul>
+  </div>
+
+  <div class="gallery-bot container">
+    <ul class="pagination gallery-pagination">
+      <li><a href="#">&lt;</a></li>
+      <li><a href="#">1</a></li>
+      <li><a href="#">2</a></li>
+      <li><a href="#">...</a></li>
+      <li><a href="#">26</a></li>
+      <li><a href="#">&gt;</a></li>
+    </ul>
+  </div>
+</section>
+
+<div class="last-margin"></div>
