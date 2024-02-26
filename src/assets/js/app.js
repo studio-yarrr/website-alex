@@ -485,23 +485,31 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
-  function closeAllBlocks() {
-    const parent = event.target.closest('.radio-container')
-    if (!parent) {
-      const radiocontainers = document.querySelectorAll('.radio-container .select-arrow-active')
-      if (radiocontainers.length) {
-        radiocontainers.forEach(el => {
-          el.classList.remove('select-arrow-active')
-        })
-      }
-      document.removeEventListener('click', closeAllBlocks)
-    }
-  }
-
   const radionbtns = document.querySelectorAll('.radio-container .radio-btn')
   if (radionbtns.length) {
     radionbtns.forEach(btn => {
-      btn.addEventListener('click', function () { 
+      btn.addEventListener('click', function () {
+        const closeAllBlocks = () => {
+          const parent = event.target.closest('.radio-container')
+          let active = null
+          if (parent) {
+            active = parent.querySelector('.select-arrow-active')
+          }
+          console.log(active, active !== this)
+          if (active && active !== this) {
+            this.classList.remove('select-arrow-active')
+          }
+          if (!parent) {
+            const radiocontainers = document.querySelectorAll('.radio-container .select-arrow-active')
+            if (radiocontainers.length) {
+              radiocontainers.forEach(el => {
+                el.classList.remove('select-arrow-active')
+              })
+            }
+            document.removeEventListener('click', closeAllBlocks)
+          }
+        }
+
         this.classList.toggle('select-arrow-active')
         if (this.classList.contains('select-arrow-active')) {
           document.addEventListener('click', closeAllBlocks)

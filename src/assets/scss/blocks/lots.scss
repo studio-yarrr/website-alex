@@ -33,7 +33,12 @@
 .lots-input {
   width: 30rem;
   font-weight: 700;
-  &.--light { 
+
+  &.--light {
+    width: 100%;
+  }
+
+  &.w-full {
     width: 100%;
   }
 }
@@ -43,6 +48,10 @@
   font-weight: 700;
 
   &.--light {
+    width: 100%;
+  }
+
+  &.w-full {
     width: 100%;
   }
 }
@@ -128,6 +137,7 @@
   &.--light {
     width: 100%;
     justify-content: space-between;
+
     .lots-year {
       width: 12rem;
     }
@@ -147,6 +157,9 @@
 .lots-line {
   font-weight: 500;
   font-size: 3.2rem;
+  &.--white {
+    color: var(--orange);
+  }
 }
 
 .dark {
@@ -173,6 +186,17 @@
   @media (hover: hover) and (pointer: fine) {
     &:hover {
       fill: var(--orange);
+    }
+  }
+
+  &.--white {
+
+    fill: var(--orange);
+
+    @media (hover: hover) and (pointer: fine) {
+      &:hover {
+        fill: var(--grey);
+      }
     }
   }
 }
@@ -216,6 +240,19 @@
   &.--light {
     width: 14.3rem;
   }
+
+  &.--white {
+    border-color: var(--orange);
+    background-color: var(--orange);
+    color: var(--grey);
+
+    @media (hover: hover) and (pointer: fine) {
+      &:hover {
+        background-color: transparent;
+        color: var(--orange);
+      }
+    }
+  }
 }
 
 .dark {
@@ -251,10 +288,40 @@
     display: flex;
     flex-direction: column;
   }
+
+  &.--lk {
+    grid-template-columns: repeat(3, 1fr);
+    @include breakpoint($xl-bp) {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+}
+
+.lots-list[data-content="--box"] {
+  &.--lk {
+    .lk-offeritem {
+      display: flex;
+      flex-direction: column;
+    }
+  }
 }
 
 .lots-list[data-content="--plane"] {
   grid-template-columns: repeat(2, 1fr);
+
+  @include breakpoint($xl-bp) {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &.--lk {
+    grid-template-columns: repeat(1, 1fr);
+    @include breakpoint($xl-bp) {
+      display: flex;
+      flex-direction: column;
+    }
+  }
 
   .lots-item {
     flex-direction: row;
@@ -266,10 +333,7 @@
     }
   }
 
-  @include breakpoint($xl-bp) {
-    display: flex;
-    flex-direction: column;
-  }
+
 }
 
 .lots-item {
@@ -281,6 +345,34 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  &.--grey {
+    background-color: #343E47; 
+  }
+  &.--white {
+    background-color: var(--lgrey-2);
+
+    .lots-price,
+    .lots-link ,
+    .lots-num {
+      color: var(--grey);
+    }
+
+    .lots-link {
+      @media (hover: hover) and (pointer: fine) {
+      &:hover {
+        color: var(--orange);
+      }
+      }
+    }
+
+    .lots-favor {
+      @media (hover: hover) and (pointer: fine) {
+      &:hover{
+        stroke: var(--grey);
+      }
+      }
+    }
+  }
 }
 
 .lots-top {
@@ -299,7 +391,7 @@
   width: 1.9rem;
   height: 1.9rem;
   stroke: var(--orange);
-
+  fill: transparent;
   @media (hover: hover) and (pointer: fine) {
     &:hover {
       stroke: var(--lgrey-2);
@@ -461,7 +553,8 @@
   // border-color: transparent transparent #fff transparent;
   transform: translateY(-50%) rotate(180deg);
 }
-.radio-btn.select-arrow-active + .radio-list {
+
+.radio-btn.select-arrow-active+.radio-list {
   display: block;
 }
 
@@ -489,7 +582,7 @@
   right: 0;
   z-index: 99;
   overflow: hidden;
-  box-shadow: 0px 0.5rem 1rem rgba(19, 33, 42, 0.15);
+  // box-shadow: 0px 0.5rem 1rem rgba(19, 33, 42, 0.15);
   animation: fadeEffect .3s;
   padding: 1.2rem 1.9rem;
   border-radius: 0.3rem;
@@ -506,18 +599,21 @@
   align-items: baseline;
   transition: color .3s;
   cursor: pointer;
+
   @media (hover: hover) and (pointer: fine) {
-  &:hover {
-    .radio-text {
-      color: var(--orange);
+    &:hover {
+      .radio-text {
+        color: var(--orange);
+      }
     }
   }
-  }
+
   input {
     position: absolute;
     pointer-events: none;
     opacity: 0;
-    &:checked + .radio-box {
+
+    &:checked+.radio-box {
       background-color: var(--orange);
     }
   }
@@ -550,4 +646,14 @@
 .lots-rightwrap {
   display: flex;
   justify-content: space-between;
+}
+
+.lots-price {
+  grid-column: 2 span;
+  font-weight: 600;
+  font-size: 2.2rem;
+  text-align: right;
+  color: var(--orange);
+  margin-left: auto;
+  margin-top: 2.7rem;
 }

@@ -1,4 +1,4 @@
-<li class="lots-item">
+<li class="lots-item @if (grey) {--grey} @if (white) {--white}">
   <div class="lots-top">
     <div class="lots-num h7 text-orange">Лот №111</div>
     <div class="lots-date h8">23.02 в 12.00</div>
@@ -17,10 +17,10 @@
 
   <div class="lots-images">
     <div class="lots-img img-contain">
-      <img src="./assets/images/lots/1.png" alt="Название монеты или медали">
+      <img src="./assets/images/lots/@lotimg1.png" alt="Название монеты или медали">
     </div>
     <div class="lots-img img-contain">
-      <img src="./assets/images/lots/1.png" alt="Название монеты или медали">
+      <img src="./assets/images/lots/@lotimg2.png" alt="Название монеты или медали">
     </div>
   </div>
 
@@ -34,4 +34,7 @@
       <button type="submit" class="lots-submit btn">Ставка</button>
     </div>
   </div>
+  @if(price) { 
+    <div class="lots-price">@price ₽</div> 
+  }
 </li>

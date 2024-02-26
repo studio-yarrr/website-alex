@@ -10,7 +10,7 @@
 
 html {
   box-sizing: border-box;
-  font-size: calc(100vw / 1920 * 10); 
+  font-size: calc(100vw / 1920 * 10);
 
   @include breakpoint($cos-bp) {
     font-size: calc(100vw / 1360 * 10);
@@ -68,6 +68,7 @@ body {
   body {
     background-color: var(--black);
     color: var(--lgrey-2);
+
     &::-webkit-scrollbar-track {
       background-color: #444444;
     }
@@ -132,6 +133,7 @@ svg {
 .container {
   padding-right: 20rem;
   padding-left: 20rem;
+
   @include breakpoint($cos-bp) {
     padding-right: 2rem;
     padding-left: 2rem;
@@ -146,6 +148,7 @@ svg {
 .header-container {
   padding-right: 24rem;
   padding-left: 24rem;
+
   @include breakpoint($cos-bp) {
     padding-right: 1.8rem;
     padding-left: 1.8rem;
@@ -291,6 +294,11 @@ img.lazyload:not([src]) {
   &::placeholder {
     color: inherit;
   }
+
+  &.--white {
+    border-color: var(--orange);
+    color: var(--orange);
+  }
 }
 
 .dark {
@@ -381,7 +389,7 @@ img.lazyload:not([src]) {
   font-weight: 400;
   font-size: 1.6rem;
   line-height: 112%;
-  color: var(--black); 
+  color: var(--black);
   transition: background-color .3s;
   border-radius: 0.2rem;
 }
@@ -432,15 +440,18 @@ img.lazyload:not([src]) {
     line-height: 2.2rem;
     text-align: center;
     color: var(--orange);
-    transition: border-color .3s, color .3s;
+    transition: border-color .3s, color .3s, background-color .3s;
+
     &.active {
-      color: var(--grey);
-      border-color: var(--grey);
+      color: var(--white);
+      background-color: var(--orange);
     }
+
     @media (hover: hover) and (pointer: fine) {
       &:hover {
-        color: var(--grey);
-        border-color: var(--grey);
+        color: var(--white);
+
+        background-color: var(--orange);
       }
     }
   }
@@ -451,14 +462,14 @@ img.lazyload:not([src]) {
     a {
       color: var(--orange);
       border-color: var(--orange);
+
       &.active {
         color: var(--lgrey-2);
-        border-color: var(--lgrey-2);
       }
+
       @media (hover: hover) and (pointer: fine) {
         &:hover {
           color: var(--lgrey-2);
-          border-color: var(--lgrey-2);
         }
       }
     }

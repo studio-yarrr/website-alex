@@ -11,11 +11,80 @@ title: Личный кабинет - Доставка
     <div class="lk-wrap col-span-2">
       <h1 class="lk-title h3">Доставка</h1>
   
-      <div class="lk-block">
-        
-  
+      <ul class="lk-block lk-delivery mt-20">
+        <li class="lk-delitem">
+          <div class="lk-delimg img-contain"></div>
+          <label class="lk-label">
+            <input type="radio" name="delivery" value="Самовывоз">
+            <span class="lk-box"></span>
+            <span class="h5">Самовывоз</span>
+          </label>
+        </li>
+        <li class="lk-delitem">
+          <div class="lk-delimg img-contain"></div>
+          <label class="lk-label">
+            <input type="radio" name="delivery" value="Курьерская компания DPD">
+            <span class="lk-box"></span>
+            <span class="h5">Курьерская <br>компания DPD</span>
+          </label>
+        </li>
+        <li class="lk-delitem">
+          <div class="lk-delimg img-contain"></div>
+          <label class="lk-label">
+            <input type="radio" name="delivery" value="Почта России">
+            <span class="lk-box"></span>
+            <span class="h5">Почта России</span>
+          </label>
+        </li>
+      </ul>
+
+      <div class="lk-block lk-adress mt-27">
+        <h2 class="lk-adresssub h6">Адрес доставки:<button type="button" class="edit-btn" aria-label="edit delivery"><svg><use xlink:href='./assets/images/sprite.svg#edit'></use></svg></button></h2>
+
+        <ul class="lk-adresses">
+          <li class="lk-adressitem">
+            <label class="lk-label">
+              <input type="radio" name="delivery" value="1" checked>
+              <span class="lk-box"></span>
+              <span class="h5">197441, Санкт-Петербург, г. Санкт-Петербург, ул. Торжковская, д. 15, кв/оф. 82, ФИО получателя: Сердюков Виктор</span>
+            </label>
+          </li>
+          <li class="lk-adressitem">
+            <label class="lk-label">
+              <input type="radio" name="delivery" value="2">
+              <span class="lk-box"></span>
+              <span class="h5">12345, Марий Эл, г. Йошкар-Ола, ул. Фестивальная, д. 80, кв/оф. 77, <br>ФИО получателя: Я сам самыч, Конт. телефон: +7</span>
+            </label>
+          </li>
+        </ul>
       </div>
     </div>
+
+    <div class="lk-wrap col-span-2 mt-40">
+      <h2 class="lk-title h3">Посылки</h2>
+  
+      <div class="lk-block lk-delhistory mt-20">
+        <div class="table-container lk-tablecontainer">
+          <table>
+            <thead>
+              <tr class="h5">
+                <td>Номер отправки</td>
+                <td>Дата отправки</td>
+                <td>Служба Доставки</td>
+                <td>Сайт Службы Доставки</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="h5">
+                <td>123456789</td>
+                <td>12.02.2024</td>
+                <td>Курьерская компания</td>
+                <td>www.dpd.ru</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
   </div>
 </section>
 

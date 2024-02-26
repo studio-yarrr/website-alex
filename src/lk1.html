@@ -47,7 +47,7 @@ title: Личный кабинет - финансы
         <ul class="rec-list">
           <li class="rec-item">
             <label class="lk-label">
-              <input type="checkbox" name="Сбербанк">
+              <input type="radio" name="rec" value="Сбербанк">
               <span class="lk-box"></span>
               <span class="h5">Сбербанк  </span>
               <span class="h5">*** 4554</span>
@@ -60,7 +60,7 @@ title: Личный кабинет - финансы
           </li>
           <li class="rec-item">
             <label class="lk-label">
-              <input type="checkbox" name="Тинькофф">
+              <input type="radio" name="rec" value="Тинькофф">
               <span class="lk-box"></span>
               <span class="h5">Тинькофф</span>
               <span class="h5">*** 4554</span>
@@ -73,7 +73,7 @@ title: Личный кабинет - финансы
           </li>
           <li class="rec-item">
             <label class="lk-label">
-              <input type="checkbox" name="Альфабанк">
+              <input type="radio" name="rec" value="Альфабанк">
               <span class="lk-box"></span>
               <span class="h5">Альфабанк</span>
               <span class="h5">*** 4554</span>
@@ -86,6 +86,20 @@ title: Личный кабинет - финансы
           </li>
         </ul>
   
+        <div class="rec-new">
+          <label class="lk-label">
+            <input type="radio" name="rec" value="новая">
+            <span class="lk-box"></span>
+            <span class="h5">Новая карта:</span>
+          </label>
+
+          <form action="#" class="lk-form">
+            <input type="text" class="lk-input inp --white" name="name" placeholder="Название банка">
+            <input type="text" class="lk-input inp --white" name="bik" placeholder="Бик банка">
+            <input type="text" class="lk-input inp --white" name="schet" placeholder="Счет получателя">
+            <button type="submit" class="lk-submit btn">Сохранить</button>
+          </form>
+        </div>
       </div>
     </div>
   </div>

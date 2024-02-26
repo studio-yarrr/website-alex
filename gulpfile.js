@@ -103,6 +103,13 @@ function html(cb) {
     .pipe(fileInclude({
       prefix: '@',
       basepath: '@file',
+      context: {
+        price: false,
+        grey: false,
+        white: false,
+        lotimg1: 1,
+        lotimg2: 1,
+      }
     }))
     .pipe(dest(path.build.html))
     .pipe(browserSync.reload({ stream: true }));
