@@ -5,9 +5,17 @@
 .nhowto-swiper {
   margin-top: 8rem;
   padding-bottom: 8rem;
+  @include breakpoint($xl-bp) {
+    margin-top: 3rem;
+    padding-bottom: 3rem;
+  }
   .swiper-slide {
     width: 36rem;
     margin-right: 4rem;
+    @include breakpoint($xl-bp) {
+      width: 25rem;
+      margin-right: 2rem;
+    }
   }
 
   .swiper-pagination-progressbar {
@@ -15,6 +23,7 @@
     left: 50%;
     height: 0.7rem;
     width: 71rem;
+    max-width: 100%;
     transform: translate3d(-50%, 0, 0);
   }
 }

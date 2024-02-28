@@ -52,6 +52,7 @@
     left: 0;
     @include breakpoint($xl-bp) {
       background-color: rgba(48, 62, 71, 0.6);
+      opacity: 0.5;
     }
   }
 
@@ -77,6 +78,10 @@
     &::after {
       background: linear-gradient(180deg, #2c2b2e 46%, rgba(44, 47, 49, 0.2) 99.99%, rgba(43, 43, 43, 0) 100%);
       opacity: 0.7;
+      @include breakpoint($xl-bp) {
+        opacity: 0.5;
+        background: rgba(48, 62, 71, 0.6);
+      }
     }
   }
 }
@@ -101,7 +106,7 @@
   &.--numis {
     margin-top: 5rem;
     @include breakpoint($xl-bp) {
-      margin-top: 2rem;
+      margin-top: 2.5rem;
     }
   }
 }

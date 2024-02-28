@@ -4,14 +4,22 @@
   align-items: center;
   gap: 3rem;
   margin-top: 4rem;
+  @include breakpoint($xl-bp) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    margin-top: 2rem;
+  }
 }
 
 .interesting-inp {
-  width: 100%;
   width: 30rem;
   max-width: 100%;
   font-weight: 700;
-
+  @include breakpoint($xl-bp) {
+    grid-column: 2 span;
+    width: 100%;
+  }
   &.--light {
     border-color: var(--orange);
     color: var(--orange);
@@ -22,6 +30,10 @@
 .custom-select {
   &.--interesting-select {
     width: 30rem;
+    @include breakpoint($xl-bp) {
+      width: 100%;
+      grid-column: 2 span;
+    }
   }
 
   &.--light {
@@ -42,9 +54,10 @@
   border: 0.2rem solid var(--orange);
   font-weight: 500;
   font-size: 1.6rem;
-  border-radius: 0.2rem;
-  transition: color .3s;
-
+  border-radius: 0.3rem;
+  transition: color .3s, background-color .3s;
+  width: 100%;
+  text-align: center;
   @media (hover: hover) and (pointer: fine) {
     &:hover {
       color: var(--orange);
@@ -57,6 +70,11 @@
   width: 0.5rem;
   background-color: var(--orange);
   border-radius: 0.2rem;
+  @include breakpoint($xl-bp) {
+    grid-column: 2 span;
+    width: 100%;
+    height: 0.5rem;
+  }
 }
 
 .interesting-reset {
@@ -75,7 +93,10 @@
   border-radius: .2rem;
   transition: background-color .3s, color .3s;
   border: 0.1rem solid var(--orange);
-
+  @include breakpoint($xl-bp) {
+    grid-column: 2 span;
+    width: 100%;
+  }
   @media (hover: hover) and (pointer: fine) {
     &:hover {
       color: var(--orange);
@@ -91,7 +112,7 @@
   grid-template-rows: minmax(7.5rem, min-content);
   gap: 4rem;
   row-gap: 0;
-  margin-right: 20rem;
+  margin-right: 28rem;
 
   @include breakpoint($cos-bp) {
     margin-right: 4rem;
@@ -102,6 +123,7 @@
     flex-direction: column;
     background-color: var(--lgrey-2);
     padding: 2rem 0.75rem 1rem;
+    margin-right: 0;
   }
 }
 
@@ -110,6 +132,10 @@
   display: flex;
   flex-direction: column;
   gap: 8rem;
+  @include breakpoint($xl-bp) {
+    margin-top: 2rem;
+    gap: 2rem;
+  }
 }
 
 .interesting-img {
@@ -120,5 +146,17 @@
   @include breakpoint($xl-bp) {
     margin-top: 1.2rem;
     height: 19.37rem;
+  }
+}
+
+.interesting-label {
+  cursor: pointer;
+  display: flex;
+  input {
+    display: none;
+    &:checked + .interesting-btn {
+      background-color: var(--orange);
+      color: var(--white);
+    }
   }
 }

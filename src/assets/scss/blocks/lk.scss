@@ -3,11 +3,19 @@
   display: grid;
   grid-template-columns: 30rem 1fr;
   gap: 2.7rem;
+  @include breakpoint($xl-bp) {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
 }
 
 .out+main {
   .lk-nav {
     top: 2rem;
+    @include breakpoint($xl-bp) {
+      top: 0;
+    }
   }
 }
 
@@ -23,6 +31,9 @@
   top: 12rem;
   transition: top .3s;
   transform: translate3d(0, 0, 0);
+  @include breakpoint($xl-bp) {
+    position: static;
+  }
 }
 
 .lk-link {
@@ -69,6 +80,11 @@
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: min-content;
   column-gap: 3.2rem;
+  @include breakpoint($xl-bp) {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
 }
 
 .lk-profile {
@@ -76,6 +92,10 @@
   display: grid;
   grid-template-columns: 14.4rem repeat(2, 1fr);
   gap: 2rem;
+  @include breakpoint($xl-bp) {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 .lk-block {
@@ -322,6 +342,10 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 5rem;
+  @include breakpoint($xl-bp) {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 .lk-form {

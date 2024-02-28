@@ -5,6 +5,10 @@
   gap: 4rem;
   justify-content: center;
   align-items: center;
+  @include breakpoint($xl-bp) {
+    margin-top: 2rem;
+    gap: 2rem;
+  }
 }
 .helpinfo-item {
   width: 39.3rem;
@@ -21,9 +25,17 @@
   border: 0.2rem solid var(--orange);
   padding: 4rem;
   background-color: rgba($color: #D0B787, $alpha: 0.1);
+  @include breakpoint($xl-bp) {
+    border-width: 0.1rem;
+    padding: 2rem;
+    height: 15.2rem;
+  }
 }
 .helpinfo-subtitle {
   margin-top: 1.3rem;
   color: var(--orange);
   text-align: center;
+  @include breakpoint($xl-bp) {
+    margin-top: 1rem;
+  }
 }

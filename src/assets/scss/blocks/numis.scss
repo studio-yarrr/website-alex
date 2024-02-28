@@ -7,7 +7,8 @@
   z-index: 1;
   @include breakpoint($xl-bp) {
     flex-direction: column;
-    margin-top: 2rem;
+    margin-top: 2.5rem;
+    gap: 1rem;
   }
 }
 
@@ -15,4 +16,10 @@
   margin-top: 0;
   width: 24rem;
   max-width: 100%;
+  @include breakpoint($xl-bp) {
+    width: 13.3rem;
+    background-color: var(--orange);
+    padding: 0.6rem 1.5rem;
+    border-color: var(--orange);
+  }
 }

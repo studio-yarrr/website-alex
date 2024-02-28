@@ -1,6 +1,9 @@
 .schedule-subtitle {
   text-align: center;
   margin-top: 4rem;
+  @include breakpoint($xl-bp) {
+    margin-top: 2rem;
+  }
 }
 
 .schedule-list {
@@ -10,6 +13,10 @@
   gap: 20rem;
   row-gap: 4rem;
   margin-top: 4rem;
+  @include breakpoint($xl-bp) {
+    margin-top: 1rem;
+    gap: 1rem;
+  }
 }
 
 .schedule-item {
@@ -19,6 +26,9 @@
   grid-template-columns: 0.4fr 0.85fr;
   justify-content: space-between;
   row-gap: 1.6rem;
+  @include breakpoint($xl-bp) {
+    gap: 0.5rem;
+  }
 }
 
 .schedule-date {

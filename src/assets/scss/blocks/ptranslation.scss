@@ -6,21 +6,36 @@
   align-items: center;
   padding-top: 4rem;
   padding-bottom: 4rem;
+  @include breakpoint($xl-bp) {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
 }
 .ptranslation-title {
 font-size: 3.2rem;
 font-weight: 500;
 line-height: 3.8rem;
 text-align: center;
-
+@include breakpoint($xl-bp) {
+  font-size: 2rem;
+  line-height: 2.7rem;
+}
 }
 .ptranslation-subtitle {
   text-align: center;
   margin-top: 4rem;
+  @include breakpoint($xl-bp) {
+    margin-top: 1rem;
+  }
 }
 .ptranslation-btn {
   display: inline-block;
   margin-top: 4rem;
   padding-left: 4rem;
   padding-right: 3.3rem;
+  @include breakpoint($xl-bp) {
+    margin-top: 1rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
 }

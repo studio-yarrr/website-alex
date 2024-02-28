@@ -1,19 +1,56 @@
 .nearest {
+  @include breakpoint($xl-bp) {
+    margin-top: 5rem;
+  }
+}
+
+.nearest-swiper-wrapper {
+  position: relative;
+  .arrow-swiper {
+    display: none;
+    @include breakpoint($xl-bp) {
+      position: absolute;
+      top: 47%;
+      display: block;
+      width: 0.6rem;
+      height: 1.2rem; 
+      fill: var(--orange);
+      z-index: 5;
+      &.next {
+        right: 0.8rem;
+      }
+      &.prev {
+        left: 0.8rem;
+      }
+    }
+  }
+}
+
+.nearest-swiper {
   padding-bottom: 2rem;
+  @include breakpoint($xl-bp) {
+    padding-right: 2.4rem;
+    padding-left: 2.4rem;
+  }
 }
 
 .nearest-list {
   margin-top: 8rem;
-  display: grid;
-  grid-template-columns: repeat(3, max(39.3rem));
   justify-content: center;
-  gap: 3rem;
   @include breakpoint($xl-bp) {
-    display: flex;
-    flex-direction: column  ;
+    margin-top: 2rem;
+    justify-content: flex-start;
   }
 }
 .nearest-item {
+  width: 39.3rem;
+  margin-right: 3rem;
+  @include breakpoint($xl-bp) {
+    width: 100%;
+  }
+  &:last-child {
+    margin-right: 0;
+  }
   a {
     display: flex;
     flex-direction: column;
@@ -24,6 +61,11 @@
     padding-top: 5.6rem;
     min-height: 24.5rem;
     transition: background-color .3s, color .3s;
+    @include breakpoint($xl-bp) {
+      padding-top: 2rem;
+      border-width: 0.1rem;
+      min-height: 15.2rem;
+    }
     @media (hover: hover) and (pointer: fine) {
     &:hover {
       background-color: var(--lgrey-2);
@@ -33,14 +75,22 @@
       }
     }
     }
+
   }
 }
 .nearest-subtitle {
   text-align: center;
+  @include breakpoint($xl-bp) {
+    font-size: 2rem;
+  }
 }
 .nearest-desc {
   text-align: center;
   margin-top: 3rem;
+  @include breakpoint($xl-bp) {
+    margin-top: 1rem;
+    line-height: 3rem;
+  }
 }
 .nearest-btn {
   display: inline-block;

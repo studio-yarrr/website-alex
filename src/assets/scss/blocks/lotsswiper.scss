@@ -1,10 +1,15 @@
 .lotsswiper {
   margin-top: 8.8rem;
+  @include breakpoint($xl-bp) {
+    margin-top: 3rem;
+  }
 }
 
 .lotsswiper-swiper {
   margin-top: 8rem;
-
+  @include breakpoint($xl-bp) {
+    margin-top: 2rem;
+  }
   .swiper-wrapper {
     justify-content: center;
 

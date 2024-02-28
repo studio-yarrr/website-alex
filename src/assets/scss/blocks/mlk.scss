@@ -3,10 +3,13 @@
   font-weight: 600;
   line-height: 2.6rem;
   text-align: center;
-  max-width: 87rem;
+  max-width: 142rem;
   margin: 0 auto;
   margin-top: 3.5rem;
   font-family: 'Fira Sans';
+  @include breakpoint($cos-bp) {
+    max-width: 87rem;
+  }
   @include breakpoint($xl-bp) {
     font-size: 1.2rem;
     font-weight: 400;

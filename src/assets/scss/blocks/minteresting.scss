@@ -17,7 +17,7 @@
     grid-template-rows: min-content minmax(7.5rem, min-content);
     gap: 4rem;
     row-gap: 0;
-    margin-right: 20rem;
+    margin-right: 28rem;
     @include breakpoint($cos-bp) {
       margin-right: 4rem;
     }
@@ -180,6 +180,10 @@
   h2,h3,h4,h5,h6 {
     margin-bottom: 4rem;
     margin-bottom: 6rem;
+    @include breakpoint($xl-bp) {
+      margin-top: 1rem;
+      margin-bottom: 2rem;
+    }
   }
 
   h2 {
@@ -228,10 +232,17 @@
     font-size: 1.8rem;
     font-weight: 700;
     line-height: 2.2rem;
+    @include breakpoint($xl-bp) {
+      font-size: 1.6rem;
+      line-height: normal;
+    }
   }
   
   p {
     margin-bottom: 2rem;
+    @include breakpoint($xl-bp) {
+      margin-bottom: 1rem;
+    }
   }
 
   & > * {

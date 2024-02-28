@@ -131,8 +131,8 @@ svg {
 }
 
 .container {
-  padding-right: 20rem;
-  padding-left: 20rem;
+  padding-right: 28rem;
+  padding-left: 28rem;
 
   @include breakpoint($cos-bp) {
     padding-right: 2rem;
@@ -146,8 +146,8 @@ svg {
 }
 
 .header-container {
-  padding-right: 24rem;
-  padding-left: 24rem;
+  padding-right: 30rem;
+  padding-left: 30rem;
 
   @include breakpoint($cos-bp) {
     padding-right: 1.8rem;
@@ -290,7 +290,7 @@ img.lazyload:not([src]) {
   padding: 1rem;
   height: 4.2rem;
   background-color: transparent;
-
+  border-radius: 0.3rem;
   &::placeholder {
     color: inherit;
   }
@@ -441,7 +441,7 @@ img.lazyload:not([src]) {
     text-align: center;
     color: var(--orange);
     transition: border-color .3s, color .3s, background-color .3s;
-
+    border-radius: 0.3rem;
     &.active {
       color: var(--white);
       background-color: var(--orange);
@@ -530,6 +530,10 @@ img.lazyload:not([src]) {
   font-size: 1.8rem;
   font-weight: 700;
   line-height: 2.2rem;
+  @include breakpoint($xl-bp) {
+    font-size: 1.6rem;
+    line-height: normal;
+  }
 }
 
 .h7 {

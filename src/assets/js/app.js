@@ -209,7 +209,7 @@ document.addEventListener("DOMContentLoaded", () => {
     })
   }
   setTimeout(() => {
-    const swiperWrappersNoLoop = document.querySelectorAll('.mbelieve, .pokaz, .private-bot, .lotsswiper, .gallery-wrapper')
+    const swiperWrappersNoLoop = document.querySelectorAll('.mbelieve, .pokaz, .private-bot, .lotsswiper, .gallery-wrapper, .nearest-swiper-wrapper')
     if (swiperWrappersNoLoop.length) {
       swiperWrappersNoLoop.forEach(wrapper => {
         const swiper = wrapper.querySelector('.swiper');

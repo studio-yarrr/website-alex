@@ -90,5 +90,8 @@
 
   &.--mt-70 {
     margin-top: 7rem;
+    @include breakpoint($xl-bp) {
+      margin-top: 3rem;
+    }
   }
 }
