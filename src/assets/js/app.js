@@ -47,7 +47,9 @@ document.addEventListener("DOMContentLoaded", () => {
       // Get the current page scroll position;
       const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
       const scrollLeft = window.pageXOffset || document.documentElement.scrollLeft;
-
+      if (xl.matches) {
+        document.body.style.overflow = 'hidden'
+      }
       // if any scroll is attempted, set this to the previous value;
       window.onscroll = function () {
         window.scrollTo(scrollLeft, scrollTop);
@@ -55,6 +57,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     enableScroll() {
+      document.body.style.overflow = null
       window.onscroll = function () { };
     }
   }

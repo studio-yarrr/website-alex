@@ -3,17 +3,18 @@
     <div class="lots-inputs">
       <input type="text" class="inp lots-input" placeholder="Название" name="name">
       <input type="number" class="inp lots-number" placeholder="Номер лота" name="lotnumber">
-    </div>
-    <div class="lots-years">
-      <div class="lots-ytext h5">Год</div>
-      <div class="lots-ylist">
-        <input type="number" name="year-from" class="inp lots-year">
-        <span class="lots-line">–</span>
-        <input type="number" name="year-to" class="inp lots-year">
+
+      <div class="lots-years">
+        <div class="lots-ytext h5">Год</div>
+        <div class="lots-ylist">
+          <input type="number" name="year-from" class="inp lots-year">
+          <span class="lots-line">–</span>
+          <input type="number" name="year-to" class="inp lots-year">
+        </div>
       </div>
     </div>
 
-    <ul class="pagination lots-pagination">
+    <ul class="pagination lots-pagination xl-hidden">
       <li><a href="#">&lt;</a></li>
       <li><a href="#">1</a></li>
       <li><a href="#">2</a></li>
@@ -22,7 +23,7 @@
       <li><a href="#">&gt;</a></li>
     </ul>
 
-    <button type="reset" class="lots-reset"> 
+    <button type="reset" class="lots-reset mobile-hidden"> 
       Сброс
     </button>
 
@@ -37,5 +38,9 @@
   </div>
 
   {{> lotsfilterrow}}
+
+  <button type="reset" class="lots-reset mobile-first"> 
+    Сброс
+  </button>
 
 </form>

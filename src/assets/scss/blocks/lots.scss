@@ -39,9 +39,13 @@
 .lots-input {
   width: 30rem;
   font-weight: 700;
+
   @include breakpoint($xl-bp) {
     width: 100%;
+    grid-column: 2 span;
+    font-weight: 400;
   }
+
   &.--light {
     width: 100%;
   }
@@ -54,9 +58,12 @@
 .lots-number {
   width: 12rem;
   font-weight: 700;
+
   @include breakpoint($xl-bp) {
     width: 100%;
+    font-weight: 400;
   }
+
   &.--light {
     width: 100%;
   }
@@ -105,6 +112,7 @@
   flex-direction: column;
   margin-top: 4rem;
   gap: 1rem;
+
   @include breakpoint($xl-bp) {
     margin-top: 2rem;
   }
@@ -123,9 +131,9 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 4rem;
+
     @include breakpoint($xl-bp) {
-      display: flex;
-      flex-direction: column;
+      grid-template-columns: repeat(2, 1fr);
       gap: 1rem;
     }
   }
@@ -147,8 +155,13 @@
   display: flex;
   gap: 2rem;
   align-items: center;
+  margin-left: 1rem; 
+  @include breakpoint($cos-bp) {
+    margin-left: 0;
+  }
   @include breakpoint($xl-bp) {
     justify-content: center;
+    gap: 1rem;
   }
 }
 
@@ -157,19 +170,28 @@
   align-items: center;
   color: var(--grey);
   gap: 2rem;
-
+  @include breakpoint($xl-bp) {
+    gap: 1rem;
+  }
   &.--light {
     width: 100%;
     justify-content: space-between;
 
     .lots-year {
       width: 12rem;
+      @include breakpoint($xl-bp) {
+        width: 7rem;
+      }
     }
   }
 }
 
 .lots-ytext {
   color: var(--grey);
+  @include breakpoint($xl-bp) {
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+  }
 }
 
 .dark {
@@ -181,6 +203,10 @@
 .lots-line {
   font-weight: 500;
   font-size: 3.2rem;
+  @include breakpoint($xl-bp) {
+    font-size: 2rem;
+    font-weight: normal;
+  }
   &.--white {
     color: var(--orange);
   }
@@ -199,6 +225,11 @@
   line-height: 122%;
   text-align: center;
   color: var(--grey);
+  @include breakpoint($xl-bp) {
+    font-size: 1.2rem;
+    font-weight: 400;
+    line-height: 1.5rem;
+  }
 }
 
 .lots-view {
@@ -252,7 +283,22 @@
   border-radius: .2rem;
   transition: background-color .3s, color .3s;
   border: 0.1rem solid var(--grey);
-
+  @include breakpoint($xl-bp) {
+    font-size: 1rem;
+    line-height: normal;
+    max-width: 17.5rem;
+  }
+  &.mobile-hidden {
+    @include breakpoint($xl-bp) {
+      display: none;
+    }
+  }
+  &.mobile-first {
+    display: none;
+    @include breakpoint($xl-bp) {
+      display: flex;
+    }
+  }
   @media (hover: hover) and (pointer: fine) {
     &:hover {
       color: var(--grey);
@@ -297,6 +343,10 @@
   display: flex;
   gap: 2.2rem;
   align-items: center;
+
+  @include breakpoint($xl-bp) {
+    display: none;
+  }
 }
 
 .lots-list[data-content="--box"],
@@ -315,6 +365,7 @@
 
   &.--lk {
     grid-template-columns: repeat(3, 1fr);
+
     @include breakpoint($xl-bp) {
       display: flex;
       flex-direction: column;
@@ -341,6 +392,7 @@
 
   &.--lk {
     grid-template-columns: repeat(1, 1fr);
+
     @include breakpoint($xl-bp) {
       display: flex;
       flex-direction: column;
@@ -369,31 +421,33 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+
   &.--grey {
-    background-color: #343E47; 
+    background-color: #343E47;
   }
+
   &.--white {
     background-color: var(--lgrey-2);
 
     .lots-price,
-    .lots-link ,
+    .lots-link,
     .lots-num {
       color: var(--grey);
     }
 
     .lots-link {
       @media (hover: hover) and (pointer: fine) {
-      &:hover {
-        color: var(--orange);
-      }
+        &:hover {
+          color: var(--orange);
+        }
       }
     }
 
     .lots-favor {
       @media (hover: hover) and (pointer: fine) {
-      &:hover{
-        stroke: var(--grey);
-      }
+        &:hover {
+          stroke: var(--grey);
+        }
       }
     }
   }
@@ -416,6 +470,7 @@
   height: 1.9rem;
   stroke: var(--orange);
   fill: transparent;
+
   @media (hover: hover) and (pointer: fine) {
     &:hover {
       stroke: var(--lgrey-2);
@@ -537,6 +592,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+
   @include breakpoint($xl-bp) {
     margin-top: 2rem;
   }
@@ -559,6 +615,16 @@
   line-height: 2.2rem;
   padding: 1rem 0.75rem;
   padding-right: 3.5rem;
+
+  @include breakpoint($xl-bp) {
+    font-size: 1.2rem;
+    font-weight: 400;
+    line-height: 1.5rem;
+    height: 4rem;
+    padding: 1.2rem 1.1rem 1.2rem 1.3rem;
+    padding-right: 3.5rem;
+    border-width: 0.1rem;
+  }
 }
 
 .radio-btn:after {
@@ -574,6 +640,10 @@
   background-size: contain;
   background-position: center;
   background-image: url("data:image/svg+xml,%3Csvg width='18' height='10' viewBox='0 0 18 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M9 10L0.339745 0.249998L17.6603 0.25L9 10Z' fill='%23343E47'/%3E%3C/svg%3E%0A");
+  @include breakpoint($xl-bp) {
+    width: 1.2rem;
+    height: 0.8rem;
+  }
 }
 
 .radio-btn.select-arrow-active:after {
@@ -626,7 +696,9 @@
   align-items: baseline;
   transition: color .3s;
   cursor: pointer;
-
+  @include breakpoint($xl-bp) {
+    align-items: flex-start;
+  }
   @media (hover: hover) and (pointer: fine) {
     &:hover {
       .radio-text {
@@ -662,12 +734,17 @@
   line-height: 112%;
   color: var(--black);
   transition: color .3s;
+  @include breakpoint($xl-bp) {
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+  }
 }
 
 .lots-inputs {
   display: flex;
   align-items: center;
   gap: 3.6rem;
+
   @include breakpoint($xl-bp) {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -678,6 +755,9 @@
 .lots-rightwrap {
   display: flex;
   justify-content: space-between;
+  @include breakpoint($xl-bp) {
+    display: none;
+  }
 }
 
 .lots-price {
