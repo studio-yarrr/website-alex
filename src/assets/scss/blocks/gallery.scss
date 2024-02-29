@@ -3,6 +3,9 @@
   align-items: center;
   justify-content: center;
   margin-top: 4rem;
+  @include breakpoint($xl-bp) {
+    margin-top: 2rem;
+  }
 }
 
 .gallery-subtitle {
