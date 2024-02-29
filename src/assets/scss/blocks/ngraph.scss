@@ -18,14 +18,22 @@
     }
 
     &.prev {
-      left: 2rem;
+      left: 29.6rem;
+      @include breakpoint($cos-bp) {
+        left: 2rem;
+      }
+
       @include breakpoint($xl-bp) {
         left: 0.8rem;
       }
     }
 
     &.next {
-      right: 2rem;
+      right: 29.6rem;
+      @include breakpoint($cos-bp) {
+        right: 2rem;
+      }
+
       @include breakpoint($xl-bp) {
         right: 0.8rem;
       }
@@ -39,8 +47,12 @@
 }
 
 .ngraph-swiper {
-  padding-left: 6.3rem;
-  padding-right: 6.3rem;
+  padding-right: 34rem;
+  padding-left: 34rem;
+  @include breakpoint($cos-bp) {
+    padding-left: 6.3rem;
+    padding-right: 6.3rem; 
+  }
 
   @include breakpoint($xl-bp) {
     padding-left: 2.4rem;
@@ -48,7 +60,10 @@
   }
 
   .swiper-slide {
-    margin-right: 7rem;
+    margin-right: 35rem;
+    @include breakpoint($cos-bp) {
+      margin-right: 7rem;
+    }
 
     @include breakpoint($xl-bp) {
       margin-right: 3rem;
@@ -82,11 +97,13 @@
   max-width: 100%;
   margin-left: 2rem;
   position: relative;
+
   @include breakpoint($xl-bp) {
     width: 100%;
     height: 100%;
     margin-left: 0;
   }
+
   img {
     @include breakpoint($xl-bp) {
       display: none;
@@ -97,30 +114,36 @@
 .ngraph-message {
   position: absolute;
   top: -5.4rem;
+
   @include breakpoint($xl-bp) {
     position: static;
     display: flex;
     flex-direction: column;
     gap: 1rem;
   }
+
   li {
     display: flex;
     flex-direction: column;
     gap: 4.8rem;
     position: absolute;
     top: 0;
+
     @include breakpoint($xl-bp) {
       position: static;
       gap: 4.5rem;
     }
+
     &:first-child {
       left: 7rem;
       color: var(--orange);
       width: 14.2rem;
+
       @include breakpoint($xl-bp) {
         width: 100%;
         left: 0;
       }
+
       &>div {
         &:first-child {
           font-weight: 700;
@@ -140,6 +163,7 @@
           font-size: 1.8rem;
           line-height: 122%;
           text-align: center;
+
           @include breakpoint($xl-bp) {
             font-weight: 700;
             font-size: 1.6rem;
@@ -167,13 +191,16 @@
     &:last-child {
       color: var(--lgrey-2);
       left: 31.5rem;
+
       @include breakpoint($xl-bp) {
         gap: 1.1rem;
       }
+
       &>div {
         @include breakpoint($xl-bp) {
           position: relative;
         }
+
         &:first-child {
           font-weight: 700;
           font-size: 3.2rem;
@@ -181,6 +208,7 @@
           display: flex;
           gap: 35rem;
           white-space: nowrap;
+
           @include breakpoint($xl-bp) {
             font-weight: 700;
             font-size: 2rem;
@@ -193,6 +221,7 @@
           &>div {
             font-family: 'PT Serif';
             width: 14.2rem;
+
             @include breakpoint($xl-bp) {
               text-overflow: ellipsis;
               overflow: hidden;
@@ -206,6 +235,7 @@
           font-size: 1.8rem;
           line-height: 122%;
           text-align: center;
+
           @include breakpoint($xl-bp) {
             font-weight: 500;
             font-size: 1.6rem;
@@ -218,10 +248,12 @@
 
 .mobile-line {
   display: none;
+
   @include breakpoint($xl-bp) {
     position: relative;
     display: block;
     width: 100%;
+
     &::before {
       content: '';
       background-image: url("data:image/svg+xml,%3Csvg width='166' height='10' viewBox='0 0 166 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='5.75879' height='5.75879' transform='matrix(0.70495 0.709257 -0.70495 0.709257 95.8954 0.970459)' fill='%23F1EFEC'/%3E%3Crect width='5.75879' height='5.75879' transform='matrix(0.70495 0.709257 -0.70495 0.709257 43.4178 0.970459)' fill='%23F1EFEC'/%3E%3Crect width='5.75879' height='5.75879' transform='matrix(0.70495 0.709257 -0.70495 0.709257 148.373 0.970459)' fill='%23F1EFEC'/%3E%3Crect width='5.75879' height='5.75879' transform='matrix(0.70495 0.709257 -0.70495 0.709257 17.1791 0.970459)' fill='%23F1EFEC'/%3E%3Crect width='5.75879' height='5.75879' transform='matrix(0.70495 0.709257 -0.70495 0.709257 122.134 0.970459)' fill='%23F1EFEC'/%3E%3Crect width='5.75879' height='5.75879' transform='matrix(0.70495 0.709257 -0.70495 0.709257 69.6566 0.970459)' fill='%23F1EFEC'/%3E%3Crect width='5.75879' height='5.75879' transform='matrix(0.70495 0.709257 -0.70495 0.709257 4.05969 0.970459)' fill='%23CDB98C'/%3E%3Crect width='5.75879' height='5.75879' transform='matrix(0.70495 0.709257 -0.70495 0.709257 109.015 0.970459)' fill='%23F1EFEC'/%3E%3Crect width='5.75879' height='5.75879' transform='matrix(0.70495 0.709257 -0.70495 0.709257 56.5372 0.970459)' fill='%23F1EFEC'/%3E%3Crect width='5.75879' height='5.75879' transform='matrix(0.70495 0.709257 -0.70495 0.709257 161.492 0.970459)' fill='%23CDB98C'/%3E%3Crect width='5.75879' height='5.75879' transform='matrix(0.70495 0.709257 -0.70495 0.709257 30.2985 0.970459)' fill='%23F1EFEC'/%3E%3Crect width='5.75879' height='5.75879' transform='matrix(0.70495 0.709257 -0.70495 0.709257 135.254 0.970459)' fill='%23F1EFEC'/%3E%3Crect width='5.75879' height='5.75879' transform='matrix(0.70495 0.709257 -0.70495 0.709257 82.776 0.970459)' fill='%23F1EFEC'/%3E%3C/svg%3E%0A");
