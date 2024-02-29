@@ -1,32 +1,10 @@
-<form action="#" class="lots-filter container">
-  <div class="lots-row">
-    <div class="lots-inputs">
-      <input type="text" class="inp lots-input" placeholder="Название" name="name">
-      <input type="number" class="inp lots-number" placeholder="Номер лота" name="lotnumber">
-
-      <div class="lots-years">
-        <div class="lots-ytext h5">Год</div>
-        <div class="lots-ylist">
-          <input type="number" name="year-from" class="inp lots-year">
-          <span class="lots-line">–</span>
-          <input type="number" name="year-to" class="inp lots-year">
-        </div>
-      </div>
-    </div>
-
-    <ul class="pagination lots-pagination xl-hidden">
-      <li><a href="#">&lt;</a></li>
-      <li><a href="#">1</a></li>
-      <li><a href="#">2</a></li>
-      <li><a href="#">...</a></li>
-      <li><a href="#">26</a></li>
-      <li><a href="#">&gt;</a></li>
-    </ul>
-
-    <button type="reset" class="lots-reset mobile-hidden"> 
+<form action="#" class="form-wrapper">
+  <div class="mobile-row container">
+    <button type="button" class="btn btn-filter">Фильтры</button>
+    <button type="reset" class="lots-reset lots-reset-top"> 
       Сброс
     </button>
-
+  
     <div class="lots-views">
       <button type="button" class="lots-view" data-view="--plane" aria-label="plane view">
         <svg><use xlink:href='./assets/images/sprite.svg#planeview'></use></svg>
@@ -36,11 +14,46 @@
       </button>
     </div>
   </div>
-
-  {{> lotsfilterrow}}
-
-  <button type="reset" class="lots-reset mobile-first"> 
-    Сброс
-  </button>
-
+  <div class="lots-filter container">
+    <div class="lots-row">
+      <div class="lots-inputs">
+        <input type="text" class="inp lots-input" placeholder="Название" name="name">
+        <input type="number" class="inp lots-number" placeholder="Номер лота" name="lotnumber">
+  
+        <div class="lots-years">
+          <div class="lots-ytext h5">Год</div>
+          <div class="lots-ylist">
+            <input type="number" name="year-from" class="inp lots-year">
+            <span class="lots-line">–</span>
+            <input type="number" name="year-to" class="inp lots-year">
+          </div>
+        </div>
+      </div>
+  
+      <ul class="pagination lots-pagination xl-hidden">
+        <li><a href="#">&lt;</a></li>
+        <li><a href="#">1</a></li>
+        <li><a href="#">2</a></li>
+        <li><a href="#">...</a></li>
+        <li><a href="#">26</a></li>
+        <li><a href="#">&gt;</a></li>
+      </ul>
+  
+      <button type="reset" class="lots-reset mobile-hidden"> 
+        Сброс
+      </button>
+  
+      <div class="lots-views mobile-hidden">
+        <button type="button" class="lots-view" data-view="--plane" aria-label="plane view">
+          <svg><use xlink:href='./assets/images/sprite.svg#planeview'></use></svg>
+        </button>
+        <button type="button" class="lots-view selected" data-view="--box" aria-label="plane view">
+          <svg><use xlink:href='./assets/images/sprite.svg#boxview'></use></svg>
+        </button>
+      </div>
+    </div>
+  
+    {{> lotsfilterrow}}
+  
+  </div>
 </form>

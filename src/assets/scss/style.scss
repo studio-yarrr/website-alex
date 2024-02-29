@@ -293,11 +293,11 @@ img.lazyload:not([src]) {
   border-radius: 0.3rem;
 
   @include breakpoint($xl-bp) {
-    font-size: 1.2rem;
-    font-weight: 400;
-    line-height: 1.5rem;
-    height: 4rem;
-    padding: 1.2rem 1.1rem 1.2rem 1.3rem;
+    font-size: 1.6rem;
+    font-weight: 500;
+    line-height: normal;
+    height: 3.1rem;
+    padding: 0.9rem;
     border-width: 0.1rem;
   }
 
@@ -370,6 +370,7 @@ img.lazyload:not([src]) {
   @include breakpoint($xl-bp) {
     width: 1.2rem;
     height: 0.8rem;
+    right: 0.3rem;
   }
 }
 
@@ -395,11 +396,11 @@ img.lazyload:not([src]) {
   padding-right: 3.5rem;
 
   @include breakpoint($xl-bp) {
-    font-size: 1.2rem;
-    font-weight: 400;
+    font-size: 1.6rem;
+    font-weight: 500;
     line-height: 1.5rem;
-    padding: 1.2rem 1.1rem 1.2rem 1.3rem;
-    padding-right: 3.5rem;
+    padding: 0.5rem 0.9rem;
+    padding-right: 1.5rem;
   }
 }
 

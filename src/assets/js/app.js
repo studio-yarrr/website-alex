@@ -498,7 +498,6 @@ document.addEventListener("DOMContentLoaded", () => {
           if (parent) {
             active = parent.querySelector('.select-arrow-active')
           }
-          console.log(active, active !== this)
           if (active && active !== this) {
             this.classList.remove('select-arrow-active')
           }
@@ -520,6 +519,13 @@ document.addEventListener("DOMContentLoaded", () => {
           document.removeEventListener('click', closeAllBlocks)
         }
       })
+    })
+  }
+
+  const filterbtn = document.querySelector('.btn-filter')
+  if (filterbtn) {
+    filterbtn.addEventListener('click', function () {
+      this.parentElement.classList.toggle('active')
     })
   }
 

@@ -1,39 +1,56 @@
-<form action="#" class="lots-filter --light container">
-  <div class="lots-row --light">
-    <input type="text" class="inp lots-input --light" placeholder="Название" name="name">
-    <input type="number" class="inp lots-number --light" placeholder="Номер лота" name="lotnumber">
-    <div class="lots-years">
-      <div class="lots-ylist --light">
-        <input type="number" name="year-from" placeholder="Год от" class="inp lots-year">
-        <span class="lots-line">–</span>
-        <input type="number" name="year-to" placeholder="Год до" class="inp lots-year">
-      </div>
-    </div>
+<form action="#" class="form-wrapper">
+  <div class="mobile-row container">
+    <button type="button" class="btn btn-filter">Фильтры</button>
+    <button type="reset" class="lots-reset lots-reset-top">
+      Сброс
+    </button>
 
-    <div class="lots-rightwrap">
-      <button type="reset" class="lots-reset --light mobile-hidden">
-        Сброс
+    <div class="lots-views">
+      <button type="button" class="lots-view" data-view="--plane" aria-label="plane view">
+        <svg>
+          <use xlink:href='./assets/images/sprite.svg#planeview'></use>
+        </svg>
       </button>
-
-      <div class="lots-views">
-        <button type="button" class="lots-view" data-view="--plane" aria-label="plane view">
-          <svg>
-            <use xlink:href='./assets/images/sprite.svg#planeview'></use>
-          </svg>
-        </button>
-        <button type="button" class="lots-view selected" data-view="--box" aria-label="plane view">
-          <svg>
-            <use xlink:href='./assets/images/sprite.svg#boxview'></use>
-          </svg>
-        </button>
-      </div>
+      <button type="button" class="lots-view selected" data-view="--box" aria-label="plane view">
+        <svg>
+          <use xlink:href='./assets/images/sprite.svg#boxview'></use>
+        </svg>
+      </button>
     </div>
   </div>
+  <div class="lots-filter --light container">
+    <div class="lots-row --light">
+      <input type="text" class="inp lots-input --light" placeholder="Название" name="name">
+      <input type="number" class="inp lots-number --light" placeholder="Номер лота" name="lotnumber">
+      <div class="lots-years">
+        <div class="lots-ylist --light">
+          <input type="number" name="year-from" placeholder="Год от" class="inp lots-year">
+          <span class="lots-line">–</span>
+          <input type="number" name="year-to" placeholder="Год до" class="inp lots-year">
+        </div>
+      </div>
 
-  {{> lotsfilterrow}}
+      <div class="lots-rightwrap">
+        <button type="reset" class="lots-reset --light mobile-hidden">
+          Сброс
+        </button>
 
-  <button type="reset" class="lots-reset mobile-first"> 
-    Сброс
-  </button>
+        <div class="lots-views">
+          <button type="button" class="lots-view" data-view="--plane" aria-label="plane view">
+            <svg>
+              <use xlink:href='./assets/images/sprite.svg#planeview'></use>
+            </svg>
+          </button>
+          <button type="button" class="lots-view selected" data-view="--box" aria-label="plane view">
+            <svg>
+              <use xlink:href='./assets/images/sprite.svg#boxview'></use>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
 
+    {{> lotsfilterrow}}
+
+  </div>
 </form>
