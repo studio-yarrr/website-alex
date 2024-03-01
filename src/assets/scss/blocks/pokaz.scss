@@ -34,8 +34,11 @@
     margin-top: 1.5rem;
   }
   &.--implement {
-    padding-right: 4rem;
+    padding-right: 29.5rem;
     gap: 2rem;
+    @include breakpoint($cos-bp) {
+      padding-right: 2rem;
+    }
     @include breakpoint($xl-bp) {
       padding-right: 0;
       flex-direction: column;
@@ -86,7 +89,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-right: 7.8rem;
+  margin-right: 8rem;
   border-radius: 0.3rem;
   &:last-child {
     margin-right: 0;
@@ -106,6 +109,9 @@
 
   .swiper-wrapper {
     justify-content: center;
+    @include breakpoint($cos-bp) {
+      justify-content: flex-start;
+    }
     @include breakpoint($xl-bp) {
       justify-content: flex-start;
     }

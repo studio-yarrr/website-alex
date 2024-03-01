@@ -131,8 +131,8 @@ svg {
 }
 
 .container {
-  padding-right: 28rem;
-  padding-left: 28rem;
+  padding-right: 29.5rem;
+  padding-left: 29.5rem;
 
   @include breakpoint($cos-bp) {
     padding-right: 2rem;
@@ -146,8 +146,8 @@ svg {
 }
 
 .header-container {
-  padding-right: 30rem;
-  padding-left: 30rem;
+  padding-right: 29.5rem;
+  padding-left: 29.5rem;
 
   @include breakpoint($cos-bp) {
     padding-right: 1.8rem;

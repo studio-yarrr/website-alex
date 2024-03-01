@@ -1,7 +1,26 @@
 .minteresting {
   margin-top: 2.2rem;
+  position: relative;
   @include breakpoint($xl-bp) {
     margin-top: 3.4rem;
+  }
+  &.--private {
+    padding-bottom: 6rem;
+    @include breakpoint($xl-bp) {
+      padding-bottom: 3rem;
+    }
+  }
+  &.mt-80 {
+    margin-top: 8rem;
+    @include breakpoint($xl-bp) {
+      margin-top: 3.4rem;
+    }
+  }
+
+  .swiper-pagination {
+    bottom: 0;
+    left: 50%;
+    transform: translate3d(-50%, 0, 0);
   }
 }
 
@@ -10,6 +29,12 @@
   padding-bottom: 6rem;
   @include breakpoint($xl-bp) {
     padding-bottom: 3.1rem;
+  }
+  &.--private {
+    padding-bottom: 4rem;
+    @include breakpoint($xl-bp) {
+      padding-bottom: 1rem; 
+    }
   }
   .swiper-slide {
     display: grid;
@@ -26,6 +51,14 @@
       flex-direction: column;
       background-color: var(--lgrey-2);
       padding: 2rem 0.75rem 1rem;
+    }
+
+    &.--private {
+      grid-template-rows: min-content minmax(5.5rem, min-content); 
+      @include breakpoint($xl-bp) {
+        display: flex;
+        flex-direction: column;
+      }
     }
   }
 
@@ -69,6 +102,15 @@
     line-height: 1.5rem;
     text-align: center;
   }
+
+  &.--private {
+    font-size: 2.2rem;
+    line-height: 2.6rem;
+    @include breakpoint($xl-bp) {
+      font-size: 1.4rem;
+      line-height: 1.5rem;
+    }
+  }
 }
 
 .minteresting-img {
@@ -76,6 +118,10 @@
   grid-column: 1 / 2;
   grid-row: 2 / 4;
   height: 36rem;
+  background-color: #F1EFEC;
+  &.--private {
+    margin-top: 0.5rem;
+  }
   @include breakpoint($xl-bp) {
     margin-top: 1.2rem;
     height: 19.37rem;
@@ -102,6 +148,12 @@
     min-height: 0;
     font-family: 'Fira Sans';
   }
+  &.--private {
+    min-height: 3.3rem;
+    @include breakpoint($xl-bp) {
+      min-height: 0 ;
+    }
+  }
 }
 
 .minteresting-desc {
@@ -110,6 +162,9 @@
     margin-top: 0.7rem;
     padding-left: 0.7rem;
     padding-right: 0.7rem;
+  }
+  &.--private {
+    max-width: 61rem;
   }
 }
 
@@ -253,4 +308,14 @@
       margin-bottom: 0;
     }
   }
+}
+
+.minteresting-private {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.minteresting-btn{
+  min-width: 23rem;
 }
