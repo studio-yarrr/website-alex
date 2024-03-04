@@ -376,6 +376,10 @@
   }
   &::placeholder {
     color: var(--lgrey-2);
+    opacity: 1;
+  }
+  &:focus, &:focus-visible {
+    outline: none;
   }
 }
 

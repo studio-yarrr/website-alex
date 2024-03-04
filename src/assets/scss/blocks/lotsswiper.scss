@@ -7,6 +7,7 @@
 
 .lotsswiper-swiper {
   margin-top: 8rem;
+  min-height: 28.2rem;
   @include breakpoint($xl-bp) {
     margin-top: 2rem;
   }

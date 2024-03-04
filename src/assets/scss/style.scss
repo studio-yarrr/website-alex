@@ -313,6 +313,7 @@ img.lazyload:not([src]) {
 
   &::placeholder {
     color: inherit;
+    opacity: 1;
   }
 
   &.--white {
