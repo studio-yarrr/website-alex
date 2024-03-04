@@ -33,6 +33,7 @@
   height: 13.5rem;
   img {
     object-position: left;
+    object-fit: scale-down;
   }
 }
 
@@ -53,6 +54,9 @@
 .nhowto-calc {
   width: 22.4rem;
   height: 13.5rem;
+  img {
+    object-fit: scale-down;
+  }
 }
 .nhowto-commission {
   max-width: 90.9rem;

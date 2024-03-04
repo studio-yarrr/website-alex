@@ -30,6 +30,10 @@
     padding: 2rem;
     height: 15.2rem;
   }
+
+  img {
+    object-fit: scale-down;
+  }
 }
 .helpinfo-subtitle {
   margin-top: 1.3rem;
