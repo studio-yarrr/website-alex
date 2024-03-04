@@ -228,6 +228,11 @@ img.lazyload:not([src]) {
       color: var(--orange);
     }
   }
+
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 0 0.2rem rgba($color: #D0B787, $alpha: 0.3); 
+  }
 }
 
 .btn-white {
@@ -299,6 +304,11 @@ img.lazyload:not([src]) {
     height: 3.1rem;
     padding: 0.9rem;
     border-width: 0.1rem;
+  }
+
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 0 0.2rem rgba($color: #D0B787, $alpha: 0.3);
   }
 
   &::placeholder {
@@ -482,6 +492,11 @@ img.lazyload:not([src]) {
 
     @include breakpoint($xl-bp) {
       border-width: 0.1rem;
+    }
+
+    &:focus {
+      outline: none;
+      box-shadow: 0 0 0 0.2rem rgba($color: #D0B787, $alpha: 0.3); 
     }
 
     &.active {
