@@ -31,6 +31,7 @@
   @include breakpoint($xl-bp) {
     padding-right: 2.4rem;
     padding-left: 2.4rem;
+    padding-bottom: 2rem;
   }
 }
 
@@ -101,6 +102,12 @@
   top: 2.9rem;
   opacity: 0;
   transition: opacity .3s;
+  @include breakpoint($xl-bp) {
+    background-color: var(--orange);
+    color: var(--grey);
+    opacity: 1;
+    top: 1.5rem;
+  }
   @media (hover: hover) and (pointer: fine) {
   &:hover {
     background-color: var(--orange);
