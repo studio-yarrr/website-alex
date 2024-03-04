@@ -31,8 +31,11 @@
   top: 12rem;
   transition: top .3s;
   transform: translate3d(0, 0, 0);
+  border-radius: 0.3rem;
   @include breakpoint($xl-bp) {
     position: static;
+    padding: 1.5rem;
+    gap: 1rem;
   }
 }
 
@@ -41,7 +44,10 @@
   font-size: 1.8rem;
   line-height: 122%;
   color: var(--grey);
-
+  @include breakpoint($xl-bp) {
+    font-size: 1.6rem;
+    line-height: normal;
+  }
   a {
     display: flex;
     align-items: center;
@@ -95,12 +101,17 @@
   @include breakpoint($xl-bp) {
     display: flex;
     flex-direction: column;
+    margin-top: 1rem;
   }
 }
 
 .lk-block {
   padding: 2.3rem 2.5rem 2.4rem;
   background-color: var(--lgrey-2);
+  border-radius: 0.3rem;
+  @include breakpoint($xl-bp) {
+    padding: 1.5rem;
+  }
 }
 
 .lk-img {
@@ -159,7 +170,9 @@
   text-decoration: underline;
   text-decoration-skip-ink: none;
   transition: text-decoration-color .3s;
-
+  @include breakpoint($xl-bp) {
+    margin-top: 1rem;
+  }
   @media (hover: hover) and (pointer: fine) {
     &:hover {
       text-decoration-color: transparent;
@@ -176,6 +189,9 @@
   flex-direction: column;
   margin-top: 5rem;
   gap: 2rem;
+  @include breakpoint($xl-bp) {
+    margin-top: 0;
+  }
 }
 
 .notification-list {
@@ -218,7 +234,10 @@
   align-items: center;
   justify-content: center;
   transition: background-color .3s;
-
+  @include breakpoint($xl-bp) {
+    width: 2rem;
+    height: 2rem;
+  }
   &::before {
     content: '';
     width: 0.4rem;
@@ -256,14 +275,23 @@
 
 .mt-30 {
   margin-top: 3rem;
+  @include breakpoint($xl-bp) {
+    margin-top: 1rem;
+  }
 }
 
 .mt-48 {
   margin-top: 4.8rem;
+  @include breakpoint($xl-bp) {
+    margin-top: 2rem;
+  }
 }
 
 .mt-50 {
   margin-top: 5rem;
+  @include breakpoint($xl-bp) {
+    margin-top: 0;
+  }
 }
 
 .justify-between {
@@ -274,6 +302,9 @@
 .lk-balance {
   font-weight: 500;
   font-size: 3.2rem;
+  @include breakpoint($xl-bp) {
+    font-size: 1.8rem;
+  }
 }
 
 .lk-payleft {
@@ -285,6 +316,11 @@
   svg {
     width: 7.2rem;
     height: 7.2rem;
+    @include breakpoint($xl-bp) {
+      width: 5rem;
+      height: 5rem;
+      height: 5rem;
+    }
     fill: var(--grey);
   }
 }
@@ -298,10 +334,16 @@
   gap: 5.6rem;
   align-items: center;
   min-height: 19.5rem;
+  @include breakpoint($xl-bp) {
+    min-height: 0;
+  }
 }
 
 .lk-finance {
   min-height: 19.5rem;
+  @include breakpoint($xl-bp) {
+    min-height: 0;
+  }
 }
 
 .rec-item {
@@ -345,6 +387,7 @@
   @include breakpoint($xl-bp) {
     display: flex;
     flex-direction: column;
+    gap: 2rem;
   }
 }
 
@@ -427,10 +470,20 @@
   tr {
     border-bottom: 0;
   }
+
+  @include breakpoint($xl-bp) {
+    td {
+      font-size: 1.4rem;
+      line-height: normal;
+    }
+  }
 }
 
 .lk-delhistory {
   min-height: 19.2rem;
+  @include breakpoint($xl-bp) {
+    min-height: 0;
+  }
 }
 
 .lk-rad {
@@ -455,6 +508,9 @@
 
 .mt-28 {
   margin-top: 2.8rem;
+  @include breakpoint($xl-bp) {
+    margin-top: 2rem;
+  }
 }
 .mt-33 {
   margin-top: 3.3rem;
@@ -465,7 +521,7 @@
   gap: 2rem;
   @include breakpoint($xl-bp) {
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
     gap: 1rem;
   }
 }
@@ -479,6 +535,10 @@
   padding: 1rem;
   height: 3.9rem;
   display: inline-block;
+  @include breakpoint($xl-bp) {
+    padding: 0.5rem 0.9rem;
+    height: 3.1rem;
+  }
 }
 
 .lk-row2 {
@@ -489,6 +549,8 @@
   @include breakpoint($xl-bp) {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    gap: 0.8rem;
+    margin-top: 0.8rem;
   }
 }
 
@@ -530,6 +592,18 @@
 .lk-ylist {
   display: flex;
   gap: 0.5rem;
+  &.xl-col-span-2 {
+    @include breakpoint($xl-bp) {
+      grid-column: 2 span;
+      width: 100%;
+      justify-content: space-between;
+      .lots-year {
+        @include breakpoint($xl-bp) {
+          width: 10rem;
+        }
+      }
+    }
+  }
 }
 
 .lk-line {
@@ -553,6 +627,11 @@
   flex-direction: column;
   gap: 2.4rem;
   margin-top: 2.4rem;
+  @include breakpoint($xl-bp) {
+    gap: 1rem;
+    margin-top: 1rem;
+    margin-top: 1rem;
+  }
 }
 
 .lk-calendar {
@@ -569,6 +648,8 @@
   @include breakpoint($xl-bp) {
     display: flex;
     flex-direction: column;
+    padding: 1.5rem;
+    min-height: 0;
   }
   &.--grey {
     background-color: #343E47;
@@ -608,6 +689,7 @@
   margin-top: 2.1rem;
   @include breakpoint($xl-bp) {
     flex-direction: column;
+    gap: 1rem;
   }
 }
 .lk-offeritem {

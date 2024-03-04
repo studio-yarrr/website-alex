@@ -11,266 +11,290 @@ title: Личный кабинет - История продаж
     <div class="lk-wrap col-span-2">
       <h1 class="lk-title h3">История продаж</h1>
 
-      <form action="#" class="mt-28">
-        <ul class="lk-row">
-          <li class="lk-rad">
-            <label>
-              <input type="radio" name="category" value="Проданные" checked>
-              <span type="button" class="rad-btn">Проданные</span>
-            </label>
-          </li>
-          <li class="lk-rad">
-            <label>
-              <input type="radio" name="category" value="Непроданные">
-              <span class="rad-btn">Непроданные</span>
-            </label>
-          </li>
-          <li class="lk-rad">
-            <label>
-              <input type="radio" name="category" value="Все">
-              <span type="button" class="rad-btn">Все</sp>
-            </label>
-          </li>
-        </ul>
+      <form action="#" class="form-wrapper mt-8">
+        <div class="mobile-row --white container">
+          <button type="button" class="btn btn-filter">Фильтры</button>
+          <button type="reset" class="lots-reset lots-reset-top">
+            Сброс
+          </button>
+          <button type="submit" class="lots-reset lots-reset-top">
+            Применить
+          </button>
 
-        <div class="lk-row2 --white">
-          <div class="radio-container">
-            <button type="button" class="radio-btn">Выбрать аукцион</button>
-
-            <ul class="radio-list">
-              <li class="radio-item">
-                <label class="radio-label">
-                  <input type="checkbox" name="Алюминиевая бронза">
-                  <span class="radio-box"></span>
-                  <span class="radio-text">Алюминиевая бронза</span>
-                </label>
-              </li>
-              <li class="radio-item">
-                <label class="radio-label">
-                  <input type="checkbox" name="Алюминий">
-                  <span class="radio-box"></span>
-                  <span class="radio-text">Алюминий</span>
-                </label>
-              </li>
-              <li class="radio-item">
-                <label class="radio-label">
-                  <input type="checkbox" name="Бронза">
-                  <span class="radio-box"></span>
-                  <span class="radio-text">Бронза</span>
-                </label>
-              </li>
-              <li class="radio-item">
-                <label class="radio-label">
-                  <input type="checkbox" name="Золото">
-                  <span class="radio-box"></span>
-                  <span class="radio-text">Золото</span>
-                </label>
-              </li>
-              <li class="radio-item">
-                <label class="radio-label">
-                  <input type="checkbox" name="Латунь">
-                  <span class="radio-box"></span>
-                  <span class="radio-text">Латунь</span>
-                </label>
-              </li>
-              <li class="radio-item">
-                <label class="radio-label">
-                  <input type="checkbox" name="Медно-никелевый сплав">
-                  <span class="radio-box"></span>
-                  <span class="radio-text">Медно-никелевый сплав</span>
-                </label>
-              </li>
-              <li class="radio-item">
-                <label class="radio-label">
-                  <input type="checkbox" name="Медь">
-                  <span class="radio-box"></span>
-                  <span class="radio-text">Медь</span>
-                </label>
-              </li>
-
-              <li class="radio-item">
-                <label class="radio-label">
-                  <input type="checkbox" name="Платина">
-                  <span class="radio-box"></span>
-                  <span class="radio-text">Платина</span>
-                </label>
-              </li>
-
-              <li class="radio-item">
-                <label class="radio-label">
-                  <input type="checkbox" name="Серебро">
-                  <span class="radio-box"></span>
-                  <span class="radio-text">Серебро</span>
-                </label>
-              </li>
-
-            </ul>
-          </div>
-
-          <input type="text" class="inp lots-input w-full" placeholder="Название" name="name">
-
-          <div class="lk-rightwrap">
-            <button type="submit" class="lots-reset --white">
-              Применить
+          <div class="lots-views">
+            <button type="button" class="lots-view" data-view="--plane" aria-label="plane view">
+              <svg>
+                <use xlink:href='./assets/images/sprite.svg#planeview'></use>
+              </svg>
             </button>
-            <button type="reset" class="lots-reset --white">
-              Сброс
+            <button type="button" class="lots-view selected" data-view="--box" aria-label="plane view">
+              <svg>
+                <use xlink:href='./assets/images/sprite.svg#boxview'></use>
+              </svg>
             </button>
-
-            <div class="lots-views">
-              <button type="button" class="lots-view --white selected" data-view="--plane" aria-label="plane view">
-                <svg>
-                  <use xlink:href='./assets/images/sprite.svg#planeview'></use>
-                </svg>
-              </button>
-              <button type="button" class="lots-view --white" data-view="--box" aria-label="plane view">
-                <svg>
-                  <use xlink:href='./assets/images/sprite.svg#boxview'></use>
-                </svg>
-              </button>
-            </div>
           </div>
         </div>
+        <div class="lots-filter --lk">
+          <ul class="lk-row">
+            <li class="lk-rad">
+              <label>
+                <input type="radio" name="category" value="Проданные" checked>
+                <span type="button" class="rad-btn">Проданные</span>
+              </label>
+            </li>
+            <li class="lk-rad">
+              <label>
+                <input type="radio" name="category" value="Непроданные">
+                <span class="rad-btn">Непроданные</span>
+              </label>
+            </li>
+            <li class="lk-rad">
+              <label>
+                <input type="radio" name="category" value="Все">
+                <span type="button" class="rad-btn">Все</sp>
+              </label>
+            </li>
+          </ul>
 
-        <div class="lk-row3 mt-8 --white">
-          <div class="radio-container">
-            <button type="button" class="radio-btn">Категория</button>
+          <div class="lk-row2 --white">
+            <div class="radio-container xl-col-span-2">
+              <button type="button" class="radio-btn">Выбрать аукцион</button>
 
-            <ul class="radio-list">
-              <li class="radio-item">
-                <label class="radio-label">
-                  <input type="checkbox" name="Литература">
-                  <span class="radio-box"></span>
-                  <span class="radio-text">Литература</span>
-                </label>
-              </li>
-              <li class="radio-item">
-                <label class="radio-label">
-                  <input type="checkbox" name="Бумаги">
-                  <span class="radio-box"></span>
-                  <span class="radio-text">Бумаги</span>
-                </label>
-              </li>
-              <li class="radio-item">
-                <label class="radio-label">
-                  <input type="checkbox" name="Монеты России до 1917 года ">
-                  <span class="radio-box"></span>
-                  <span class="radio-text">Монеты России до 1917 года</span>
-                </label>
-              </li>
-              <li class="radio-item">
-                <label class="radio-label">
-                  <input type="checkbox" name="Монеты РСФСР, СССР, России">
-                  <span class="radio-box"></span>
-                  <span class="radio-text">Монеты РСФСР, СССР, России</span>
-                </label>
-              </li>
-              <li class="radio-item">
-                <label class="radio-label">
-                  <input type="checkbox" name="Монеты иностранные">
-                  <span class="radio-box"></span>
-                  <span class="radio-text">Монеты иностранные</span>
-                </label>
-              </li>
-              <li class="radio-item">
-                <label class="radio-label">
-                  <input type="checkbox" name="Монеты антика, средневековье">
-                  <span class="radio-box"></span>
-                  <span class="radio-text">Монеты антика, средневековье</span>
-                </label>
-              </li>
-              <li class="radio-item">
-                <label class="radio-label">
-                  <input type="checkbox" name="Награды, знаки, жетоны">
-                  <span class="radio-box"></span>
-                  <span class="radio-text">Награды, знаки, жетоны</span>
-                </label>
-              </li>
+              <ul class="radio-list">
+                <li class="radio-item">
+                  <label class="radio-label">
+                    <input type="checkbox" name="Алюминиевая бронза">
+                    <span class="radio-box"></span>
+                    <span class="radio-text">Алюминиевая бронза</span>
+                  </label>
+                </li>
+                <li class="radio-item">
+                  <label class="radio-label">
+                    <input type="checkbox" name="Алюминий">
+                    <span class="radio-box"></span>
+                    <span class="radio-text">Алюминий</span>
+                  </label>
+                </li>
+                <li class="radio-item">
+                  <label class="radio-label">
+                    <input type="checkbox" name="Бронза">
+                    <span class="radio-box"></span>
+                    <span class="radio-text">Бронза</span>
+                  </label>
+                </li>
+                <li class="radio-item">
+                  <label class="radio-label">
+                    <input type="checkbox" name="Золото">
+                    <span class="radio-box"></span>
+                    <span class="radio-text">Золото</span>
+                  </label>
+                </li>
+                <li class="radio-item">
+                  <label class="radio-label">
+                    <input type="checkbox" name="Латунь">
+                    <span class="radio-box"></span>
+                    <span class="radio-text">Латунь</span>
+                  </label>
+                </li>
+                <li class="radio-item">
+                  <label class="radio-label">
+                    <input type="checkbox" name="Медно-никелевый сплав">
+                    <span class="radio-box"></span>
+                    <span class="radio-text">Медно-никелевый сплав</span>
+                  </label>
+                </li>
+                <li class="radio-item">
+                  <label class="radio-label">
+                    <input type="checkbox" name="Медь">
+                    <span class="radio-box"></span>
+                    <span class="radio-text">Медь</span>
+                  </label>
+                </li>
 
-              <li class="radio-item">
-                <label class="radio-label">
-                  <input type="checkbox" name="Групповые лоты">
-                  <span class="radio-box"></span>
-                  <span class="radio-text">Групповые лоты</span>
-                </label>
-              </li>
+                <li class="radio-item">
+                  <label class="radio-label">
+                    <input type="checkbox" name="Платина">
+                    <span class="radio-box"></span>
+                    <span class="radio-text">Платина</span>
+                  </label>
+                </li>
 
-            </ul>
+                <li class="radio-item">
+                  <label class="radio-label">
+                    <input type="checkbox" name="Серебро">
+                    <span class="radio-box"></span>
+                    <span class="radio-text">Серебро</span>
+                  </label>
+                </li>
+
+              </ul>
+            </div>
+
+            <input type="text" class="inp lots-input w-full" placeholder="Название" name="name">
+
+            <div class="lk-rightwrap">
+              <button type="submit" class="lots-reset mobile-hidden --white">
+                Применить
+              </button>
+              <button type="reset" class="lots-reset mobile-hidden --white">
+                Сброс
+              </button>
+
+              <div class="lots-views mobile-hidden">
+                <button type="button" class="lots-view --white selected" data-view="--plane" aria-label="plane view">
+                  <svg>
+                    <use xlink:href='./assets/images/sprite.svg#planeview'></use>
+                  </svg>
+                </button>
+                <button type="button" class="lots-view --white" data-view="--box" aria-label="plane view">
+                  <svg>
+                    <use xlink:href='./assets/images/sprite.svg#boxview'></use>
+                  </svg>
+                </button>
+              </div>
+            </div>
           </div>
 
-          <div class="radio-container">
-            <button type="button" class="radio-btn">Дополнительно</button>
+          <div class="lk-row3 mt-8 --white">
+            <div class="radio-container">
+              <button type="button" class="radio-btn">Категория</button>
 
-            <ul class="radio-list">
-              <li class="radio-item">
-                <label class="radio-label">
-                  <input type="checkbox" name="Алюминиевая бронза">
-                  <span class="radio-box"></span>
-                  <span class="radio-text">Алюминиевая бронза</span>
-                </label>
-              </li>
-              <li class="radio-item">
-                <label class="radio-label">
-                  <input type="checkbox" name="Алюминий">
-                  <span class="radio-box"></span>
-                  <span class="radio-text">Алюминий</span>
-                </label>
-              </li>
-              <li class="radio-item">
-                <label class="radio-label">
-                  <input type="checkbox" name="Бронза">
-                  <span class="radio-box"></span>
-                  <span class="radio-text">Бронза</span>
-                </label>
-              </li>
-              <li class="radio-item">
-                <label class="radio-label">
-                  <input type="checkbox" name="Золото">
-                  <span class="radio-box"></span>
-                  <span class="radio-text">Золото</span>
-                </label>
-              </li>
-              <li class="radio-item">
-                <label class="radio-label">
-                  <input type="checkbox" name="Латунь">
-                  <span class="radio-box"></span>
-                  <span class="radio-text">Латунь</span>
-                </label>
-              </li>
-              <li class="radio-item">
-                <label class="radio-label">
-                  <input type="checkbox" name="Медно-никелевый сплав">
-                  <span class="radio-box"></span>
-                  <span class="radio-text">Медно-никелевый сплав</span>
-                </label>
-              </li>
-              <li class="radio-item">
-                <label class="radio-label">
-                  <input type="checkbox" name="Медь">
-                  <span class="radio-box"></span>
-                  <span class="radio-text">Медь</span>
-                </label>
-              </li>
+              <ul class="radio-list">
+                <li class="radio-item">
+                  <label class="radio-label">
+                    <input type="checkbox" name="Литература">
+                    <span class="radio-box"></span>
+                    <span class="radio-text">Литература</span>
+                  </label>
+                </li>
+                <li class="radio-item">
+                  <label class="radio-label">
+                    <input type="checkbox" name="Бумаги">
+                    <span class="radio-box"></span>
+                    <span class="radio-text">Бумаги</span>
+                  </label>
+                </li>
+                <li class="radio-item">
+                  <label class="radio-label">
+                    <input type="checkbox" name="Монеты России до 1917 года ">
+                    <span class="radio-box"></span>
+                    <span class="radio-text">Монеты России до 1917 года</span>
+                  </label>
+                </li>
+                <li class="radio-item">
+                  <label class="radio-label">
+                    <input type="checkbox" name="Монеты РСФСР, СССР, России">
+                    <span class="radio-box"></span>
+                    <span class="radio-text">Монеты РСФСР, СССР, России</span>
+                  </label>
+                </li>
+                <li class="radio-item">
+                  <label class="radio-label">
+                    <input type="checkbox" name="Монеты иностранные">
+                    <span class="radio-box"></span>
+                    <span class="radio-text">Монеты иностранные</span>
+                  </label>
+                </li>
+                <li class="radio-item">
+                  <label class="radio-label">
+                    <input type="checkbox" name="Монеты антика, средневековье">
+                    <span class="radio-box"></span>
+                    <span class="radio-text">Монеты антика, средневековье</span>
+                  </label>
+                </li>
+                <li class="radio-item">
+                  <label class="radio-label">
+                    <input type="checkbox" name="Награды, знаки, жетоны">
+                    <span class="radio-box"></span>
+                    <span class="radio-text">Награды, знаки, жетоны</span>
+                  </label>
+                </li>
 
-              <li class="radio-item">
-                <label class="radio-label">
-                  <input type="checkbox" name="Платина">
-                  <span class="radio-box"></span>
-                  <span class="radio-text">Платина</span>
-                </label>
-              </li>
+                <li class="radio-item">
+                  <label class="radio-label">
+                    <input type="checkbox" name="Групповые лоты">
+                    <span class="radio-box"></span>
+                    <span class="radio-text">Групповые лоты</span>
+                  </label>
+                </li>
 
-              <li class="radio-item">
-                <label class="radio-label">
-                  <input type="checkbox" name="Серебро">
-                  <span class="radio-box"></span>
-                  <span class="radio-text">Серебро</span>
-                </label>
-              </li>
+              </ul>
+            </div>
 
-            </ul>
+            <div class="radio-container">
+              <button type="button" class="radio-btn">Дополнительно</button>
+
+              <ul class="radio-list">
+                <li class="radio-item">
+                  <label class="radio-label">
+                    <input type="checkbox" name="Алюминиевая бронза">
+                    <span class="radio-box"></span>
+                    <span class="radio-text">Алюминиевая бронза</span>
+                  </label>
+                </li>
+                <li class="radio-item">
+                  <label class="radio-label">
+                    <input type="checkbox" name="Алюминий">
+                    <span class="radio-box"></span>
+                    <span class="radio-text">Алюминий</span>
+                  </label>
+                </li>
+                <li class="radio-item">
+                  <label class="radio-label">
+                    <input type="checkbox" name="Бронза">
+                    <span class="radio-box"></span>
+                    <span class="radio-text">Бронза</span>
+                  </label>
+                </li>
+                <li class="radio-item">
+                  <label class="radio-label">
+                    <input type="checkbox" name="Золото">
+                    <span class="radio-box"></span>
+                    <span class="radio-text">Золото</span>
+                  </label>
+                </li>
+                <li class="radio-item">
+                  <label class="radio-label">
+                    <input type="checkbox" name="Латунь">
+                    <span class="radio-box"></span>
+                    <span class="radio-text">Латунь</span>
+                  </label>
+                </li>
+                <li class="radio-item">
+                  <label class="radio-label">
+                    <input type="checkbox" name="Медно-никелевый сплав">
+                    <span class="radio-box"></span>
+                    <span class="radio-text">Медно-никелевый сплав</span>
+                  </label>
+                </li>
+                <li class="radio-item">
+                  <label class="radio-label">
+                    <input type="checkbox" name="Медь">
+                    <span class="radio-box"></span>
+                    <span class="radio-text">Медь</span>
+                  </label>
+                </li>
+
+                <li class="radio-item">
+                  <label class="radio-label">
+                    <input type="checkbox" name="Платина">
+                    <span class="radio-box"></span>
+                    <span class="radio-text">Платина</span>
+                  </label>
+                </li>
+
+                <li class="radio-item">
+                  <label class="radio-label">
+                    <input type="checkbox" name="Серебро">
+                    <span class="radio-box"></span>
+                    <span class="radio-text">Серебро</span>
+                  </label>
+                </li>
+
+              </ul>
+            </div>
+
           </div>
-
         </div>
       </form>
 

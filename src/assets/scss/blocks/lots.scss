@@ -108,6 +108,10 @@
   }
 }
 
+.lk-wrap {
+  background-color: var(--white);
+}
+
 .lots-filter {
   display: flex;
   flex-direction: column;
@@ -127,6 +131,12 @@
     background-color: inherit;
     padding-bottom: 2rem;
     animation: fadeEffect .3s;
+    z-index: 1;
+    width: 100%;
+  }
+
+  &.--lk {
+    gap: 0;
   }
 }
 
@@ -631,6 +641,11 @@
 
 .radio-container {
   position: relative;
+  &.xl-col-span-2 {
+    @include breakpoint($xl-bp) {
+      grid-column: 2 span;
+    }
+  }
 }
 
 .radio-btn {
@@ -801,12 +816,16 @@
   color: var(--orange);
   margin-left: auto;
   margin-top: 2.7rem;
+  @include breakpoint($xl-bp) {
+    font-size: 1.6rem;
+  }
 }
 
 .mobile-row {
   display: none;
   @include breakpoint($xl-bp) {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     gap: 1.3rem;
     padding-left: 1.6rem;
@@ -816,6 +835,30 @@
       & ~ .lots-filter {
         display: flex;
       }
+    }
+  }
+
+  &.--white {
+    .btn-filter {
+      background-color: var(--orange) ;
+      border-color: var(--orange);
+      @media (hover: hover) and (pointer: fine) {
+      &:hover {
+        color: var(--white);
+      }
+      }
+    }
+    .lots-reset {
+      background-color: var(--orange);
+      border-color: var(--orange);
+      @media (hover: hover) and (pointer: fine) {
+      &:hover {
+        color: var(--white);
+      }
+      }
+    }
+    .lots-view {
+      fill: var(--orange);
     }
   }
 }

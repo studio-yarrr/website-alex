@@ -6,8 +6,6 @@
 }
 
 .phow-swiper {
-  padding-left: 2rem;
-  padding-right: 2rem;
   margin-top: 8rem;
   padding-bottom: 8rem;
   @include breakpoint($xl-bp) {
@@ -41,17 +39,16 @@
   }
 }
 .phow-img {
-  width: 28rem;
-  height: 28rem;
-  @include breakpoint($xl-bp) {
-    width: 15rem;
-    height: 15rem;
+  width: 100%;
+  height: 13.5rem;
+  img {
+    object-position: left;
   }
 }
 .phow-subtitle {
   margin-top: 2rem;
   font-weight: 600;
-  font-size: 2.2rem;
+  font-size: 1.8rem;
   color: var(--black);
   line-height: normal;
   @include breakpoint($xl-bp) {
