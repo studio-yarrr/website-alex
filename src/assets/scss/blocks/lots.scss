@@ -433,7 +433,7 @@
 }
 
 .lots-list[data-content="--plane"] {
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 1fr;
 
   @include breakpoint($xl-bp) {
     display: flex;
