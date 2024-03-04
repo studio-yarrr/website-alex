@@ -48,7 +48,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
       const scrollLeft = window.pageXOffset || document.documentElement.scrollLeft;
       if (xl.matches) {
-        document.body.style.overflow = 'hidden'
+        document.documentElement.classList.add('disable-scroll')
       }
       // if any scroll is attempted, set this to the previous value;
       window.onscroll = function () {
@@ -57,7 +57,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     enableScroll() {
-      document.body.style.overflow = null
+      document.documentElement.classList.remove('disable-scroll')
       window.onscroll = function () { };
     }
   }
