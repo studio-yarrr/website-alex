@@ -58,6 +58,9 @@
   transition: color .3s, background-color .3s;
   width: 100%;
   text-align: center;
+  @include breakpoint($xl-bp) {
+    padding: 0.5rem 0.8rem;
+  }
   @media (hover: hover) and (pointer: fine) {
     &:hover {
       color: var(--orange);

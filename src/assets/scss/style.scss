@@ -422,9 +422,9 @@ img.lazyload:not([src]) {
   border-radius: 0.2rem;
 
   @include breakpoint($xl-bp) {
-    font-size: 1.2rem;
     font-weight: 400;
     padding-left: 0.8rem;
+    padding: 0.8rem 0.8rem;
   }
 }
 
