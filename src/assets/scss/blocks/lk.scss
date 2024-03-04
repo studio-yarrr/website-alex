@@ -557,7 +557,7 @@
 
 .lk-row3 {
   display: grid;
-  grid-template-columns: repeat(2, 31.4rem);
+  grid-template-columns: repeat(2, 31.2rem);
   gap: 2rem;
   @include breakpoint($cos-bp) {
     grid-template-columns: repeat(3, 1fr);
