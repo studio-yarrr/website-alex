@@ -12,7 +12,14 @@
     padding: 1rem;
     padding-bottom: 4rem;
     padding-top: 7rem;
-    overflow: auto;
+    // overflow: auto;
+    overflow: scroll; /* not auto! */
+
+    /* magic mobile viewport iOS bug fix */
+    /* also see: https://css-tricks.com/css-fix-for-100vh-in-mobile-webkit/ */
+    /* also see: https://allthingssmitty.com/2020/05/11/css-fix-for-100vh-in-mobile-webkit/ */
+    height: -webkit-fill-available;
+    -webkit-overflow-scrolling: touch;
   }
 }
 
