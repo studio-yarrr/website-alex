@@ -49,6 +49,7 @@
 .ngraph-swiper {
   padding-right: 34rem;
   padding-left: 34rem;
+  padding-bottom: 0.1rem;
   @include breakpoint($cos-bp) {
     padding-left: 6.3rem;
     padding-right: 6.3rem; 

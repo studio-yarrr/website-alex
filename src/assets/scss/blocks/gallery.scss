@@ -130,6 +130,10 @@ a.gallery-item {
   align-items: baseline;
   transition: color .3s;
   cursor: pointer;
+  @include breakpoint($xl-bp) {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+  }
   @media (hover: hover) and (pointer: fine) {
   &:hover {
     color: var(--orange);
@@ -189,5 +193,11 @@ a.gallery-item {
   @include breakpoint($xl-bp) {
     margin-top: 0.5rem;
     font-size: 1.4rem;
+  }
+}
+
+.gallery-checkboxtext {
+  @include breakpoint($xl-bp) {
+    font-size: 1.6rem;
   }
 }
