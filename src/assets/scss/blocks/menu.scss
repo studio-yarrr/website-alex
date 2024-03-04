@@ -18,7 +18,7 @@
     /* magic mobile viewport iOS bug fix */
     /* also see: https://css-tricks.com/css-fix-for-100vh-in-mobile-webkit/ */
     /* also see: https://allthingssmitty.com/2020/05/11/css-fix-for-100vh-in-mobile-webkit/ */
-    height: -webkit-fill-available;
+    // height: -webkit-fill-available;
     -webkit-overflow-scrolling: touch;
   }
 }
