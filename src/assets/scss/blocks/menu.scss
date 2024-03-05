@@ -3,11 +3,11 @@
 
   @include breakpoint($xl-bp) {
     position: fixed;
-    top: 5.5rem;
+    top: 5.4rem;
     right: 0;
     transform: translate3d(0, -100%, 0);
     height: auto;
-    max-height: calc(100% - 5.5rem);
+    max-height: calc(100% - 5.4rem);
     background-color: var(--grey);
     transition: transform .3s;
     padding: 1rem;
