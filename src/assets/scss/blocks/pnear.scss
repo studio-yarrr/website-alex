@@ -1,12 +1,16 @@
 .pnear {
   color: var(--lgrey-2);
   background-color: var(--grey);
-  padding-left: 37.5rem;
-  padding-right: 27.5rem;
   display: flex;
   justify-content: space-between;
   position: relative;
   overflow: hidden;
+  padding-left: 20rem;
+  padding-right: 20rem;
+  @include breakpoint($max-bp) {
+    padding-left: 37.5rem;
+    padding-right: 27.5rem;
+  }
   @include breakpoint($cos-bp) {
     padding-left: 9.8rem;
     padding-right: 0;

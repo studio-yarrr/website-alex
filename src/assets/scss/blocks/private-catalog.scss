@@ -49,8 +49,11 @@
     }
   }
   .swiper-slide {
+    margin-right: 7.5rem;
+    @include breakpoint($max-bp) {
+      margin-right: 2.4rem;
+    }
     width: 24.4rem;
-    margin-right: 2.4rem;
 
     &:last-child {
       margin-right: 0;

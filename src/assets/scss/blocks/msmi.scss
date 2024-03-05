@@ -1,0 +1,68 @@
+.msmi-swiper{
+  margin-top: 8rem;
+  @include breakpoint($xl-bp) {
+    margin-top: 2rem;
+  }
+  .swiper-wrapper {
+    display: grid;
+    grid-template-columns: repeat(20, 1fr);
+    justify-content: center;
+    justify-items: center;
+    gap: 2rem;
+    row-gap: 6rem; 
+    @include breakpoint($xl-bp) {
+      display: flex;
+      gap: 0;
+      justify-content: flex-start;
+    }
+  }
+  .swiper-slide {
+    width: auto;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @include breakpoint($xl-bp) {
+      width: 21rem; 
+      height: 10rem;
+    }
+    a {
+      filter: grayscale(1);
+      transition: filter .3s;
+      @media (hover: hover) and (pointer: fine) {
+      &:hover {
+        filter: grayscale(0);
+      }
+      }
+    }
+    @include breakpoint($xl-bp) {
+      margin-right: 4rem;
+      &.swiper-slide-active {
+        a {
+          filter: grayscale(0);
+        }
+
+      }
+    }
+    @for $i from 1 through 4 {
+      &:nth-child(9n + #{$i}) {
+        grid-column: 5 span;
+      }
+    }
+    @for $i from 5 through 9 {
+      &:nth-child(9n + #{$i}) {
+        grid-column: 4 span;
+      }
+    }
+  }
+}
+
+.msmi-img {
+  display: block;
+  height: auto;
+  width: auto;
+  img {
+    object-fit: scale-down;
+  }
+}

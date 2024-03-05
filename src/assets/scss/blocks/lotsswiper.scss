@@ -8,6 +8,7 @@
 .lotsswiper-swiper {
   margin-top: 8rem;
   min-height: 28.2rem;
+
   @include breakpoint($xl-bp) {
     margin-top: 2rem;
   }
@@ -27,10 +28,12 @@
     flex-direction: column;
     align-items: center;
     width: 21rem;
-    margin-right: 1.1rem;
+    margin-right: 5.1rem;
     text-align: center;
     color: var(--lgrey-2);
-
+    @include breakpoint($max-bp) {
+      margin-right: 1.1rem;
+    }
     &:last-child {
       margin-right: 0;
     }

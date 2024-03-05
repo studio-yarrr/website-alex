@@ -33,6 +33,7 @@
   @include breakpoint($xl-bp) {
     position: relative;
     z-index: 2;
+    margin-left: auto;
   }
 }
 

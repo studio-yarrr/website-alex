@@ -60,7 +60,10 @@ a.gallery-item {
   }
 
   .swiper-slide {
-    margin-right: 4.8rem;
+    margin-right: 8.7rem;
+    @include breakpoint($max-bp) {
+      margin-right: 4.8rem;
+    }
     @include breakpoint($xl-bp) {
       margin-right: 2rem;
     }

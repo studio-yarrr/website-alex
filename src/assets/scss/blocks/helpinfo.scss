@@ -3,8 +3,11 @@
   display: flex;
   flex-wrap: wrap;
   gap: 4rem;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
+  @include breakpoint($max-bp) {
+    justify-content: center;
+  }
   @include breakpoint($xl-bp) {
     margin-top: 2rem;
     gap: 2rem;

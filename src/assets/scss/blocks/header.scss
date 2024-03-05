@@ -12,8 +12,11 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 1.8rem;
   transform: translate3d(0, 0, 0);
+  gap: 4rem;
+  @include breakpoint($max-bp) {
+    gap: 1.8rem;
+  }
   @include breakpoint($xl-bp) {
     padding-top: 1.5rem;
     padding-bottom: 1.5rem;

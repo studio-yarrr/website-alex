@@ -212,7 +212,7 @@ document.addEventListener("DOMContentLoaded", () => {
     })
   }
   setTimeout(() => {
-    const swiperWrappersNoLoop = document.querySelectorAll('.mbelieve, .pokaz, .private-bot, .lotsswiper, .gallery-wrapper, .nearest-swiper-wrapper')
+    const swiperWrappersNoLoop = document.querySelectorAll('.mbelieve, .pokaz, .private-bot, .lotsswiper, .gallery-wrapper, .nearest-swiper-wrapper, .information-wrap')
     if (swiperWrappersNoLoop.length) {
       swiperWrappersNoLoop.forEach(wrapper => {
         const swiper = wrapper.querySelector('.swiper');
@@ -432,8 +432,6 @@ document.addEventListener("DOMContentLoaded", () => {
         })
       }
 
-
-
       const thumbs = new Swiper(tmb, {
         direction: 'vertical',
         loop: false,
@@ -545,6 +543,33 @@ document.addEventListener("DOMContentLoaded", () => {
       btns[0].click()
     }
   }
+
+  function initSwiperSmi() {
+    let init = false;
+    let swiper = null;
+    function swiperCard() {
+      if (xl.matches) {
+        if (!init) {
+          init = true;
+          swiper = new Swiper(".msmi-swiper", {
+            slidesPerView: "auto",
+            autoHeight: true,
+            speed: 700,
+            loop: true,
+            autoplay: {
+              delay: 1000,
+            }
+          });
+        }
+      } else if (init && swiper) {
+        swiper.destroy();
+        init = false;
+      }
+    }
+    swiperCard();
+    window.addEventListener("resize", swiperCard);
+  }
+  initSwiperSmi()
 });
 
 

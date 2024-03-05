@@ -18,7 +18,10 @@
     }
 
     &.prev {
-      left: 29.6rem;
+      left: 17rem;
+      @include breakpoint($max-bp) {
+        left: 29.6rem;
+      }
       @include breakpoint($cos-bp) {
         left: 2rem;
       }
@@ -29,7 +32,10 @@
     }
 
     &.next {
-      right: 29.6rem;
+      right: 17rem;
+      @include breakpoint($max-bp) {
+        right: 29.6rem;
+      }
       @include breakpoint($cos-bp) {
         right: 2rem;
       }
@@ -47,9 +53,13 @@
 }
 
 .ngraph-swiper {
-  padding-right: 34rem;
-  padding-left: 34rem;
+  padding-right: 20rem;
+  padding-left: 20rem;
   padding-bottom: 0.1rem;
+  @include breakpoint($max-bp) {
+    padding-right: 34rem;
+    padding-left: 34rem;
+  }
   @include breakpoint($cos-bp) {
     padding-left: 6.3rem;
     padding-right: 6.3rem; 

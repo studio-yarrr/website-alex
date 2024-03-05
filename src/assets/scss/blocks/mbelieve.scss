@@ -18,7 +18,10 @@
 }
 .mbelieve-item {
   width: 30.7rem;
-  margin-right: 4rem;
+  margin-right: 11rem;
+  @include breakpoint($max-bp) {
+    margin-right: 4rem;
+  }
   @include breakpoint($xl-bp) {
     width: 19.5rem;
   }

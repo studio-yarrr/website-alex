@@ -1,0 +1,40 @@
+---
+layout: default
+title: Информация
+---
+
+<section class="information mt-80">
+  <h1 class="information-title h2 container">Информация</h1>
+
+  <h2 class="information-subtitle container">
+    Пара строчек о том, что это за галерея, как она работает. <br>Для покупки необходима регистрация
+  </h2>
+
+  @include('./partials/infonav.html')
+
+  <h3 class="information-title-2 mt-80 h2 container">
+    Наша Команда
+  </h3>
+
+  <h4 class="information-subtitle container">
+    Пара строчек о том, что это за галерея, как она работает. <br>Для покупки необходима регистрация
+  </h4>
+
+  <div class="information-wrap">
+    <div class="swiper information-swiper container">
+      <div class="swiper-wrapper">
+        @for(i=1;i<=4;i++) {
+          <div class="swiper-slide">
+            <div class="information-comand img-cover">
+              <img src="./assets/images/information/1.jpg" alt="info"> 
+            </div>
+            <h5 class="information-name h4">Имя Фамилия</h5>
+            <div class="information-desc h5">Должность</div>
+          </div>
+        }
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="last-margin"></div>

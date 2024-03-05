@@ -25,12 +25,12 @@
 }
 
 .information-link {
-  font-weight: 400;
-  font-size: 1.8rem;
-  line-height: 122%;
   text-align: center;
   width: 30rem;
   height: 10rem;
+  @include breakpoint($max-bp) {
+    width: 27rem;
+  }
   @include breakpoint($xl-bp) {
     height: 5rem;
   }
@@ -116,4 +116,49 @@
     background-color: var(--orange);
   }
   }
+}
+
+.information-swiper {
+  margin-top: 4rem;
+  @include breakpoint($xl-bp) {
+    margin-top: 1rem;
+  }
+  .swiper-slide {
+    width: 25rem;
+    margin-right: 17.3rem;
+    @include breakpoint($max-bp) {
+      margin-right: 9.1rem;
+    }
+    @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      .information-comand {
+        filter: grayscale(0);
+        @include breakpoint($xl-bp) {
+          filter: grayscale(1);
+        }
+      }
+    }
+    }
+    @include breakpoint($xl-bp) {
+      margin-right: 2rem;
+      &.swiper-slide-active {
+        .information-comand {
+          filter: grayscale(0);
+        }
+      }
+    }
+  }
+}
+
+.information-comand {
+  height: 35rem;
+  filter: grayscale(1);
+  transition: filter .3s;
+  @include breakpoint($xl-bp) {
+    height: 30rem;
+  }
+}
+
+.information-name {
+  margin-top: 1.5rem;
 }

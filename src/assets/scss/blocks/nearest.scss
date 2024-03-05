@@ -45,7 +45,10 @@
 }
 .nearest-item {
   width: 39.3rem;
-  margin-right: 3rem;
+  margin-right: 17rem;
+  @include breakpoint($max-bp) {
+    margin-right: 3rem;
+  }
   @include breakpoint($xl-bp) {
     width: 100%;
   }

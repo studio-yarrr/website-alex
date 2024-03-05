@@ -1,9 +1,12 @@
 .parchive-list {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   gap: 8rem;
   flex-wrap: wrap;
   margin-top: 8rem;
+  @include breakpoint($max-bp) {
+    justify-content: center;
+  }
   @include breakpoint($xl-bp) {
     margin-top: 3rem;
     gap: 2rem;
