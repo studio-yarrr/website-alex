@@ -29,6 +29,13 @@
   @include breakpoint($xl-bp) {
     justify-content: center;
   }
+
+  &.xl-hidden {
+    margin-left: auto;
+    @include breakpoint($max-bp) {
+      margin-left: 0;
+    }
+  }
 }
 
 .--light {
@@ -143,7 +150,7 @@
 .lots-row {
   display: flex;
   justify-content: space-between;
-  gap: 1rem;
+  gap: 3rem;
 
   @include breakpoint($xl-bp) {
     flex-direction: column;
