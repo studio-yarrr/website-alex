@@ -289,6 +289,10 @@ img.lazyload:not([src]) {
     height: 4rem;
     padding: 1.2rem 1.1rem 1.2rem 1.3rem;
   }
+
+  &:focus {
+    outline: none;
+  }
 }
 
 .inp {
