@@ -42,7 +42,7 @@
     grid-template-rows: min-content minmax(7.5rem, min-content);
     gap: 4rem;
     row-gap: 0;
-    margin-right: 28rem;
+    margin-right: 30rem;
     @include breakpoint($cos-bp) {
       margin-right: 4rem;
     }
