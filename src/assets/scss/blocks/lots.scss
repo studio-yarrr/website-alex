@@ -141,9 +141,12 @@
     z-index: 1;
     width: 100%;
   }
-
   &.--lk {
     gap: 0;
+    margin-top: 2.3rem;
+  }
+  &.--collect {
+    margin-top: 1.5rem;
   }
 }
 
@@ -431,6 +434,12 @@
       flex-direction: column;
     }
   }
+  &.--collection {
+    gap: 2.5rem;
+    @include breakpoint($xl-bp) {
+      gap: 1rem;
+    }
+  }
 }
 
 .lots-list[data-content="--box"] {
@@ -488,7 +497,7 @@
 
   &.--white {
     background-color: var(--lgrey-2);
-
+    .lots-material,
     .lots-price,
     .lots-link,
     .lots-num {

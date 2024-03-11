@@ -11,7 +11,7 @@ title: Личный кабинет - Коллекция
     <div class="lk-wrap col-span-2">
       <h1 class="lk-title h3">Коллекция</h1>
 
-      <form action="#" class="form-wrapper mt-28">
+      <form action="#" class="form-wrapper mt-11">
         <div class="mobile-row --white container">
           <button type="button" class="btn btn-filter">Фильтры</button>
           <button type="reset" class="lots-reset lots-reset-top">
@@ -31,7 +31,7 @@ title: Личный кабинет - Коллекция
             </button>
           </div>
         </div>
-        <div class="lots-filter --lk">
+        <div class="lots-filter --lk --collect">
           <ul class="lk-row">
             <li class="lk-rad">
               <label>
@@ -154,7 +154,7 @@ title: Личный кабинет - Коллекция
         </div>
       </form>
 
-      <ul class="lots-list --lk" data-content="--box">
+      <ul class="lots-list --lk --collection" data-content="--box">
         @loop('./partials/lotsitem.html',
         [{price: '72 300'},
         {grey: true, lotimg1: '4', lotimg2: '5', price: '12 000 000'},

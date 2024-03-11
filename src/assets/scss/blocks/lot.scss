@@ -458,6 +458,53 @@
   width: 100%;
 }
 
+.lk-table-num {
+  width: 4.1rem;
+}
+
+.lk-table-name {
+  width: 33.2rem;
+  @include breakpoint($xl-bp) {
+    width: 18rem;
+  }
+}
+
+.lk-table-auc {
+  width: 9.8rem;
+}
+.lk-table-material {
+  width: 15.9rem;
+}
+.lk-table-reserve {
+  width: 9.5rem;
+}
+.lk-table-price {
+  width: 10.3rem;
+}
+.lk-table-close {
+  width: 15.5rem;
+}
+
+.lk-table-row {
+  font-size: 1.2rem;
+}
+
+.lk-table-inner {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  min-height: 2.2rem;
+}
+
+.lk-table-inner-name {
+  padding-left: 1.5rem;
+  padding-top: 0.1rem;
+  @include breakpoint($xl-bp) {
+    font-size: 1.2rem;
+  }
+}
+
 table,
 .table {
   width: 100%;
